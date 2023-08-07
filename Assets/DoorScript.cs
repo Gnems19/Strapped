@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DoorScript : MonoBehaviour
 {
@@ -10,7 +11,9 @@ public class DoorScript : MonoBehaviour
     // get sprites for opend and closed door
     public Sprite openedDoor;
     public Sprite closedDoor;
-
+    bool collide = false;
+    float timer = 0;
+    float duration = 5;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,11 +23,17 @@ public class DoorScript : MonoBehaviour
         Debug.Log("Start called");
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
-        
-        // transform.position = new Vector3(transform.position.x -1 , transform.position.y, transform.position.z);
-        // Debug.Log("Update called");
+        //if the collision is grater than 1 second change scene to 2
+        if(collide)
+        {
+            timer+=Time.deltaTime;
+            if (timer >= duration)
+            {
+                SceneManager.LoadScene(2); // end game win !!!
+            }
+        }
     }
 
     // if player comes to the door changes sprite to opened door
@@ -35,7 +44,10 @@ public class DoorScript : MonoBehaviour
         if (other.gameObject == (player))
         {
             GetComponent<SpriteRenderer>().sprite = openedDoor;
+            if(!collide)
+                collide = true;
         }
+        
     }
     
 
@@ -49,6 +61,8 @@ public class DoorScript : MonoBehaviour
         {
             GetComponent<SpriteRenderer>().sprite = closedDoor;
         }
+        collide = false;
+        timer = 0;
     }
     
     

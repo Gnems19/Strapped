@@ -339,6 +339,26 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 39, y: 83}
+  - name: Enemie_Frame_11
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 74
+      y: 118
+      width: 1
+      height: 1
+    spriteID: 074a9055e5b8e6b40ae2612929e1c940
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 74, y: 118}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
@@ -436,6 +456,14 @@ ScriptedImporter:
         width: 26
         height: 27
       spriteId: b62a26a5801235447a60ff7d49ec20f1
+    - name: Enemie_Frame_11
+      frameIndex: 11
+      cellRect:
+        x: 16
+        y: 0
+        width: 1
+        height: 1
+      spriteId: 074a9055e5b8e6b40ae2612929e1c940
     linkedCells: []
     parentIndex: -1
   platformSettings:

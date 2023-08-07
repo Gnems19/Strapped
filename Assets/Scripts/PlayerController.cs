@@ -22,20 +22,29 @@ public class PlayerController : MonoBehaviour, IPlayerController {
     
     private void Update() {
         if(!_active) return;
-        // Calculate velocity
-        Velocity = (transform.position - _lastPosition) / Time.deltaTime;
-        _lastPosition = transform.position;
-        playerAnimator.SetFloat("Speed", Mathf.Abs(Velocity.x));
-        playerAnimator.SetFloat("YVelocity", Velocity.y);
-        GatherInput();
-        RunCollisionChecks();
+        // if dead animation plaing slow down faster
+        if (playerAnimator.GetCurrentAnimatorStateInfo(0).IsName("PlayerDeath"))
+        {
+            _currentHorizontalSpeed = Mathf.Lerp(_currentHorizontalSpeed, 0, 0.1f);
+            _currentVerticalSpeed = Mathf.Lerp(_currentVerticalSpeed, 0, 0.1f);
+        }
+        else
+        {
+            // Calculate velocity
+            Velocity = (transform.position - _lastPosition) / (Time.deltaTime);
+            _lastPosition = transform.position;
+            playerAnimator.SetFloat("Speed", Mathf.Abs(Velocity.x));
+            playerAnimator.SetFloat("YVelocity", Velocity.y);
+            GatherInput();
+            RunCollisionChecks();
 
-        CalculateWalk(); // Horizontal movement
-        CalculateJumpApex(); // Affects fall speed, so calculate before gravity
-        CalculateGravity(); // Vertical movement
-        CalculateJump(); // Possibly overrides vertical
+            CalculateWalk(); // Horizontal movement
+            CalculateJumpApex(); // Affects fall speed, so calculate before gravity
+            CalculateGravity(); // Vertical movement
+            CalculateJump(); // Possibly overrides vertical
 
-        MoveCharacter(); // Actually perform the axis movement
+            MoveCharacter(); // Actually perform the axis movement
+        }
     }
 
 

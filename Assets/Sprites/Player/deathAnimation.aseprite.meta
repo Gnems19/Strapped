@@ -35,7 +35,7 @@ ScriptedImporter:
     spriteMeshType: 1
     alignment: 0
     spritePivot: {x: 0.5, y: 0.5}
-    spritePixelsToUnits: 100
+    spritePixelsToUnits: 16
     spriteBorder: {x: 0, y: 0, z: 0, w: 0}
     spriteGenerateFallbackPhysicsShape: 0
     generateCubemap: 6
@@ -75,8 +75,8 @@ ScriptedImporter:
     importHiddenLayers: 0
     layerImportMode: 1
     defaultPivotSpace: 0
-    defaultPivotAlignment: 7
-    customPivotPosition: {x: 0.5, y: 0.5}
+    defaultPivotAlignment: 9
+    customPivotPosition: {x: 0.5, y: 0.21}
     spritePadding: 0
     generateModelPrefab: 1
     generateAnimationClips: 1
@@ -87,15 +87,15 @@ ScriptedImporter:
     importHiddenLayers: 0
     layerImportMode: 1
     defaultPivotSpace: 0
-    defaultPivotAlignment: 7
-    customPivotPosition: {x: 0.5, y: 0.5}
+    defaultPivotAlignment: 9
+    customPivotPosition: {x: 0.5, y: 0.21}
     spritePadding: 0
     generateModelPrefab: 1
     generateAnimationClips: 1
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 0
+  platformSettingsDirtyTick: 638269060605073674
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -121,7 +121,7 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: deathAnimation_Frame_0
     originalName: 
-    pivot: {x: 0.5555556, y: 0}
+    pivot: {x: 0.5555556, y: 0.48000002}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -141,7 +141,7 @@ ScriptedImporter:
     uvTransform: {x: 229, y: 70}
   - name: deathAnimation_Frame_1
     originalName: 
-    pivot: {x: 0.48387095, y: 0}
+    pivot: {x: 0.48387095, y: 0.3952941}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -161,7 +161,7 @@ ScriptedImporter:
     uvTransform: {x: 208, y: 4}
   - name: deathAnimation_Frame_2
     originalName: 
-    pivot: {x: 0.5185185, y: 0}
+    pivot: {x: 0.5185185, y: 0.25846153}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -181,7 +181,7 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 70}
   - name: deathAnimation_Frame_3
     originalName: 
-    pivot: {x: 0.5185185, y: 0}
+    pivot: {x: 0.5185185, y: 0.25846153}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -201,7 +201,7 @@ ScriptedImporter:
     uvTransform: {x: 66, y: 70}
   - name: deathAnimation_Frame_4
     originalName: 
-    pivot: {x: 0.48333335, y: 0}
+    pivot: {x: 0.48333335, y: 0.23172413}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -221,7 +221,7 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 4}
   - name: deathAnimation_Frame_5
     originalName: 
-    pivot: {x: 0.48333335, y: 0}
+    pivot: {x: 0.48333335, y: 0.23172413}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -241,7 +241,7 @@ ScriptedImporter:
     uvTransform: {x: 72, y: 4}
   - name: deathAnimation_Frame_6
     originalName: 
-    pivot: {x: 0.48333335, y: 0}
+    pivot: {x: 0.48333335, y: 0.23172413}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -261,7 +261,7 @@ ScriptedImporter:
     uvTransform: {x: 140, y: 4}
   - name: deathAnimation_Frame_7
     originalName: 
-    pivot: {x: 0.5555556, y: 0}
+    pivot: {x: 0.5555556, y: 0.48000002}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -281,7 +281,7 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 130}
   - name: deathAnimation_Frame_8
     originalName: 
-    pivot: {x: 0.56, y: 0}
+    pivot: {x: 0.56, y: 0.48000002}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -301,7 +301,7 @@ ScriptedImporter:
     uvTransform: {x: 128, y: 70}
   - name: deathAnimation_Frame_9
     originalName: 
-    pivot: {x: 0.56, y: 0}
+    pivot: {x: 0.56, y: 0.51692307}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -321,7 +321,7 @@ ScriptedImporter:
     uvTransform: {x: 161, y: 70}
   - name: deathAnimation_Frame_10
     originalName: 
-    pivot: {x: 0.5185185, y: 0}
+    pivot: {x: 0.5185185, y: 0.6109091}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -341,7 +341,7 @@ ScriptedImporter:
     uvTransform: {x: 194, y: 70}
   - name: deathAnimation_Frame_11
     originalName: 
-    pivot: {x: 0.5185185, y: 0}
+    pivot: {x: 0.5185185, y: 0.74666667}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -361,7 +361,7 @@ ScriptedImporter:
     uvTransform: {x: 194, y: 100}
   - name: deathAnimation_Frame_12
     originalName: 
-    pivot: {x: 0.5185185, y: 0}
+    pivot: {x: 0.5185185, y: 1.2218182}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -494,7 +494,43 @@ ScriptedImporter:
       spriteId: 6a0f6d1e14781de4c91e42c73a0878c7
     linkedCells: []
     parentIndex: -1
-  platformSettings: []
+  platformSettings:
+  - name: DefaultTexturePlatform
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Standalone
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Server
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 64, y: 64}
