@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 public class SettingsScript : MonoBehaviour
 {
     public int gameMenuSceneID;
-    
     public void BackToMenu()
     {
         SceneManager.LoadScene(gameMenuSceneID);

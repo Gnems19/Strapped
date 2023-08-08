@@ -8,6 +8,9 @@ public class DeathManager : MonoBehaviour
 {
     GameObject player;
     Animator animator;
+    //  get audio manager
+    public SoundManager soundManager;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -37,6 +40,7 @@ public class DeathManager : MonoBehaviour
         //if the other is enemy EnemySight play death animation and wait for it to finish and restart the game
         if (other.gameObject.CompareTag("EnemySight"))
         {
+            soundManager.PlayPlayerDeathByExplosionSound();
             animator.SetBool("isDead", true);
             Invoke("RestartGame", 1);
         }

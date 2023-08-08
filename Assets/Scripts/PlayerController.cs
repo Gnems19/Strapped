@@ -7,7 +7,10 @@ public class PlayerController : MonoBehaviour, IPlayerController {
     public Animator playerAnimator;
     public Vector3 Velocity { get; private set; }
     public FrameInput Input { get; private set; }
+   
+    
     public bool JumpingThisFrame { get; private set; }
+    
     public bool LandingThisFrame { get; private set; }
     public Vector3 RawMovement { get; private set; }
     public bool Grounded => _colDown;
@@ -16,9 +19,14 @@ public class PlayerController : MonoBehaviour, IPlayerController {
     private float _currentHorizontalSpeed, _currentVerticalSpeed;
 
     // This is horrible, but for some reason colliders are not fully established when update starts...
-    private bool _active;
-    void Awake() => Invoke(nameof(Activate), 0.5f);
-    void Activate() =>  _active = true;
+    private void Start()
+    { 
+        JumpingThisFrame = false;
+        LandingThisFrame = false; 
+    } 
+    private bool _active = true;
+    //void Awake() => Invoke(nameof(Activate), 0.5f);
+    //void Activate() =>  _active = true;
     
     private void Update() {
         if(!_active) return;
@@ -298,6 +306,6 @@ public class PlayerController : MonoBehaviour, IPlayerController {
             positionToMoveTo = posToTry;
         }
     }
-
+    
     #endregion
 }
