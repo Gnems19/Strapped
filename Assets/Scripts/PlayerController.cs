@@ -3,61 +3,54 @@ using System.Linq;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour, IPlayerController {
+    
+    [SerializeField] Logger logger;
+
     // Public for external hooks
-    public Animator playerAnimator;
     public Vector3 Velocity { get; private set; }
     public FrameInput Input { get; private set; }
-   
-    
     public bool JumpingThisFrame { get; private set; }
-    
     public bool LandingThisFrame { get; private set; }
     public Vector3 RawMovement { get; private set; }
+    public bool IsDead { get; private set;}
     public bool Grounded => _colDown;
-
+    
     private Vector3 _lastPosition;
     private float _currentHorizontalSpeed, _currentVerticalSpeed;
-
-    // This is horrible, but for some reason colliders are not fully established when update starts...
+    private IPlayerDeathController _death;
+    
+    void Awake() => _death = GetComponentInParent<IPlayerDeathController>();
     private void Start()
-    { 
+    {
+        logger.Log("PlayerController Start called");
         JumpingThisFrame = false;
         LandingThisFrame = false; 
-    } 
-    private bool _active = true;
-    //void Awake() => Invoke(nameof(Activate), 0.5f);
-    //void Activate() =>  _active = true;
-    
+    }
     private void Update() {
-        if(!_active) return;
-        // if dead animation plaing slow down faster
-        if (playerAnimator.GetCurrentAnimatorStateInfo(0).IsName("PlayerDeath"))
+        // Calculate velocity
+        Velocity = (transform.position - _lastPosition) / (Time.deltaTime);
+        _lastPosition = transform.position;
+        
+        //log update enter 
+        if (_death.IsDead)
         {
-            _currentHorizontalSpeed = Mathf.Lerp(_currentHorizontalSpeed, 0, 0.1f);
-            _currentVerticalSpeed = Mathf.Lerp(_currentVerticalSpeed, 0, 0.1f);
+            IsDead = true;
+            ManualInputForDeath();
         }
         else
         {
-            // Calculate velocity
-            Velocity = (transform.position - _lastPosition) / (Time.deltaTime);
-            _lastPosition = transform.position;
-            playerAnimator.SetFloat("Speed", Mathf.Abs(Velocity.x));
-            playerAnimator.SetFloat("YVelocity", Velocity.y);
             GatherInput();
-            RunCollisionChecks();
-
-            CalculateWalk(); // Horizontal movement
-            CalculateJumpApex(); // Affects fall speed, so calculate before gravity
-            CalculateGravity(); // Vertical movement
-            CalculateJump(); // Possibly overrides vertical
-
-            MoveCharacter(); // Actually perform the axis movement
         }
+
+        RunCollisionChecks();
+        CalculateWalk(); // Horizontal movement
+        CalculateJumpApex(); // Affects fall speed, so calculate before gravity
+        CalculateGravity(); // Vertical movement
+        CalculateJump(); // Possibly overrides vertical
+        MoveCharacter(); // Actually perform the axis movement
+
     }
-
-
     #region Gather Input
-
     private void GatherInput() {
         Input = new FrameInput {
             JumpDown = UnityEngine.Input.GetButtonDown("Jump"),
@@ -68,9 +61,17 @@ public class PlayerController : MonoBehaviour, IPlayerController {
             _lastJumpPressed = Time.time;
         }
     }
-
+    private void ManualInputForDeath()
+    {
+        Input = new FrameInput
+        {
+            JumpDown = false,
+            JumpUp = true,
+            X = 0
+        };
+    }
     #endregion
-
+    
     #region Collisions
 
     [Header("COLLISION")] [SerializeField] private Bounds _characterBounds;
@@ -88,7 +89,6 @@ public class PlayerController : MonoBehaviour, IPlayerController {
     private void RunCollisionChecks() {
         // Generate ray ranges. 
         CalculateRayRanged();
-
         // Ground
         LandingThisFrame = false;
         var groundedCheck = RunDetection(_raysDown);

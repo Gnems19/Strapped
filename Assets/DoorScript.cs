@@ -9,18 +9,20 @@ public class DoorScript : MonoBehaviour
     // get player object
     public GameObject player;
     // get sprites for opend and closed door
-    public Sprite openedDoor;
-    public Sprite closedDoor;
+    [SerializeField] Sprite openedDoor;
+    [SerializeField] Sprite closedDoor;
+    [SerializeField] Logger logger;
     bool collide = false;
     float timer = 0;
     float duration = 5;
+    
     // Start is called before the first frame update
     void Start()
     {
         // set sprite to closed door
         GetComponent<SpriteRenderer>().sprite = closedDoor;
         //check if called by logging
-        Debug.Log("Start called");
+        logger.Log("DoorScript Start called");
     }
 
     private void FixedUpdate()
@@ -40,7 +42,7 @@ public class DoorScript : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         // check if called by logging
-        Debug.Log("OnTriggerEnter2D called");
+        logger.Log("OnTriggerEnter2D called");
         if (other.gameObject == (player))
         {
             GetComponent<SpriteRenderer>().sprite = openedDoor;
@@ -55,7 +57,7 @@ public class DoorScript : MonoBehaviour
     private void OnTriggerExit2D(Collider2D other)
     {
         // check if called by logging
-        Debug.Log("OnTriggerExit2D called");
+        logger.Log("OnTriggerExit2D called");
         
         if (other.gameObject == (player))
         {

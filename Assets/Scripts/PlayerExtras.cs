@@ -15,8 +15,12 @@ public interface IPlayerController {
     public bool LandingThisFrame { get; }
     public Vector3 RawMovement { get; }
     public bool Grounded { get; }
+    public bool IsDead { get; }
 }
 
+public interface IPlayerDeathController {
+    public bool IsDead { get; }
+}
 public interface IExtendedPlayerController : IPlayerController {
     public bool DoubleJumpingThisFrame { get; set; }
     public bool Dashing { get; set; }  
@@ -28,6 +32,5 @@ public struct RayRange {
         End = new Vector2(x2, y2);
         Dir = dir;
     }
-
     public readonly Vector2 Start, End, Dir;
 }

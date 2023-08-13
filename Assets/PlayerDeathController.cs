@@ -4,29 +4,26 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class DeathManager : MonoBehaviour
+public class PlayerDeathController : MonoBehaviour, IPlayerDeathController
 {
-    GameObject player;
-    Animator animator;
-    //  get audio manager
-    public SoundManager soundManager;
-    
+
+    [SerializeField] private Logger logger;
+
+    public bool IsDead { get; private set; }
+
     // Start is called before the first frame update
     void Start()
     {
-        // this is a script for player but first we must get the player object
-        player = GameObject.FindGameObjectWithTag("Player");
-        //debug
-        Debug.Log("DeathManager Start called");
-        animator = GetComponent<Animator>();
+        logger.Log("DeathManager Start called");
+        IsDead = false;
     }
     
     void FixedUpdate()
     {
         //check if the player fell in a pit
-        if (player.transform.position.y < -10)
+        if (gameObject.transform.position.y < -10)
         {
-            // if so restart the game
+            IsDead = true;
             RestartGame();
         }
 
@@ -35,14 +32,13 @@ public class DeathManager : MonoBehaviour
     // if the player collides with the enemy eye sight restart the game
     private void OnTriggerEnter2D(Collider2D other)
     {
-        //debug
-        Debug.Log("OnTriggerEnter2D called");
+        logger.Log("DeathManager OnTriggerEnter2D called");
         //if the other is enemy EnemySight play death animation and wait for it to finish and restart the game
         if (other.gameObject.CompareTag("EnemySight"))
         {
-            soundManager.PlayPlayerDeathByExplosionSound();
-            animator.SetBool("isDead", true);
-            Invoke("RestartGame", 1);
+            IsDead = true;
+            SoundManager.Instance.PlayPlayerDeathByExplosionSound();
+            Invoke("RestartGame", 1.5f);
         }
     }
     void RestartGame()
