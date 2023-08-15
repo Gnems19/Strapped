@@ -11,6 +11,7 @@ public class PlayerDeathController : MonoBehaviour, IPlayerDeathController
 
     public bool IsDead { get; private set; }
 
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -26,7 +27,8 @@ public class PlayerDeathController : MonoBehaviour, IPlayerDeathController
             IsDead = true;
             RestartGame();
         }
-
+        
+        
     }
 
     // if the player collides with the enemy eye sight restart the game
@@ -41,6 +43,9 @@ public class PlayerDeathController : MonoBehaviour, IPlayerDeathController
             Invoke("RestartGame", 1.5f);
         }
     }
+    
+    // while the player is in collision OnTriggerStay2D will be called if insstant death ever to be changed... (private float spottedTime = 0f;)
+
     void RestartGame()
     {
         // restart the game

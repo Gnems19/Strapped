@@ -121,14 +121,14 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: Bed_Frame_0
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.66, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 4
-      y: 437
-      width: 80
+      x: 69
+      y: 59
+      width: 50
       height: 22
     spriteID: 1608be4d4d425dd40a7534b020e63711
     spriteBone: []
@@ -138,17 +138,17 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 437}
+    uvTransform: {x: 69, y: 59}
   - name: Bed_Frame_1
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.66, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 4
-      y: 404
-      width: 80
+      x: 190
+      y: 4
+      width: 50
       height: 25
     spriteID: 4fbe38f8d5d14194faca8ea859dc8671
     spriteBone: []
@@ -158,17 +158,17 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 404}
+    uvTransform: {x: 190, y: 4}
   - name: Bed_Frame_2
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.66, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 4
-      y: 331
-      width: 80
+      x: 132
+      y: 4
+      width: 50
       height: 29
     spriteID: 38adcefbdfbeca94391423ac293121fa
     spriteBone: []
@@ -178,17 +178,17 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 331}
+    uvTransform: {x: 132, y: 4}
   - name: Bed_Frame_3
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.66, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 4
-      y: 291
-      width: 80
+      x: 74
+      y: 4
+      width: 50
       height: 32
     spriteID: 4d301ba60ba2df74f8711971629cfd50
     spriteBone: []
@@ -198,17 +198,17 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 291}
+    uvTransform: {x: 74, y: 4}
   - name: Bed_Frame_4
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.66, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 4
-      y: 467
-      width: 80
+      x: 127
+      y: 59
+      width: 50
       height: 22
     spriteID: 9c8475e55a96b3a4a8205726987d9288
     spriteBone: []
@@ -218,17 +218,17 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 467}
+    uvTransform: {x: 127, y: 59}
   - name: Bed_Frame_5
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.66, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 4
-      y: 243
-      width: 80
+      x: 200
+      y: 117
+      width: 50
       height: 40
     spriteID: 0fd720b43af241148869dde232617fd5
     spriteBone: []
@@ -238,17 +238,17 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 243}
+    uvTransform: {x: 200, y: 117}
   - name: Bed_Frame_6
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.66, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
-      y: 4
-      width: 80
+      y: 117
+      width: 50
       height: 55
     spriteID: 918715786d5ef0d46a2934709b72fc14
     spriteBone: []
@@ -258,17 +258,17 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 4}
+    uvTransform: {x: 4, y: 117}
   - name: Bed_Frame_7
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.66, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 4
-      y: 67
-      width: 80
+      x: 62
+      y: 117
+      width: 50
       height: 55
     spriteID: 4a23b63be4cdf1b4090fd2df07a61589
     spriteBone: []
@@ -278,17 +278,17 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 67}
+    uvTransform: {x: 62, y: 117}
   - name: Bed_Frame_8
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.57894737, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
-      y: 130
-      width: 80
+      y: 59
+      width: 57
       height: 50
     spriteID: 1f299030d7a07844eaa2aaaba951574b
     spriteBone: []
@@ -298,17 +298,17 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 130}
+    uvTransform: {x: 4, y: 59}
   - name: Bed_Frame_9
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.53225803, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
-      y: 188
-      width: 80
+      y: 4
+      width: 62
       height: 47
     spriteID: cff5f3225008b144cb3b47d2ce4dd563
     spriteBone: []
@@ -318,17 +318,17 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 188}
+    uvTransform: {x: 4, y: 4}
   - name: Bed_Frame_10
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.45833334, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 4
-      y: 368
-      width: 80
+      x: 120
+      y: 117
+      width: 72
       height: 28
     spriteID: 29fc433f7954c5546a2cd8d287f2820c
     spriteBone: []
@@ -338,17 +338,17 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 368}
+    uvTransform: {x: 120, y: 117}
   - name: Bed_Frame_11
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.66, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 92
-      y: 4
-      width: 80
+      x: 69
+      y: 89
+      width: 50
       height: 14
     spriteID: 72cd529699961304c98a32413cc3eea0
     spriteBone: []
@@ -358,7 +358,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 92, y: 4}
+    uvTransform: {x: 69, y: 89}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
@@ -371,97 +371,97 @@ ScriptedImporter:
     - name: Bed_Frame_0
       frameIndex: 0
       cellRect:
-        x: 0
+        x: 7
         y: 0
-        width: 80
+        width: 50
         height: 22
       spriteId: 1608be4d4d425dd40a7534b020e63711
     - name: Bed_Frame_1
       frameIndex: 1
       cellRect:
-        x: 0
+        x: 7
         y: 0
-        width: 80
+        width: 50
         height: 25
       spriteId: 4fbe38f8d5d14194faca8ea859dc8671
     - name: Bed_Frame_2
       frameIndex: 2
       cellRect:
-        x: 0
+        x: 7
         y: 0
-        width: 80
+        width: 50
         height: 29
       spriteId: 38adcefbdfbeca94391423ac293121fa
     - name: Bed_Frame_3
       frameIndex: 3
       cellRect:
-        x: 0
+        x: 7
         y: 0
-        width: 80
+        width: 50
         height: 32
       spriteId: 4d301ba60ba2df74f8711971629cfd50
     - name: Bed_Frame_4
       frameIndex: 4
       cellRect:
-        x: 0
+        x: 7
         y: 0
-        width: 80
+        width: 50
         height: 22
       spriteId: 9c8475e55a96b3a4a8205726987d9288
     - name: Bed_Frame_5
       frameIndex: 5
       cellRect:
-        x: 0
+        x: 7
         y: 0
-        width: 80
+        width: 50
         height: 40
       spriteId: 0fd720b43af241148869dde232617fd5
     - name: Bed_Frame_6
       frameIndex: 6
       cellRect:
-        x: 0
+        x: 7
         y: 0
-        width: 80
+        width: 50
         height: 55
       spriteId: 918715786d5ef0d46a2934709b72fc14
     - name: Bed_Frame_7
       frameIndex: 7
       cellRect:
-        x: 0
+        x: 7
         y: 0
-        width: 80
+        width: 50
         height: 55
       spriteId: 4a23b63be4cdf1b4090fd2df07a61589
     - name: Bed_Frame_8
       frameIndex: 8
       cellRect:
-        x: 0
+        x: 7
         y: 0
-        width: 80
+        width: 57
         height: 50
       spriteId: 1f299030d7a07844eaa2aaaba951574b
     - name: Bed_Frame_9
       frameIndex: 9
       cellRect:
-        x: 0
+        x: 7
         y: 0
-        width: 80
+        width: 62
         height: 47
       spriteId: cff5f3225008b144cb3b47d2ce4dd563
     - name: Bed_Frame_10
       frameIndex: 10
       cellRect:
-        x: 0
+        x: 7
         y: 0
-        width: 80
+        width: 72
         height: 28
       spriteId: 29fc433f7954c5546a2cd8d287f2820c
     - name: Bed_Frame_11
       frameIndex: 11
       cellRect:
-        x: 0
+        x: 7
         y: 0
-        width: 80
+        width: 50
         height: 14
       spriteId: 72cd529699961304c98a32413cc3eea0
     linkedCells: []

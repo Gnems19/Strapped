@@ -23,7 +23,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &951867247724166249
 Transform:
   m_ObjectHideFlags: 0
@@ -37,7 +37,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &5212519023914172648
 SpriteRenderer:
@@ -103,7 +103,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbfb23717f7dee14688bccda60b77b9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerAnimator: {fileID: 5544608548076400730}
+  logger: {fileID: 0}
   _characterBounds:
     m_Center: {x: 0, y: 0, z: 0}
     m_Extent: {x: 0.24, y: 0.72, z: 0}
@@ -112,7 +112,7 @@ MonoBehaviour:
     m_Bits: 8
   _detectorCount: 5
   _detectionRayLength: 0.11
-  _rayBuffer: 0.01
+  _rayBuffer: 0.3
   _acceleration: 90
   _moveClamp: 12
   _deAcceleration: 75
@@ -139,6 +139,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _anim: {fileID: 5544608548076400730}
+  logger: {fileID: 0}
 --- !u!114 &1575978906915495288
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -163,7 +164,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60a7357676f4cae4db73b591d9613d91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  soundManager: {fileID: 0}
+  logger: {fileID: 0}
 --- !u!95 &5544608548076400730
 Animator:
   serializedVersion: 5
@@ -217,7 +218,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.010604858, y: 0.017649531}
+  m_Offset: {x: 0.010604858, y: 0.015381336}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5555556, y: 0.46857145}
@@ -228,7 +229,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.5677004, y: 1.4986575}
+  m_Size: {x: 0.5677004, y: 1.6665001}
   m_EdgeRadius: 0
 --- !u!50 &7084300303131018325
 Rigidbody2D:

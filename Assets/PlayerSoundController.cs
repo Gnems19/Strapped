@@ -9,7 +9,8 @@ public class PlayerSoundController : MonoBehaviour
     void Awake() => _player = GetComponentInParent<IPlayerController>();
     void Update() {
         if (_player == null) return;
-        if (_player.Input.X != 0 && _player.Grounded)
+        
+        if (_player.Input.X != 0 && _player.Grounded && _player.Velocity.x != 0)
         {
             if(!SoundManager.Instance.sfxSource.isPlaying) SoundManager.Instance.PlayRunSound();
         }

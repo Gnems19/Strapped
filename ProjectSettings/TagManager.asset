@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Door
   - EnemySight
+  - Ground
   layers:
   - Default
   - TransparentFX
