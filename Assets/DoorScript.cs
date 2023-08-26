@@ -12,13 +12,17 @@ public class DoorScript : MonoBehaviour
     [SerializeField] Sprite openedDoor;
     [SerializeField] Sprite closedDoor;
     [SerializeField] Logger logger;
-    bool collide = false;
-    float timer = 0;
-    float duration = 5;
+    [SerializeField] int sceneToLoad;
+    private bool _collide;
+    private float _timer;
+    private float _duration;
     
     // Start is called before the first frame update
     void Start()
     {
+        _collide = false;
+        _timer = 0f; 
+        _duration = 2f;
         // set sprite to closed door
         GetComponent<SpriteRenderer>().sprite = closedDoor;
         //check if called by logging
@@ -28,12 +32,12 @@ public class DoorScript : MonoBehaviour
     private void FixedUpdate()
     {
         //if the collision is grater than 1 second change scene to 2
-        if(collide)
+        if(_collide)
         {
-            timer+=Time.deltaTime;
-            if (timer >= duration)
+            _timer+=Time.deltaTime;
+            if (_timer >= _duration)
             {
-                SceneManager.LoadScene(2); // end game win !!!
+                SceneManager.LoadScene(sceneToLoad); 
             }
         }
     }
@@ -42,14 +46,13 @@ public class DoorScript : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         // check if called by logging
-        logger.Log("OnTriggerEnter2D called");
+        if (logger != null) logger.Log("OnTriggerEnter2D called");
         if (other.gameObject == (player))
         {
             GetComponent<SpriteRenderer>().sprite = openedDoor;
-            if(!collide)
-                collide = true;
+            if(!_collide)
+                _collide = true;
         }
-        
     }
     
 
@@ -57,14 +60,15 @@ public class DoorScript : MonoBehaviour
     private void OnTriggerExit2D(Collider2D other)
     {
         // check if called by logging
-        logger.Log("OnTriggerExit2D called");
-        
+        if (logger != null) logger.Log("OnTriggerExit2D called");
+
         if (other.gameObject == (player))
         {
             GetComponent<SpriteRenderer>().sprite = closedDoor;
         }
-        collide = false;
-        timer = 0;
+        
+        _collide = false;
+        _timer = 0;
     }
     
     

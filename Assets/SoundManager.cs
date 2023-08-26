@@ -8,7 +8,7 @@ public class SoundManager : MonoBehaviour
     [Header("Audio Sources")] 
     public AudioSource backgroundMusicSource; // Background music audio source
     public AudioSource sfxSource; // Sound effects audio source
-    [Header("Sound Clips")]
+    [Header("SoundFX")]
     public AudioClip playerJumpSound; // Sound clip for jumping
     public AudioClip playerLandSound; // Sound clip for landing
     public AudioClip playerRunSound; // Sound clip for running
@@ -17,7 +17,10 @@ public class SoundManager : MonoBehaviour
     public AudioClip winSound; // Sound clip for winning
     public AudioClip collectItemSound; // Sound clip for collecting items
     
+    [Header("Music")]
     public AudioClip startGameSong; // Sound clip for starting the game
+    public AudioClip level1Song; // Sound clip for level 1
+    public AudioClip level2Song; // Sound clip for level 2
     // adding a way to change the volume of the music and the sound effects seperatly
     [Header("Volume")]
     [Range(0.0f, 1.0f)]

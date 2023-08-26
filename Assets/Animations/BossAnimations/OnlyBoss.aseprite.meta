@@ -1,0 +1,1612 @@
+fileFormatVersion: 2
+guid: b983bbd1ac5c520418625fbb3ffd358b
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 0
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 16
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  previousAsepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 0
+    customPivotPosition: {x: 0.5, y: 0.5}
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  asepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 0
+    customPivotPosition: {x: 0.5, y: 0.5}
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 638278835293576582
+  textureAssetName: 
+  singleSpriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  animatedSpriteImportData:
+  - name: OnlyBoss_Frame_0
+    originalName: 
+    pivot: {x: 0.5, y: 0.7207207}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 653
+      y: 4
+      width: 158
+      height: 111
+    spriteID: 8ac0370bcd0127843915bdb7ceb86ed4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 653, y: 4}
+  - name: OnlyBoss_Frame_1
+    originalName: 
+    pivot: {x: 0.5, y: 0.7207207}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 819
+      y: 4
+      width: 158
+      height: 111
+    spriteID: 4db8b90ca37eaaf4093e07ad59bf7b3f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 819, y: 4}
+  - name: OnlyBoss_Frame_2
+    originalName: 
+    pivot: {x: 0.5, y: 0.7207207}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 159
+      width: 158
+      height: 111
+    spriteID: 87e2c2738ef7e4549af427c03c5d1adf
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 159}
+  - name: OnlyBoss_Frame_3
+    originalName: 
+    pivot: {x: 0.5, y: 0.7207207}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 170
+      y: 159
+      width: 158
+      height: 111
+    spriteID: 2c3804ae320e1ac41aa126218d55c710
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 170, y: 159}
+  - name: OnlyBoss_Frame_4
+    originalName: 
+    pivot: {x: 0.59398496, y: 0.7207207}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 798
+      y: 278
+      width: 133
+      height: 111
+    spriteID: db4d371af238daa4e9a300c34016a41e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 798, y: 278}
+  - name: OnlyBoss_Frame_5
+    originalName: 
+    pivot: {x: 0.625, y: 0.7207207}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 421
+      y: 869
+      width: 112
+      height: 111
+    spriteID: 3bd638c8bb86ad646a1394225010bcef
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 421, y: 869}
+  - name: OnlyBoss_Frame_6
+    originalName: 
+    pivot: {x: 0.70535713, y: 0.7207207}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 541
+      y: 869
+      width: 112
+      height: 111
+    spriteID: 33b7e034d0d57bd43bddac215fed8b96
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 541, y: 869}
+  - name: OnlyBoss_Frame_7
+    originalName: 
+    pivot: {x: 0.56934303, y: 0.72727275}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 653
+      y: 278
+      width: 137
+      height: 110
+    spriteID: d3591c341bc13f14b98b002f4500c356
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 653, y: 278}
+  - name: OnlyBoss_Frame_8
+    originalName: 
+    pivot: {x: 0.5597015, y: 0.72727275}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 397
+      width: 134
+      height: 110
+    spriteID: 4bdcb72f34280d945bc83d5842ed32ed
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 397}
+  - name: OnlyBoss_Frame_9
+    originalName: 
+    pivot: {x: 0.556391, y: 0.72727275}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 146
+      y: 397
+      width: 133
+      height: 110
+    spriteID: d73c73d9b2185a74db316dcfc77bfc5d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 146, y: 397}
+  - name: OnlyBoss_Frame_10
+    originalName: 
+    pivot: {x: 0.47328246, y: 0.72727275}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 287
+      y: 397
+      width: 131
+      height: 110
+    spriteID: fc4b9562980dc784093814c9a5fbd1d1
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 287, y: 397}
+  - name: OnlyBoss_Frame_11
+    originalName: 
+    pivot: {x: 0.47328246, y: 0.72727275}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 426
+      y: 397
+      width: 131
+      height: 110
+    spriteID: 984fb409af5d10d41a66f7b1654c030a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 426, y: 397}
+  - name: OnlyBoss_Frame_12
+    originalName: 
+    pivot: {x: 0.47328246, y: 0.72727275}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 565
+      y: 397
+      width: 131
+      height: 110
+    spriteID: 16a3c5033b8e2524da1a49bfef588c7a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 565, y: 397}
+  - name: OnlyBoss_Frame_13
+    originalName: 
+    pivot: {x: 0.47328246, y: 0.72727275}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 704
+      y: 397
+      width: 131
+      height: 110
+    spriteID: 57f955a2e3316124d8f83d9596ca7d3e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 704, y: 397}
+  - name: OnlyBoss_Frame_14
+    originalName: 
+    pivot: {x: 0.47328246, y: 0.72727275}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 843
+      y: 397
+      width: 131
+      height: 110
+    spriteID: 6718c3d4376a09b41bb75dee3fa2a974
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 843, y: 397}
+  - name: OnlyBoss_Frame_15
+    originalName: 
+    pivot: {x: 0.47328246, y: 0.72727275}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 515
+      width: 131
+      height: 110
+    spriteID: c32fc2250f0a5b84488fb75129ed0a2c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 515}
+  - name: OnlyBoss_Frame_16
+    originalName: 
+    pivot: {x: 0.47328246, y: 0.72727275}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 143
+      y: 515
+      width: 131
+      height: 110
+    spriteID: c0a4ef42d1f239046a34735a82231131
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 143, y: 515}
+  - name: OnlyBoss_Frame_17
+    originalName: 
+    pivot: {x: 0.47328246, y: 0.72727275}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 282
+      y: 515
+      width: 131
+      height: 110
+    spriteID: a5b544995b3f0a546afb55df59084832
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 282, y: 515}
+  - name: OnlyBoss_Frame_18
+    originalName: 
+    pivot: {x: 0.47328246, y: 0.72727275}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 421
+      y: 515
+      width: 131
+      height: 110
+    spriteID: 89cec2bf5ff6a2a48bbbf74a3ac4f4f2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 421, y: 515}
+  - name: OnlyBoss_Frame_19
+    originalName: 
+    pivot: {x: 0.47328246, y: 0.72727275}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 560
+      y: 515
+      width: 131
+      height: 110
+    spriteID: 5be34a0f4e61fb347a23c65060e6e88c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 560, y: 515}
+  - name: OnlyBoss_Frame_20
+    originalName: 
+    pivot: {x: 0.47328246, y: 0.72727275}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 699
+      y: 515
+      width: 131
+      height: 110
+    spriteID: f21f47279242bef4c9afbd34db17bac6
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 699, y: 515}
+  - name: OnlyBoss_Frame_21
+    originalName: 
+    pivot: {x: 0.47328246, y: 0.72727275}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 838
+      y: 515
+      width: 131
+      height: 110
+    spriteID: 32fe42d909a81c64bbef1dfbf60ef75a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 838, y: 515}
+  - name: OnlyBoss_Frame_22
+    originalName: 
+    pivot: {x: 0.47328246, y: 0.72727275}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 633
+      width: 131
+      height: 110
+    spriteID: 35f71138a5950da4186556fedcd0bab2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 633}
+  - name: OnlyBoss_Frame_23
+    originalName: 
+    pivot: {x: 0.47328246, y: 0.72727275}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 143
+      y: 633
+      width: 131
+      height: 110
+    spriteID: e69e9f9716b55b14c9c9a79643db5a97
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 143, y: 633}
+  - name: OnlyBoss_Frame_24
+    originalName: 
+    pivot: {x: 0.47328246, y: 0.72727275}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 282
+      y: 633
+      width: 131
+      height: 110
+    spriteID: 96fce98cdf4473340929017181dafb52
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 282, y: 633}
+  - name: OnlyBoss_Frame_25
+    originalName: 
+    pivot: {x: 0.47328246, y: 0.72727275}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 421
+      y: 633
+      width: 131
+      height: 110
+    spriteID: d57699b1a7fcfc247bdd7ba4effed7ee
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 421, y: 633}
+  - name: OnlyBoss_Frame_26
+    originalName: 
+    pivot: {x: 0.47328246, y: 0.72727275}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 560
+      y: 633
+      width: 131
+      height: 110
+    spriteID: c3425a771260e524495236892acb326e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 560, y: 633}
+  - name: OnlyBoss_Frame_27
+    originalName: 
+    pivot: {x: 0.47328246, y: 0.72727275}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 699
+      y: 633
+      width: 131
+      height: 110
+    spriteID: ea334c7f91a93194ab9c84e6ec89ee38
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 699, y: 633}
+  - name: OnlyBoss_Frame_28
+    originalName: 
+    pivot: {x: 0.47328246, y: 0.72727275}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 838
+      y: 633
+      width: 131
+      height: 110
+    spriteID: cfd95aa7754f67d4287b4a58c65c9857
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 838, y: 633}
+  - name: OnlyBoss_Frame_29
+    originalName: 
+    pivot: {x: 0.47328246, y: 0.72727275}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 751
+      width: 131
+      height: 110
+    spriteID: b215d670a4848914e8cbd435250f4936
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 751}
+  - name: OnlyBoss_Frame_30
+    originalName: 
+    pivot: {x: 0.47328246, y: 0.72727275}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 143
+      y: 751
+      width: 131
+      height: 110
+    spriteID: 8a4518bc22c269c4cb76efcbec684b8f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 143, y: 751}
+  - name: OnlyBoss_Frame_31
+    originalName: 
+    pivot: {x: 0.47328246, y: 0.72727275}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 282
+      y: 751
+      width: 131
+      height: 110
+    spriteID: 7aa92624f61158d45a24ad2ee0625926
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 282, y: 751}
+  - name: OnlyBoss_Frame_32
+    originalName: 
+    pivot: {x: 0.47328246, y: 0.72727275}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 421
+      y: 751
+      width: 131
+      height: 110
+    spriteID: 56f86273633a57044934e07c12d12e92
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 421, y: 751}
+  - name: OnlyBoss_Frame_33
+    originalName: 
+    pivot: {x: 0.47328246, y: 0.72727275}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 560
+      y: 751
+      width: 131
+      height: 110
+    spriteID: a819faa3d8b4b3d408b405d216853ebc
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 560, y: 751}
+  - name: OnlyBoss_Frame_34
+    originalName: 
+    pivot: {x: 0.47328246, y: 0.72727275}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 699
+      y: 751
+      width: 131
+      height: 110
+    spriteID: 63c574bc4bc22ca47b38ec4f6938294f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 699, y: 751}
+  - name: OnlyBoss_Frame_35
+    originalName: 
+    pivot: {x: 0.47328246, y: 0.72727275}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 838
+      y: 751
+      width: 131
+      height: 110
+    spriteID: 683086797c63fd647bd5e32b71289baf
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 838, y: 751}
+  - name: OnlyBoss_Frame_36
+    originalName: 
+    pivot: {x: 0.47328246, y: 0.72727275}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 869
+      width: 131
+      height: 110
+    spriteID: 6fedc014840806b4f96d81cae0ad2d61
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 869}
+  - name: OnlyBoss_Frame_37
+    originalName: 
+    pivot: {x: 0.47328246, y: 0.72727275}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 143
+      y: 869
+      width: 131
+      height: 110
+    spriteID: 4e066dbd65eb2ef4d9a0f473f5a03aea
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 143, y: 869}
+  - name: OnlyBoss_Frame_38
+    originalName: 
+    pivot: {x: 0.47328246, y: 0.72727275}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 282
+      y: 869
+      width: 131
+      height: 110
+    spriteID: fc2cb0b254be2764cab47705cfdd2b54
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 282, y: 869}
+  - name: OnlyBoss_Frame_39
+    originalName: 
+    pivot: {x: 0.5, y: 0.7207207}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 336
+      y: 159
+      width: 158
+      height: 111
+    spriteID: 7489f8de559fbc1468a480b6bfd6d2e7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 336, y: 159}
+  - name: OnlyBoss_Frame_40
+    originalName: 
+    pivot: {x: 0.5, y: 0.610687}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 326
+      y: 4
+      width: 158
+      height: 131
+    spriteID: 026f0a9f4e882744283a7fd0856d2571
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 326, y: 4}
+  - name: OnlyBoss_Frame_41
+    originalName: 
+    pivot: {x: 0.5, y: 0.7207207}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 502
+      y: 159
+      width: 158
+      height: 111
+    spriteID: 39dc98cb96e31bd4986ff0797cfcbbdb
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 502, y: 159}
+  - name: OnlyBoss_Frame_42
+    originalName: 
+    pivot: {x: 0.5, y: 0.7207207}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 668
+      y: 159
+      width: 158
+      height: 111
+    spriteID: 997ffc0e9213ecb4086417fbbdee4334
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 668, y: 159}
+  - name: OnlyBoss_Frame_43
+    originalName: 
+    pivot: {x: 0.5, y: 0.7207207}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 834
+      y: 159
+      width: 158
+      height: 111
+    spriteID: 9cf63859090129940a371f92a2522429
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 834, y: 159}
+  - name: OnlyBoss_Frame_44
+    originalName: 
+    pivot: {x: 0.5, y: 0.7207207}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 278
+      width: 158
+      height: 111
+    spriteID: c5848f1221f93f440b555e1498440930
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 278}
+  - name: OnlyBoss_Frame_45
+    originalName: 
+    pivot: {x: 0.48366016, y: 0.7207207}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 170
+      y: 278
+      width: 153
+      height: 111
+    spriteID: e43061b6018b71d41b2646189bcfa8fd
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 170, y: 278}
+  - name: OnlyBoss_Frame_46
+    originalName: 
+    pivot: {x: 0.48366016, y: 0.7207207}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 331
+      y: 278
+      width: 153
+      height: 111
+    spriteID: 142d62d39482c2c4589529ab5091f769
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 331, y: 278}
+  - name: OnlyBoss_Frame_47
+    originalName: 
+    pivot: {x: 0.48366016, y: 0.72727275}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 492
+      y: 278
+      width: 153
+      height: 110
+    spriteID: d3e0bb924bc90a04e8bfb57f4e1fe816
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 492, y: 278}
+  - name: OnlyBoss_Frame_48
+    originalName: 
+    pivot: {x: 0.48366016, y: 0.62015504}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 492
+      y: 4
+      width: 153
+      height: 129
+    spriteID: 371bb323150b1e642830018deb0f79f4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 492, y: 4}
+  - name: OnlyBoss_Frame_49
+    originalName: 
+    pivot: {x: 0.48366016, y: 0.5797101}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 165
+      y: 4
+      width: 153
+      height: 138
+    spriteID: 296341e3e3a890a4698470da9cd0dc93
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 165, y: 4}
+  - name: OnlyBoss_Frame_50
+    originalName: 
+    pivot: {x: 0.48366016, y: 0.5442177}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 153
+      height: 147
+    spriteID: 77c483803c017f946ae17faea0b1593b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+  spriteSheetImportData: []
+  asepriteLayers:
+  - layerIndex: 0
+    guid: 303102073
+    name: OnlyBoss
+    layerFlags: 0
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: OnlyBoss_Frame_0
+      frameIndex: 0
+      cellRect:
+        x: 0
+        y: 0
+        width: 158
+        height: 111
+      spriteId: 8ac0370bcd0127843915bdb7ceb86ed4
+    - name: OnlyBoss_Frame_1
+      frameIndex: 1
+      cellRect:
+        x: 0
+        y: 0
+        width: 158
+        height: 111
+      spriteId: 4db8b90ca37eaaf4093e07ad59bf7b3f
+    - name: OnlyBoss_Frame_2
+      frameIndex: 2
+      cellRect:
+        x: 0
+        y: 0
+        width: 158
+        height: 111
+      spriteId: 87e2c2738ef7e4549af427c03c5d1adf
+    - name: OnlyBoss_Frame_3
+      frameIndex: 3
+      cellRect:
+        x: 0
+        y: 0
+        width: 158
+        height: 111
+      spriteId: 2c3804ae320e1ac41aa126218d55c710
+    - name: OnlyBoss_Frame_4
+      frameIndex: 4
+      cellRect:
+        x: 0
+        y: 0
+        width: 133
+        height: 111
+      spriteId: db4d371af238daa4e9a300c34016a41e
+    - name: OnlyBoss_Frame_5
+      frameIndex: 5
+      cellRect:
+        x: 9
+        y: 0
+        width: 112
+        height: 111
+      spriteId: 3bd638c8bb86ad646a1394225010bcef
+    - name: OnlyBoss_Frame_6
+      frameIndex: 6
+      cellRect:
+        x: 0
+        y: 0
+        width: 112
+        height: 111
+      spriteId: 33b7e034d0d57bd43bddac215fed8b96
+    - name: OnlyBoss_Frame_7
+      frameIndex: 7
+      cellRect:
+        x: 1
+        y: 0
+        width: 137
+        height: 110
+      spriteId: d3591c341bc13f14b98b002f4500c356
+    - name: OnlyBoss_Frame_8
+      frameIndex: 8
+      cellRect:
+        x: 4
+        y: 0
+        width: 134
+        height: 110
+      spriteId: 4bdcb72f34280d945bc83d5842ed32ed
+    - name: OnlyBoss_Frame_9
+      frameIndex: 9
+      cellRect:
+        x: 5
+        y: 0
+        width: 133
+        height: 110
+      spriteId: d73c73d9b2185a74db316dcfc77bfc5d
+    - name: OnlyBoss_Frame_10
+      frameIndex: 10
+      cellRect:
+        x: 17
+        y: 0
+        width: 131
+        height: 110
+      spriteId: fc4b9562980dc784093814c9a5fbd1d1
+    - name: OnlyBoss_Frame_11
+      frameIndex: 11
+      cellRect:
+        x: 17
+        y: 0
+        width: 131
+        height: 110
+      spriteId: 984fb409af5d10d41a66f7b1654c030a
+    - name: OnlyBoss_Frame_12
+      frameIndex: 12
+      cellRect:
+        x: 17
+        y: 0
+        width: 131
+        height: 110
+      spriteId: 16a3c5033b8e2524da1a49bfef588c7a
+    - name: OnlyBoss_Frame_13
+      frameIndex: 13
+      cellRect:
+        x: 17
+        y: 0
+        width: 131
+        height: 110
+      spriteId: 57f955a2e3316124d8f83d9596ca7d3e
+    - name: OnlyBoss_Frame_14
+      frameIndex: 14
+      cellRect:
+        x: 17
+        y: 0
+        width: 131
+        height: 110
+      spriteId: 6718c3d4376a09b41bb75dee3fa2a974
+    - name: OnlyBoss_Frame_15
+      frameIndex: 15
+      cellRect:
+        x: 17
+        y: 0
+        width: 131
+        height: 110
+      spriteId: c32fc2250f0a5b84488fb75129ed0a2c
+    - name: OnlyBoss_Frame_16
+      frameIndex: 16
+      cellRect:
+        x: 17
+        y: 0
+        width: 131
+        height: 110
+      spriteId: c0a4ef42d1f239046a34735a82231131
+    - name: OnlyBoss_Frame_17
+      frameIndex: 17
+      cellRect:
+        x: 17
+        y: 0
+        width: 131
+        height: 110
+      spriteId: a5b544995b3f0a546afb55df59084832
+    - name: OnlyBoss_Frame_18
+      frameIndex: 18
+      cellRect:
+        x: 17
+        y: 0
+        width: 131
+        height: 110
+      spriteId: 89cec2bf5ff6a2a48bbbf74a3ac4f4f2
+    - name: OnlyBoss_Frame_19
+      frameIndex: 19
+      cellRect:
+        x: 17
+        y: 0
+        width: 131
+        height: 110
+      spriteId: 5be34a0f4e61fb347a23c65060e6e88c
+    - name: OnlyBoss_Frame_20
+      frameIndex: 20
+      cellRect:
+        x: 17
+        y: 0
+        width: 131
+        height: 110
+      spriteId: f21f47279242bef4c9afbd34db17bac6
+    - name: OnlyBoss_Frame_21
+      frameIndex: 21
+      cellRect:
+        x: 17
+        y: 0
+        width: 131
+        height: 110
+      spriteId: 32fe42d909a81c64bbef1dfbf60ef75a
+    - name: OnlyBoss_Frame_22
+      frameIndex: 22
+      cellRect:
+        x: 17
+        y: 0
+        width: 131
+        height: 110
+      spriteId: 35f71138a5950da4186556fedcd0bab2
+    - name: OnlyBoss_Frame_23
+      frameIndex: 23
+      cellRect:
+        x: 17
+        y: 0
+        width: 131
+        height: 110
+      spriteId: e69e9f9716b55b14c9c9a79643db5a97
+    - name: OnlyBoss_Frame_24
+      frameIndex: 24
+      cellRect:
+        x: 17
+        y: 0
+        width: 131
+        height: 110
+      spriteId: 96fce98cdf4473340929017181dafb52
+    - name: OnlyBoss_Frame_25
+      frameIndex: 25
+      cellRect:
+        x: 17
+        y: 0
+        width: 131
+        height: 110
+      spriteId: d57699b1a7fcfc247bdd7ba4effed7ee
+    - name: OnlyBoss_Frame_26
+      frameIndex: 26
+      cellRect:
+        x: 17
+        y: 0
+        width: 131
+        height: 110
+      spriteId: c3425a771260e524495236892acb326e
+    - name: OnlyBoss_Frame_27
+      frameIndex: 27
+      cellRect:
+        x: 17
+        y: 0
+        width: 131
+        height: 110
+      spriteId: ea334c7f91a93194ab9c84e6ec89ee38
+    - name: OnlyBoss_Frame_28
+      frameIndex: 28
+      cellRect:
+        x: 17
+        y: 0
+        width: 131
+        height: 110
+      spriteId: cfd95aa7754f67d4287b4a58c65c9857
+    - name: OnlyBoss_Frame_29
+      frameIndex: 29
+      cellRect:
+        x: 17
+        y: 0
+        width: 131
+        height: 110
+      spriteId: b215d670a4848914e8cbd435250f4936
+    - name: OnlyBoss_Frame_30
+      frameIndex: 30
+      cellRect:
+        x: 17
+        y: 0
+        width: 131
+        height: 110
+      spriteId: 8a4518bc22c269c4cb76efcbec684b8f
+    - name: OnlyBoss_Frame_31
+      frameIndex: 31
+      cellRect:
+        x: 17
+        y: 0
+        width: 131
+        height: 110
+      spriteId: 7aa92624f61158d45a24ad2ee0625926
+    - name: OnlyBoss_Frame_32
+      frameIndex: 32
+      cellRect:
+        x: 17
+        y: 0
+        width: 131
+        height: 110
+      spriteId: 56f86273633a57044934e07c12d12e92
+    - name: OnlyBoss_Frame_33
+      frameIndex: 33
+      cellRect:
+        x: 17
+        y: 0
+        width: 131
+        height: 110
+      spriteId: a819faa3d8b4b3d408b405d216853ebc
+    - name: OnlyBoss_Frame_34
+      frameIndex: 34
+      cellRect:
+        x: 17
+        y: 0
+        width: 131
+        height: 110
+      spriteId: 63c574bc4bc22ca47b38ec4f6938294f
+    - name: OnlyBoss_Frame_35
+      frameIndex: 35
+      cellRect:
+        x: 17
+        y: 0
+        width: 131
+        height: 110
+      spriteId: 683086797c63fd647bd5e32b71289baf
+    - name: OnlyBoss_Frame_36
+      frameIndex: 36
+      cellRect:
+        x: 17
+        y: 0
+        width: 131
+        height: 110
+      spriteId: 6fedc014840806b4f96d81cae0ad2d61
+    - name: OnlyBoss_Frame_37
+      frameIndex: 37
+      cellRect:
+        x: 17
+        y: 0
+        width: 131
+        height: 110
+      spriteId: 4e066dbd65eb2ef4d9a0f473f5a03aea
+    - name: OnlyBoss_Frame_38
+      frameIndex: 38
+      cellRect:
+        x: 17
+        y: 0
+        width: 131
+        height: 110
+      spriteId: fc2cb0b254be2764cab47705cfdd2b54
+    - name: OnlyBoss_Frame_39
+      frameIndex: 39
+      cellRect:
+        x: 0
+        y: 0
+        width: 158
+        height: 111
+      spriteId: 7489f8de559fbc1468a480b6bfd6d2e7
+    - name: OnlyBoss_Frame_40
+      frameIndex: 40
+      cellRect:
+        x: 0
+        y: 0
+        width: 158
+        height: 131
+      spriteId: 026f0a9f4e882744283a7fd0856d2571
+    - name: OnlyBoss_Frame_41
+      frameIndex: 41
+      cellRect:
+        x: 0
+        y: 0
+        width: 158
+        height: 111
+      spriteId: 39dc98cb96e31bd4986ff0797cfcbbdb
+    - name: OnlyBoss_Frame_42
+      frameIndex: 42
+      cellRect:
+        x: 0
+        y: 0
+        width: 158
+        height: 111
+      spriteId: 997ffc0e9213ecb4086417fbbdee4334
+    - name: OnlyBoss_Frame_43
+      frameIndex: 43
+      cellRect:
+        x: 0
+        y: 0
+        width: 158
+        height: 111
+      spriteId: 9cf63859090129940a371f92a2522429
+    - name: OnlyBoss_Frame_44
+      frameIndex: 44
+      cellRect:
+        x: 0
+        y: 0
+        width: 158
+        height: 111
+      spriteId: c5848f1221f93f440b555e1498440930
+    - name: OnlyBoss_Frame_45
+      frameIndex: 45
+      cellRect:
+        x: 5
+        y: 0
+        width: 153
+        height: 111
+      spriteId: e43061b6018b71d41b2646189bcfa8fd
+    - name: OnlyBoss_Frame_46
+      frameIndex: 46
+      cellRect:
+        x: 5
+        y: 0
+        width: 153
+        height: 111
+      spriteId: 142d62d39482c2c4589529ab5091f769
+    - name: OnlyBoss_Frame_47
+      frameIndex: 47
+      cellRect:
+        x: 5
+        y: 0
+        width: 153
+        height: 110
+      spriteId: d3e0bb924bc90a04e8bfb57f4e1fe816
+    - name: OnlyBoss_Frame_48
+      frameIndex: 48
+      cellRect:
+        x: 5
+        y: 0
+        width: 153
+        height: 129
+      spriteId: 371bb323150b1e642830018deb0f79f4
+    - name: OnlyBoss_Frame_49
+      frameIndex: 49
+      cellRect:
+        x: 5
+        y: 0
+        width: 153
+        height: 138
+      spriteId: 296341e3e3a890a4698470da9cd0dc93
+    - name: OnlyBoss_Frame_50
+      frameIndex: 50
+      cellRect:
+        x: 5
+        y: 0
+        width: 153
+        height: 147
+      spriteId: 77c483803c017f946ae17faea0b1593b
+    linkedCells: []
+    parentIndex: -1
+  platformSettings:
+  - name: DefaultTexturePlatform
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Standalone
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Server
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: WebGL
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  secondarySpriteTextures: []
+  spritePackingTag: 
+  canvasSize: {x: 158, y: 160}
