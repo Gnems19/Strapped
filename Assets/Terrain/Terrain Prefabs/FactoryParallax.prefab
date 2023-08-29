@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1806346207581314662}
   - component: {fileID: 4003589639800082954}
   - component: {fileID: 7924294416691148390}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: FactoryBackground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -71,8 +71,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 509154339
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 6b376ab510f7e8a42ab731e70b036f86, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -110,7 +110,7 @@ GameObject:
   - component: {fileID: 4067632085116650114}
   - component: {fileID: 1854768928402250765}
   - component: {fileID: 8819773722704409187}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: FactoryEquipmentBack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -170,8 +170,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 509154339
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f5e659a75c3cf82409df7371e5a7ed14, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -207,7 +207,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7357094569133063840}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: FactoryParallax
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -233,7 +233,7 @@ Transform:
   - {fileID: 4067632085116650114}
   - {fileID: 2275014094675496696}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4378966572505240315
 GameObject:
@@ -246,7 +246,7 @@ GameObject:
   - component: {fileID: 6798268127120624237}
   - component: {fileID: 7471801699742513251}
   - component: {fileID: 2652298455246237238}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: FactoryLine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -306,8 +306,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 509154339
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 535a134dd12204c42b6b14d3ce0f96bb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -345,7 +345,7 @@ GameObject:
   - component: {fileID: 2275014094675496696}
   - component: {fileID: 3096932593404887327}
   - component: {fileID: 6276605025097217591}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: FactoryEquipmentFront
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -405,8 +405,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 509154339
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 4c4082c489d90fb47990b698f90ff400, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -444,7 +444,7 @@ GameObject:
   - component: {fileID: 1484060813655085319}
   - component: {fileID: 3310575682583207392}
   - component: {fileID: 5956788813626629151}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: FactoryLedge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -504,8 +504,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 509154339
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: aa10bf57b0cb3e94d854c9f198fc2290, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -543,7 +543,7 @@ GameObject:
   - component: {fileID: 1653010159454303773}
   - component: {fileID: 1625823507817208026}
   - component: {fileID: 2494899541252638499}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: FactoryRobots
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -603,8 +603,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 509154339
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: fb7d5675796b0c543a6702bb8b12a171, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

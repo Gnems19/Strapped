@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6180719540255712468}
   - component: {fileID: 1231750282020967096}
   - component: {fileID: 7941687987965385634}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: StartBed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -72,8 +72,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1487270983
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 7237829671123825205, guid: bc430ea0181aa234b903e889b9bc5baa, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

@@ -87,6 +87,11 @@ public class SoundManager : MonoBehaviour
         PlaySFX(playerDeathByExplosionSound);
     }
     
+    public void ExplisionSound()
+    {
+        PlaySFX(playerDeathByExplosionSound);
+    }
+    
     // set the volume of the music
     public void SetMusicVolume(float volume)
     {

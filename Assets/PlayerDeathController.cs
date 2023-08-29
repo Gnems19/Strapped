@@ -17,6 +17,8 @@ public class PlayerDeathController : MonoBehaviour, IPlayerDeathController
     {
         logger.Log("DeathManager Start called");
         IsDead = false;
+        // ignore background collisions
+        Physics2D.IgnoreLayerCollision(0,1);
     }
     
     void FixedUpdate()
@@ -37,6 +39,13 @@ public class PlayerDeathController : MonoBehaviour, IPlayerDeathController
         logger.Log("DeathManager OnTriggerEnter2D called");
         //if the other is enemy EnemySight play death animation and wait for it to finish and restart the game
         if (other.gameObject.CompareTag("EnemySight"))
+        {
+            IsDead = true;
+            SoundManager.Instance.PlayPlayerDeathByExplosionSound();
+            Invoke("RestartGame", 1.5f);
+        }
+
+        if (other.gameObject.CompareTag("HomingMissile"))
         {
             IsDead = true;
             SoundManager.Instance.PlayPlayerDeathByExplosionSound();

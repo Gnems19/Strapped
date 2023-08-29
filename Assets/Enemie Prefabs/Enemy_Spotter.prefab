@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4351908412455059951}
   - component: {fileID: 7103957589277264554}
   - component: {fileID: 4619763046519463088}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Enemy_Spotter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -74,8 +74,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1295289671
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 2666235481758905264, guid: 6b91c3ae93b12aa4088dc2eb7abda5fc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

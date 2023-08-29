@@ -7,6 +7,10 @@ TagManager:
   - Door
   - EnemySight
   - Ground
+  - HomingMissile
+  - Background
+  - Enemie
+  - Boss
   layers:
   - Default
   - TransparentFX
@@ -17,14 +21,14 @@ TagManager:
   - 
   - Player
   - 
-  - 
+  - Projectiles
   - EnemyHitbox
+  - Enemie
   - 
+  - Background
+  - Interactable Objects
   - 
-  - 
-  - 
-  - 
-  - 
+  - Parallax
   - 
   - 
   - 
@@ -44,6 +48,24 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: background
+  - name: Parallax
+    uniqueID: 509154339
+    locked: 0
+  - name: Background
     uniqueID: 458350821
+    locked: 0
+  - name: Interactable Objects
+    uniqueID: 2807696313
+    locked: 0
+  - name: Ground
+    uniqueID: 4072819705
+    locked: 0
+  - name: Enemie
+    uniqueID: 1295289671
+    locked: 0
+  - name: Player
+    uniqueID: 1772286419
+    locked: 0
+  - name: Projectiles
+    uniqueID: 2549432487
     locked: 0
