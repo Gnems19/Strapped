@@ -5,25 +5,22 @@ using UnityEngine;
 public class BossScript : MonoBehaviour
 {
     // Start is called before the first frame update
-    public GameObject missileLauncherRockets;
-    public GameObject player;
+    [SerializeField] GameObject missileLauncherRockets;
     [SerializeField] Animator _animator;
-    private Rigidbody2D _rigidbody2D;
+    [SerializeField] private GameObject player;
+    private float time_passed = 0f;
+    private bool _launching = false;
     private static readonly int Moving = Animator.StringToHash("Moving");
-    private static readonly int Moveing = Animator.StringToHash("Moveing");
-
-    private void Start()
-    {
-        player = GameObject.FindGameObjectWithTag("Player"); // change this 
-        _rigidbody2D = GetComponent<Rigidbody2D>();
-    }
+    private static readonly int TurnedLeft = Animator.StringToHash("TurnedLeft");
+    private static readonly int MovingRight = Animator.StringToHash("MovingRight");
+    private static readonly int LaunchingMissiles = Animator.StringToHash("LaunchingMissiles");
 
     // Update is called once per frame
     private void Update()
     {
         // if player is far away follow but dont change y position
         
-        if (Vector2.Distance(transform.position, player.transform.position) > 7)
+        if (Vector2.Distance(transform.position, player.transform.position) > 3 && !_launching)
         {
             var bossPosition = transform.position;
             var playerPosition = player.transform.position;
@@ -31,33 +28,42 @@ public class BossScript : MonoBehaviour
             // only save x position
             bossPosition = new Vector3(nextPos.x, bossPosition.y, bossPosition.z);
             transform.position = bossPosition;
+            _animator.SetBool(Moving, true);
             if ((bossPosition.x - playerPosition.x) < 0)
             {
-                _animator.SetBool("MovingRight", true);
-                _animator.SetBool("TurnedLeft", false);
-
+                // start by turning right and if the animation is finished then set moving right to true
+                if (time_passed > 2)
+                {
+                    _launching = true;
+                    _animator.SetBool(LaunchingMissiles, true);
+                }
+                else
+                {
+                    _animator.SetBool(TurnedLeft, false);
+                    _animator.SetBool(MovingRight, true);
+                     time_passed += Time.deltaTime;
+                }
+                
             }
             else if ((bossPosition.x - playerPosition.x) > 0)
             {
-                _animator.SetBool("MovingRight", false);
-                _animator.SetBool("TurnedLeft", true);
+               
+                if(time_passed > 0) time_passed -= Time.deltaTime;
+                _animator.SetBool(MovingRight, false);
+                _animator.SetBool(TurnedLeft, true);
+                
             }
-            
-            _animator.SetBool(Moving, true);
         }
         else
         {
             _animator.SetBool(Moving, false);
-
-            _animator.SetBool("LaunchingMissiles", true); // delegate animation logic in the future
         }
-
-
     }
     
-    public void LaunchMissile()
+    public void LaunchMissile() // should be called from animation event
     {
         missileLauncherRockets.SetActive(true);
         SoundManager.Instance.ExplisionSound();
+        _launching = false;
     }
 }

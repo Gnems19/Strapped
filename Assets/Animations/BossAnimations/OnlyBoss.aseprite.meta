@@ -241,7 +241,7 @@ ScriptedImporter:
     uvTransform: {x: 421, y: 869}
   - name: OnlyBoss_Frame_6
     originalName: 
-    pivot: {x: 0.70535713, y: 0}
+    pivot: {x: 0.54464287, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -261,7 +261,7 @@ ScriptedImporter:
     uvTransform: {x: 541, y: 869}
   - name: OnlyBoss_Frame_7
     originalName: 
-    pivot: {x: 0.56934303, y: 0}
+    pivot: {x: 0.49635038, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -281,7 +281,7 @@ ScriptedImporter:
     uvTransform: {x: 653, y: 278}
   - name: OnlyBoss_Frame_8
     originalName: 
-    pivot: {x: 0.5597015, y: 0}
+    pivot: {x: 0.4850746, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -301,7 +301,7 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 397}
   - name: OnlyBoss_Frame_9
     originalName: 
-    pivot: {x: 0.556391, y: 0}
+    pivot: {x: 0.48120302, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -1199,7 +1199,7 @@ ScriptedImporter:
     - name: OnlyBoss_Frame_6
       frameIndex: 6
       cellRect:
-        x: 0
+        x: 18
         y: 0
         width: 112
         height: 111
@@ -1207,7 +1207,7 @@ ScriptedImporter:
     - name: OnlyBoss_Frame_7
       frameIndex: 7
       cellRect:
-        x: 1
+        x: 11
         y: 0
         width: 137
         height: 110
@@ -1215,7 +1215,7 @@ ScriptedImporter:
     - name: OnlyBoss_Frame_8
       frameIndex: 8
       cellRect:
-        x: 4
+        x: 14
         y: 0
         width: 134
         height: 110
@@ -1223,7 +1223,7 @@ ScriptedImporter:
     - name: OnlyBoss_Frame_9
       frameIndex: 9
       cellRect:
-        x: 5
+        x: 15
         y: 0
         width: 133
         height: 110
