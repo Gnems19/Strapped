@@ -12,6 +12,7 @@ public class HomingMissile : MonoBehaviour
     private Transform _target;
     void Start()
     {
+        
         _rigidbody2D = GetComponent<Rigidbody2D>();
         _target = GameObject.FindGameObjectWithTag("Player").transform;
     }
@@ -30,13 +31,19 @@ public class HomingMissile : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            Destroy(gameObject);
+            Explode();
         } else if (other.gameObject.CompareTag("Ground"))
         {
-            Destroy(gameObject);
-            SoundManager.Instance.ExplisionSound();
-            
+            Explode();
         }
+    }
+    
+    private void Explode()
+    {
+        // play missile explosion animation and destroy the missile
+        gameObject.GetComponent<Animation>().Play();
+        SoundManager.Instance.ExplisionSound();
+        Destroy(gameObject);
     }
   
 }
