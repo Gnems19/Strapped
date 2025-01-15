@@ -1,15 +1,16 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class BedScript : MonoBehaviour
+namespace InteractableItemsScripts
 {
-
-    public GameObject player;
-    
-    public void ShowPlayer()
+    public class BedScript : MonoBehaviour
     {
-        player.SetActive(true);
-    }
+
+        public GameObject player;
+    
+        public void ShowPlayer()
+        {
+            player.SetActive(true);
+        }
    
+    }
 }

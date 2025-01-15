@@ -2,6 +2,6 @@
 {
     public interface IPowerOutlet
     {
-        
+        public bool PluggedIn { get; }
     }
 }

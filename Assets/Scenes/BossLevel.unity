@@ -173,6 +173,8 @@ GameObject:
   - component: {fileID: 145165443}
   - component: {fileID: 145165442}
   - component: {fileID: 145165441}
+  - component: {fileID: 145165446}
+  - component: {fileID: 145165445}
   m_Layer: 9
   m_Name: HomingMissileLeft1
   m_TagString: HomingMissile
@@ -188,7 +190,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 145165439}
   m_LocalRotation: {x: 0, y: 0, z: 0.17364816, w: 0.9848078}
-  m_LocalPosition: {x: 40.24, y: 1.47, z: 0}
+  m_LocalPosition: {x: -0.42, y: 1.31, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -347,6 +349,43 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &145165445
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 145165439}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!111 &145165446
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 145165439}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: -8177876452752988506, guid: 7971d7684962d61418654ea39cb3b548, type: 3}
+  m_Animations:
+  - {fileID: -8177876452752988506, guid: 7971d7684962d61418654ea39cb3b548, type: 3}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &288692314
 GameObject:
   m_ObjectHideFlags: 0
@@ -359,9 +398,8 @@ GameObject:
   - component: {fileID: 288692316}
   - component: {fileID: 288692315}
   - component: {fileID: 288692320}
-  - component: {fileID: 288692319}
-  - component: {fileID: 288692321}
-  - component: {fileID: 288692322}
+  - component: {fileID: 288692323}
+  - component: {fileID: 288692324}
   m_Layer: 11
   m_Name: TheBoss
   m_TagString: Boss
@@ -437,7 +475,7 @@ SpriteRenderer:
   m_SortingLayerID: 1295289671
   m_SortingLayer: 5
   m_SortingOrder: -1
-  m_Sprite: {fileID: -3159249537046328599, guid: b983bbd1ac5c520418625fbb3ffd358b, type: 3}
+  m_Sprite: {fileID: -2434640349766783566, guid: b983bbd1ac5c520418625fbb3ffd358b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -456,58 +494,15 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 288692314}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 38.78, y: -5, z: 0}
+  m_LocalPosition: {x: 38.74, y: -5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 684800560}
+  - {fileID: 1988505510}
   m_Father: {fileID: 386649221}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &288692319
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 288692314}
-  m_Enabled: 0
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -1.53125}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.47328246, y: 0}
-    oldSize: {x: 8.1875, y: 6.875}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 9.875, y: 6.9375}
-  m_EdgeRadius: 0
 --- !u!95 &288692320
 Animator:
   serializedVersion: 5
@@ -529,99 +524,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!60 &288692321
-PolygonCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 288692314}
-  m_Enabled: 0
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.47328246, y: 0}
-    oldSize: {x: 8.1875, y: 6.875}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 3.6875, y: -4.4375}
-      - {x: 4.635208, y: -4.0686283}
-      - {x: 4.6440964, y: -3.6984258}
-      - {x: 4.418419, y: -2.6875}
-      - {x: 4.2496567, y: -2.037465}
-      - {x: 4.0830994, y: -0.72922444}
-      - {x: 3.9623642, y: 0.35830998}
-      - {x: 3.4985123, y: 1.1164951}
-      - {x: 2.8125, y: 1.75}
-      - {x: 2.218666, y: 2.1748953}
-      - {x: 1.789505, y: 2.389474}
-      - {x: -0.50408936, y: 2.4977837}
-      - {x: -1.9810944, y: 2.2290506}
-      - {x: -4.098755, y: 0.32852483}
-      - {x: -5.316162, y: -2.0063677}
-      - {x: -5.2210693, y: -3.3332999}
-      - {x: -5.004677, y: -4.3366613}
-      - {x: -4.8151855, y: -4.571219}
-      - {x: -4.489914, y: -4.545694}
-      - {x: -4.490593, y: -4.940179}
-      - {x: -4.135765, y: -4.7930145}
-      - {x: -3.7937012, y: -5.059139}
-      - {x: -3.3528366, y: -5.0786247}
-      - {x: -3, y: -5}
-      - {x: 3, y: -5}
-    - - {x: -1.1645813, y: -1.7128135}
-      - {x: -1.5, y: -1.375}
-      - {x: -1.5, y: -1.3125}
-      - {x: -1.125, y: -0.9375}
-      - {x: -1, y: -1.0625}
-      - {x: -0.9375, y: -1.0625}
-      - {x: -0.6875, y: -0.875}
-      - {x: -0.29906464, y: -0.87104225}
-      - {x: -0.6875, y: -0.9375}
-      - {x: -0.6875, y: -1.0625}
-      - {x: -0.5625, y: -1.1875}
-      - {x: -0.9375, y: -1.5625}
-      - {x: -0.9375, y: -1.8125}
-      - {x: 0.32511902, y: -2.2262542}
-      - {x: -0.875, y: -2}
-      - {x: -0.8125, y: -2.0625}
-      - {x: -0.75, y: -2.25}
-      - {x: -0.875, y: -2.25}
-      - {x: -0.49843597, y: -2.4003136}
-      - {x: -1.5, y: -2.3125}
-      - {x: -1.5625, y: -2.375}
-      - {x: -1.076767, y: -1.9652035}
-  m_UseDelaunayMesh: 0
---- !u!114 &288692322
+--- !u!114 &288692323
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -630,12 +533,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 288692314}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 375bad7e7d9094e4da5f4e5e282c81ba, type: 3}
+  m_Script: {fileID: 11500000, guid: 3fe21602cebfd8447859b3348dcfd624, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  missileLauncherRockets: {fileID: 684800559}
-  _animator: {fileID: 288692320}
   player: {fileID: 1057586458}
+--- !u!114 &288692324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 288692314}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c4053a32d9040e88712ed725f194418, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 288692320}
 --- !u!1 &386649220
 GameObject:
   m_ObjectHideFlags: 0
@@ -664,10 +578,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1988505510}
   - {fileID: 1300480897}
   - {fileID: 288692317}
-  - {fileID: 684800560}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -905,8 +817,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 684800559}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.86, y: 0.55, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.46, y: 5.53, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -922,7 +834,7 @@ Transform:
   - {fileID: 719996853}
   - {fileID: 1794274136}
   - {fileID: 1225219151}
-  m_Father: {fileID: 386649221}
+  m_Father: {fileID: 288692317}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &692617506
@@ -4061,6 +3973,8 @@ GameObject:
   - component: {fileID: 719996855}
   - component: {fileID: 719996854}
   - component: {fileID: 719996857}
+  - component: {fileID: 719996859}
+  - component: {fileID: 719996858}
   m_Layer: 9
   m_Name: HomingMissileRight5
   m_TagString: HomingMissile
@@ -4075,14 +3989,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 719996852}
-  m_LocalRotation: {x: 0.004297163, y: 0.0075952085, z: -0.8703225, w: 0.49240485}
-  m_LocalPosition: {x: 40.92, y: -0.95, z: -2}
+  m_LocalRotation: {x: 0.005709562, y: 0.006599529, z: -0.9502872, w: 0.3112525}
+  m_LocalPosition: {x: 0.25266266, y: -1.2077737, z: -2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 684800560}
   m_RootOrder: -1
-  m_LocalEulerAnglesHint: {x: 1, y: 0, z: -121}
+  m_LocalEulerAnglesHint: {x: 0.922, y: -0.386, z: -143.732}
 --- !u!60 &719996854
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -4235,6 +4149,43 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _speed: 5
   _rotateSpeed: 200
+--- !u!95 &719996858
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 719996852}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!111 &719996859
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 719996852}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: -8177876452752988506, guid: 7971d7684962d61418654ea39cb3b548, type: 3}
+  m_Animations:
+  - {fileID: 0}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &741458574
 GameObject:
   m_ObjectHideFlags: 0
@@ -4248,6 +4199,8 @@ GameObject:
   - component: {fileID: 741458578}
   - component: {fileID: 741458577}
   - component: {fileID: 741458576}
+  - component: {fileID: 741458581}
+  - component: {fileID: 741458580}
   m_Layer: 9
   m_Name: HomingMissileLeft3
   m_TagString: HomingMissile
@@ -4263,7 +4216,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 741458574}
   m_LocalRotation: {x: -0, y: -0, z: 0.60876137, w: 0.7933534}
-  m_LocalPosition: {x: 39.460003, y: 0.6500001, z: -2}
+  m_LocalPosition: {x: -0.98999786, y: 0.5, z: -2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4422,6 +4375,43 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &741458580
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 741458574}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!111 &741458581
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 741458574}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: -8177876452752988506, guid: 7971d7684962d61418654ea39cb3b548, type: 3}
+  m_Animations:
+  - {fileID: 0}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!20 &778228007 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 6322553146321516246, guid: e7482f4d9ff7433438ca51d2614c617e, type: 3}
@@ -4440,6 +4430,8 @@ GameObject:
   - component: {fileID: 804240584}
   - component: {fileID: 804240583}
   - component: {fileID: 804240582}
+  - component: {fileID: 804240587}
+  - component: {fileID: 804240586}
   m_Layer: 9
   m_Name: HomingMissileLeft6
   m_TagString: HomingMissile
@@ -4455,7 +4447,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 804240580}
   m_LocalRotation: {x: -0, y: -0, z: 0.86602545, w: 0.49999994}
-  m_LocalPosition: {x: 39.21, y: -1.25, z: -2}
+  m_LocalPosition: {x: -0.98999786, y: -1.3800001, z: -2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4614,6 +4606,43 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &804240586
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 804240580}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!111 &804240587
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 804240580}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: -8177876452752988506, guid: 7971d7684962d61418654ea39cb3b548, type: 3}
+  m_Animations:
+  - {fileID: 0}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!4 &879286292 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 951867247724166249, guid: 3d0629f5e24976d41a19feaccc38e31f, type: 3}
@@ -4714,6 +4743,8 @@ GameObject:
   - component: {fileID: 1060639167}
   - component: {fileID: 1060639166}
   - component: {fileID: 1060639165}
+  - component: {fileID: 1060639170}
+  - component: {fileID: 1060639169}
   m_Layer: 9
   m_Name: HomingMissileLeft5
   m_TagString: HomingMissile
@@ -4729,7 +4760,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1060639163}
   m_LocalRotation: {x: -0, y: -0, z: 0.76604444, w: 0.64278764}
-  m_LocalPosition: {x: 39.08, y: -0.63, z: -2}
+  m_LocalPosition: {x: -0.98999786, y: -0.7600001, z: -2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4888,6 +4919,43 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1060639169
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1060639163}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!111 &1060639170
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1060639163}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: -8177876452752988506, guid: 7971d7684962d61418654ea39cb3b548, type: 3}
+  m_Animations:
+  - {fileID: 0}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &1069409995
 GameObject:
   m_ObjectHideFlags: 0
@@ -5179,6 +5247,8 @@ GameObject:
   - component: {fileID: 1225219154}
   - component: {fileID: 1225219153}
   - component: {fileID: 1225219152}
+  - component: {fileID: 1225219157}
+  - component: {fileID: 1225219156}
   m_Layer: 9
   m_Name: HomingMissileRight6
   m_TagString: HomingMissile
@@ -5193,14 +5263,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1225219150}
-  m_LocalRotation: {x: -0, y: -0, z: 0.8870109, w: -0.46174863}
-  m_LocalPosition: {x: 40.63, y: -1.4, z: -2}
+  m_LocalRotation: {x: -0, y: -0, z: 0.9606075, w: -0.27790868}
+  m_LocalPosition: {x: -0.02, y: -1.47, z: -2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 684800560}
   m_RootOrder: -1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 235}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 212.271}
 --- !u!114 &1225219152
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5353,6 +5423,43 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1225219156
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1225219150}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9ea2bdf3a9340484b929ee5f44c4675f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!111 &1225219157
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1225219150}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: -8177876452752988506, guid: 7971d7684962d61418654ea39cb3b548, type: 3}
+  m_Animations:
+  - {fileID: 0}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &1246273274
 GameObject:
   m_ObjectHideFlags: 0
@@ -5564,6 +5671,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1300480897}
   - component: {fileID: 1300480898}
+  - component: {fileID: 1300480899}
   m_Layer: 0
   m_Name: BossArea
   m_TagString: Untagged
@@ -5631,6 +5739,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 41, y: 9}
   m_EdgeRadius: 0
+--- !u!114 &1300480899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1300480896}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 195210cc51db9d74baf449208e486f9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1330688556
 GameObject:
   m_ObjectHideFlags: 0
@@ -14569,6 +14689,8 @@ GameObject:
   - component: {fileID: 1416698690}
   - component: {fileID: 1416698689}
   - component: {fileID: 1416698688}
+  - component: {fileID: 1416698693}
+  - component: {fileID: 1416698692}
   m_Layer: 9
   m_Name: HomingMissileLeft4
   m_TagString: HomingMissile
@@ -14584,7 +14706,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1416698686}
   m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 39.279995, y: -0.00999999, z: -2}
+  m_LocalPosition: {x: -0.98999786, y: -0.16000009, z: -2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -14743,6 +14865,43 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1416698692
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1416698686}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!111 &1416698693
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1416698686}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: -8177876452752988506, guid: 7971d7684962d61418654ea39cb3b548, type: 3}
+  m_Animations:
+  - {fileID: 0}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1001 &1531102060
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14868,6 +15027,8 @@ GameObject:
   - component: {fileID: 1579066653}
   - component: {fileID: 1579066652}
   - component: {fileID: 1579066651}
+  - component: {fileID: 1579066656}
+  - component: {fileID: 1579066655}
   m_Layer: 9
   m_Name: HomingMissileRight2
   m_TagString: HomingMissile
@@ -14882,14 +15043,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1579066649}
-  m_LocalRotation: {x: -0, y: -0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 41.4, y: 0.52, z: -2}
+  m_LocalRotation: {x: -0, y: -0, z: -0.8325788, w: 0.5539066}
+  m_LocalPosition: {x: 0.8206253, y: 0.14806414, z: -2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 684800560}
   m_RootOrder: -1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -112.729}
 --- !u!114 &1579066651
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15042,6 +15203,43 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1579066655
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1579066649}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!111 &1579066656
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1579066649}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: -8177876452752988506, guid: 7971d7684962d61418654ea39cb3b548, type: 3}
+  m_Animations:
+  - {fileID: 0}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1001 &1598066103
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15056,7 +15254,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 951867247724166249, guid: 3d0629f5e24976d41a19feaccc38e31f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.98
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 951867247724166249, guid: 3d0629f5e24976d41a19feaccc38e31f, type: 3}
       propertyPath: m_LocalPosition.y
@@ -15250,6 +15448,8 @@ GameObject:
   - component: {fileID: 1794274139}
   - component: {fileID: 1794274138}
   - component: {fileID: 1794274137}
+  - component: {fileID: 1794274142}
+  - component: {fileID: 1794274141}
   m_Layer: 9
   m_Name: HomingMissileRight4
   m_TagString: HomingMissile
@@ -15264,14 +15464,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1794274135}
-  m_LocalRotation: {x: -0, y: -0, z: -0.8241262, w: 0.56640637}
-  m_LocalPosition: {x: 41.17, y: -0.46, z: -2}
+  m_LocalRotation: {x: -0, y: -0, z: -0.9195786, w: 0.3929061}
+  m_LocalPosition: {x: 0.44200134, y: -0.7558365, z: -2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 684800560}
   m_RootOrder: -1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -111}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -133.729}
 --- !u!114 &1794274137
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15424,6 +15624,43 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1794274141
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1794274135}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!111 &1794274142
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1794274135}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: -8177876452752988506, guid: 7971d7684962d61418654ea39cb3b548, type: 3}
+  m_Animations:
+  - {fileID: 0}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &1795211858
 GameObject:
   m_ObjectHideFlags: 0
@@ -15437,6 +15674,8 @@ GameObject:
   - component: {fileID: 1795211862}
   - component: {fileID: 1795211861}
   - component: {fileID: 1795211860}
+  - component: {fileID: 1795211865}
+  - component: {fileID: 1795211864}
   m_Layer: 9
   m_Name: HomingMissileLeft2
   m_TagString: HomingMissile
@@ -15452,7 +15691,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1795211858}
   m_LocalRotation: {x: 0, y: 0, z: 0.38268343, w: 0.92387956}
-  m_LocalPosition: {x: 39.680004, y: 1.1399999, z: -2}
+  m_LocalPosition: {x: -0.98999786, y: 0.9899998, z: -2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -15611,6 +15850,43 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1795211864
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1795211858}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!111 &1795211865
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1795211858}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: -8177876452752988506, guid: 7971d7684962d61418654ea39cb3b548, type: 3}
+  m_Animations:
+  - {fileID: 0}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &1885554091
 GameObject:
   m_ObjectHideFlags: 0
@@ -15692,6 +15968,8 @@ GameObject:
   - component: {fileID: 1899409865}
   - component: {fileID: 1899409864}
   - component: {fileID: 1899409863}
+  - component: {fileID: 1899409868}
+  - component: {fileID: 1899409867}
   m_Layer: 9
   m_Name: HomingMissileRight1
   m_TagString: HomingMissile
@@ -15706,14 +15984,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1899409861}
-  m_LocalRotation: {x: 0, y: 0, z: -0.5, w: 0.8660254}
-  m_LocalPosition: {x: 41.14, y: 1.09, z: -2}
+  m_LocalRotation: {x: -0, y: -0, z: -0.66084826, w: 0.7505195}
+  m_LocalPosition: {x: 1.01, y: 0.6, z: -2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 684800560}
   m_RootOrder: -1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -60}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -82.729}
 --- !u!114 &1899409863
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15866,6 +16144,43 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1899409867
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1899409861}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!111 &1899409868
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1899409861}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: -8177876452752988506, guid: 7971d7684962d61418654ea39cb3b548, type: 3}
+  m_Animations:
+  - {fileID: 0}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &1971190309
 GameObject:
   m_ObjectHideFlags: 0
@@ -15879,6 +16194,8 @@ GameObject:
   - component: {fileID: 1971190313}
   - component: {fileID: 1971190312}
   - component: {fileID: 1971190311}
+  - component: {fileID: 1971190316}
+  - component: {fileID: 1971190315}
   m_Layer: 9
   m_Name: HomingMissileRight3
   m_TagString: HomingMissile
@@ -15893,14 +16210,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1971190309}
-  m_LocalRotation: {x: -0, y: -0, z: -0.7660445, w: 0.64278764}
-  m_LocalPosition: {x: 41.3, y: 0.04, z: -2}
+  m_LocalRotation: {x: -0, y: -0, z: -0.87768656, w: 0.4792351}
+  m_LocalPosition: {x: 0.6351776, y: -0.29466534, z: -2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 684800560}
   m_RootOrder: -1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -100}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -122.729}
 --- !u!114 &1971190311
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16053,6 +16370,43 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1971190315
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1971190309}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!111 &1971190316
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1971190309}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: -8177876452752988506, guid: 7971d7684962d61418654ea39cb3b548, type: 3}
+  m_Animations:
+  - {fileID: 0}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &1988505508
 GameObject:
   m_ObjectHideFlags: 0
@@ -16063,6 +16417,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1988505510}
   - component: {fileID: 1988505509}
+  - component: {fileID: 1988505513}
+  - component: {fileID: 1988505512}
+  - component: {fileID: 1988505511}
+  - component: {fileID: 1988505514}
   m_Layer: 14
   m_Name: BossOutlet
   m_TagString: Untagged
@@ -16130,13 +16488,119 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1988505508}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 45.485, y: -5.006, z: 0.06157033}
+  m_LocalPosition: {x: 6.744995, y: -0.006000042, z: 0.06157033}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 386649221}
+  m_Father: {fileID: 288692317}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1988505511
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1988505508}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9398e5f5352981c42963b1954ae8ea0c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!60 &1988505512
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1988505508}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5425532, y: 0}
+    oldSize: {x: 2.9375, y: 1.4375}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 1.2652054, y: 1.4986342}
+      - {x: 0.9529724, y: 1.5047162}
+      - {x: 0.82956696, y: 1.358719}
+      - {x: 0.840065, y: 1.0625}
+      - {x: 0.6106949, y: 0.6568687}
+      - {x: 0.3319931, y: 0.4121219}
+      - {x: -0.64813995, y: 0.15720582}
+      - {x: -0.84038544, y: 0.30301166}
+      - {x: -1.40625, y: 0.31196904}
+      - {x: -1.59375, y: 0.1875}
+      - {x: -1.59375, y: 0}
+      - {x: 0.46875, y: 0}
+      - {x: 1.0300674, y: 0.3251028}
+      - {x: 1.3794479, y: 0.9783925}
+      - {x: 1.3938675, y: 1.4053338}
+  m_UseDelaunayMesh: 0
+--- !u!114 &1988505513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1988505508}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c2aa7d02a337474da706fc27c9ed349, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1057586458}
+--- !u!95 &1988505514
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1988505508}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5a35c16a8a6c8ea49ba1b2949361f434, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &2134838275
 PrefabInstance:
   m_ObjectHideFlags: 0
