@@ -8,6 +8,7 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  importerVersion: 2
   textureImporterSettings:
     alphaSource: 1
     mipMapMode: 0
@@ -77,6 +78,7 @@ ScriptedImporter:
     defaultPivotSpace: 0
     defaultPivotAlignment: 7
     customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
     spritePadding: 0
     generateModelPrefab: 1
     generateAnimationClips: 1
@@ -89,6 +91,7 @@ ScriptedImporter:
     defaultPivotSpace: 0
     defaultPivotAlignment: 7
     customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
     spritePadding: 0
     generateModelPrefab: 1
     generateAnimationClips: 1
@@ -242,54 +245,65 @@ ScriptedImporter:
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: -1938985469
+    uuid:
+      value0: 3965526479
+      value1: 0
+      value2: 0
+      value3: 0
+    guid: -329440817
     name: AchivementsBackground
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: AchivementsBackground_Frame_0
+    - name: Frame_0
       frameIndex: 0
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 320
         height: 180
       spriteId: dbe395d9dfe905943a298661268e9164
-    - name: AchivementsBackground_Frame_1
+    - name: Frame_1
       frameIndex: 1
+      additiveSortOrder: 0
       cellRect:
         x: 2
         y: 2
         width: 316
         height: 176
       spriteId: 38f2fe751365ada4f85eb09cffd1551f
-    - name: AchivementsBackground_Frame_2
+    - name: Frame_2
       frameIndex: 2
+      additiveSortOrder: 0
       cellRect:
         x: 2
         y: 2
         width: 316
         height: 176
       spriteId: f7714473948418a4a81e485ce5ad2b23
-    - name: AchivementsBackground_Frame_3
+    - name: Frame_3
       frameIndex: 3
+      additiveSortOrder: 0
       cellRect:
         x: 2
         y: 2
         width: 316
         height: 176
       spriteId: 4d9cdf51810e0c5468292c290067bfd8
-    - name: AchivementsBackground_Frame_4
+    - name: Frame_4
       frameIndex: 4
+      additiveSortOrder: 0
       cellRect:
         x: 2
         y: 2
         width: 316
         height: 176
       spriteId: 7547d70401ff94e43b051eb4d623a993
-    - name: AchivementsBackground_Frame_5
+    - name: Frame_5
       frameIndex: 5
+      additiveSortOrder: 0
       cellRect:
         x: 2
         y: 2
@@ -299,6 +313,8 @@ ScriptedImporter:
     linkedCells: []
     parentIndex: -1
   platformSettings: []
+  generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 320, y: 180}
+  previousTextureSize: {x: 1024, y: 512}

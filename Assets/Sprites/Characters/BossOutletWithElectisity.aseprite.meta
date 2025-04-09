@@ -8,6 +8,7 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  importerVersion: 2
   textureImporterSettings:
     alphaSource: 1
     mipMapMode: 0
@@ -77,6 +78,7 @@ ScriptedImporter:
     defaultPivotSpace: 0
     defaultPivotAlignment: 7
     customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
     spritePadding: 0
     generateModelPrefab: 1
     generateAnimationClips: 1
@@ -89,6 +91,7 @@ ScriptedImporter:
     defaultPivotSpace: 0
     defaultPivotAlignment: 7
     customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
     spritePadding: 0
     generateModelPrefab: 1
     generateAnimationClips: 1
@@ -362,102 +365,119 @@ ScriptedImporter:
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: -865437515
+    uuid:
+      value0: 3016197577
+      value1: 0
+      value2: 0
+      value3: 0
+    guid: -1278769719
     name: BossOutletWithElectisity
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: BossOutletWithElectisity_Frame_0
+    - name: Frame_0
       frameIndex: 0
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 47
         height: 23
       spriteId: b97648d2f3d120c498ee93b7da8c3f6f
-    - name: BossOutletWithElectisity_Frame_1
+    - name: Frame_1
       frameIndex: 1
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 47
         height: 23
       spriteId: 9c462a0ee3c41f947b431eb79222891a
-    - name: BossOutletWithElectisity_Frame_2
+    - name: Frame_2
       frameIndex: 2
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 47
         height: 23
       spriteId: 520255bfd5e2c5744a088129963842fd
-    - name: BossOutletWithElectisity_Frame_3
+    - name: Frame_3
       frameIndex: 3
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 23
       spriteId: 80a626a2f84fe9a43b0e95969afbebc2
-    - name: BossOutletWithElectisity_Frame_4
+    - name: Frame_4
       frameIndex: 4
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 50
         height: 23
       spriteId: ef19cafafd50d544c8c3caf64c1b8440
-    - name: BossOutletWithElectisity_Frame_5
+    - name: Frame_5
       frameIndex: 5
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 49
         height: 23
       spriteId: 7fe733cbe69b13e4f8392afd8c623c73
-    - name: BossOutletWithElectisity_Frame_6
+    - name: Frame_6
       frameIndex: 6
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 49
         height: 23
       spriteId: 5e9cddd28f99a3b4b8715bf55b2de0e0
-    - name: BossOutletWithElectisity_Frame_7
+    - name: Frame_7
       frameIndex: 7
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 49
         height: 23
       spriteId: 7c17389ddd62be843a371f200a21e548
-    - name: BossOutletWithElectisity_Frame_8
+    - name: Frame_8
       frameIndex: 8
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 49
         height: 23
       spriteId: 901e983d85ea24a4eb2b9296468cd605
-    - name: BossOutletWithElectisity_Frame_9
+    - name: Frame_9
       frameIndex: 9
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 49
         height: 23
       spriteId: 165fda4f6b4322e46aac275b65ed222f
-    - name: BossOutletWithElectisity_Frame_10
+    - name: Frame_10
       frameIndex: 10
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 49
         height: 23
       spriteId: ab660c3ae1ad1cf4e87c60a3d6b4d216
-    - name: BossOutletWithElectisity_Frame_11
+    - name: Frame_11
       frameIndex: 11
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -515,6 +535,8 @@ ScriptedImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     androidETC2FallbackOverride: 0
+  generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 51, y: 23}
+  previousTextureSize: {x: 128, y: 256}

@@ -6,7 +6,7 @@ using UnityEngine;
 public class HomingMissile : MonoBehaviour
 {
     // Start is called before the first frame update
-    [SerializeField] private float _speed = 5f;
+    [SerializeField] private float _speed = 9f;
     [SerializeField] private float _rotateSpeed = 200f;
     private Rigidbody2D _rigidbody2D;
     private Transform _target;

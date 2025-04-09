@@ -8,6 +8,7 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  importerVersion: 2
   textureImporterSettings:
     alphaSource: 1
     mipMapMode: 0
@@ -77,6 +78,7 @@ ScriptedImporter:
     defaultPivotSpace: 0
     defaultPivotAlignment: 0
     customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
     spritePadding: 0
     generateModelPrefab: 1
     generateAnimationClips: 1
@@ -89,6 +91,7 @@ ScriptedImporter:
     defaultPivotSpace: 0
     defaultPivotAlignment: 0
     customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
     spritePadding: 0
     generateModelPrefab: 1
     generateAnimationClips: 1
@@ -362,102 +365,119 @@ ScriptedImporter:
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: 1350520637
+    uuid:
+      value0: 4190183537
+      value1: 0
+      value2: 0
+      value3: 0
+    guid: -104783759
     name: Boss
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: Boss_Frame_0
+    - name: Frame_0
       frameIndex: 0
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: -2
         width: 204
         height: 113
       spriteId: 6db921a7ce836c949927fde56318779f
-    - name: Boss_Frame_1
+    - name: Frame_1
       frameIndex: 1
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: -2
         width: 204
         height: 133
       spriteId: fc20a8a547c445047ab4ef23612c1671
-    - name: Boss_Frame_2
+    - name: Frame_2
       frameIndex: 2
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: -2
         width: 204
         height: 113
       spriteId: 46012c9b10cc7114f8325011d9eb084e
-    - name: Boss_Frame_3
+    - name: Frame_3
       frameIndex: 3
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: -2
         width: 204
         height: 113
       spriteId: e7ac366701a35bb4eba6d52a22bface8
-    - name: Boss_Frame_4
+    - name: Frame_4
       frameIndex: 4
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: -2
         width: 207
         height: 113
       spriteId: 0b3dca446fdb7a14d873c84b25095841
-    - name: Boss_Frame_5
+    - name: Frame_5
       frameIndex: 5
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: -2
         width: 206
         height: 113
       spriteId: d6f6997950769a34ab8f0d30c279214e
-    - name: Boss_Frame_6
+    - name: Frame_6
       frameIndex: 6
+      additiveSortOrder: 0
       cellRect:
         x: 5
         y: -2
         width: 201
         height: 113
       spriteId: 9549ab0ddd29ce447bdae50b871f538b
-    - name: Boss_Frame_7
+    - name: Frame_7
       frameIndex: 7
+      additiveSortOrder: 0
       cellRect:
         x: 5
         y: -2
         width: 201
         height: 113
       spriteId: 3bcbf571460a41f4d98b03b9e24e0578
-    - name: Boss_Frame_8
+    - name: Frame_8
       frameIndex: 8
+      additiveSortOrder: 0
       cellRect:
         x: 5
         y: -2
         width: 201
         height: 112
       spriteId: bd7580ad198f51748ad41cbc5bee9ce3
-    - name: Boss_Frame_9
+    - name: Frame_9
       frameIndex: 9
+      additiveSortOrder: 0
       cellRect:
         x: 5
         y: -2
         width: 201
         height: 131
       spriteId: a08405a222970db4c90b6749f0282d0a
-    - name: Boss_Frame_10
+    - name: Frame_10
       frameIndex: 10
+      additiveSortOrder: 0
       cellRect:
         x: 5
         y: -2
         width: 201
         height: 140
       spriteId: 6e594e0624d019943b9d3b8c20e54e44
-    - name: Boss_Frame_11
+    - name: Frame_11
       frameIndex: 11
+      additiveSortOrder: 0
       cellRect:
         x: 5
         y: -2
@@ -515,6 +535,8 @@ ScriptedImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     androidETC2FallbackOverride: 0
+  generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 226, y: 160}
+  previousTextureSize: {x: 512, y: 1024}

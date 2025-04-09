@@ -14,13 +14,14 @@ public class BossScript : MonoBehaviour
     private static readonly int TurnedLeft = Animator.StringToHash("TurnedLeft");
     private static readonly int MovingRight = Animator.StringToHash("MovingRight");
     private static readonly int LaunchingMissiles = Animator.StringToHash("LaunchingMissiles");
+    private static readonly int ShutingDown = Animator.StringToHash("ShutDown");
 
     // Update is called once per frame
     private void Update()
     {
         // if player is far away follow but dont change y position
         
-        if (Vector2.Distance(transform.position, player.transform.position) > 3 && !_launching)
+        if (Vector2.Distance(transform.position, player.transform.position) > 3)
         {
             var bossPosition = transform.position;
             var playerPosition = player.transform.position;
@@ -62,8 +63,11 @@ public class BossScript : MonoBehaviour
     
     public void LaunchMissile() // should be called from animation event
     {
+        // change the place of the missile launcher
+        missileLauncherRockets.transform.position = new Vector3(transform.position.x + 3.3f, transform.position.y + 5.5f, transform.position.z);
         missileLauncherRockets.SetActive(true);
         SoundManager.Instance.ExplisionSound();
+        _animator.SetBool(LaunchingMissiles, false);
         _launching = false;
     }
 }

@@ -8,6 +8,7 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  importerVersion: 2
   textureImporterSettings:
     alphaSource: 1
     mipMapMode: 0
@@ -77,6 +78,7 @@ ScriptedImporter:
     defaultPivotSpace: 0
     defaultPivotAlignment: 7
     customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
     spritePadding: 0
     generateModelPrefab: 1
     generateAnimationClips: 1
@@ -89,6 +91,7 @@ ScriptedImporter:
     defaultPivotSpace: 0
     defaultPivotAlignment: 7
     customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
     spritePadding: 0
     generateModelPrefab: 1
     generateAnimationClips: 1
@@ -1142,414 +1145,470 @@ ScriptedImporter:
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: 303102073
+    uuid:
+      value0: 790518173
+      value1: 0
+      value2: 0
+      value3: 0
+    guid: 790518173
     name: OnlyBoss
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: OnlyBoss_Frame_0
+    - name: Frame_0
       frameIndex: 0
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 158
         height: 111
       spriteId: 8ac0370bcd0127843915bdb7ceb86ed4
-    - name: OnlyBoss_Frame_1
+    - name: Frame_1
       frameIndex: 1
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 158
         height: 111
       spriteId: 4db8b90ca37eaaf4093e07ad59bf7b3f
-    - name: OnlyBoss_Frame_2
+    - name: Frame_2
       frameIndex: 2
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 158
         height: 111
       spriteId: 87e2c2738ef7e4549af427c03c5d1adf
-    - name: OnlyBoss_Frame_3
+    - name: Frame_3
       frameIndex: 3
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 158
         height: 111
       spriteId: 2c3804ae320e1ac41aa126218d55c710
-    - name: OnlyBoss_Frame_4
+    - name: Frame_4
       frameIndex: 4
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 133
         height: 111
       spriteId: db4d371af238daa4e9a300c34016a41e
-    - name: OnlyBoss_Frame_5
+    - name: Frame_5
       frameIndex: 5
+      additiveSortOrder: 0
       cellRect:
         x: 9
         y: 0
         width: 112
         height: 111
       spriteId: 3bd638c8bb86ad646a1394225010bcef
-    - name: OnlyBoss_Frame_6
+    - name: Frame_6
       frameIndex: 6
+      additiveSortOrder: 0
       cellRect:
         x: 18
         y: 0
         width: 112
         height: 111
       spriteId: 33b7e034d0d57bd43bddac215fed8b96
-    - name: OnlyBoss_Frame_7
+    - name: Frame_7
       frameIndex: 7
+      additiveSortOrder: 0
       cellRect:
         x: 11
         y: 0
         width: 137
         height: 110
       spriteId: d3591c341bc13f14b98b002f4500c356
-    - name: OnlyBoss_Frame_8
+    - name: Frame_8
       frameIndex: 8
+      additiveSortOrder: 0
       cellRect:
         x: 14
         y: 0
         width: 134
         height: 110
       spriteId: 4bdcb72f34280d945bc83d5842ed32ed
-    - name: OnlyBoss_Frame_9
+    - name: Frame_9
       frameIndex: 9
+      additiveSortOrder: 0
       cellRect:
         x: 15
         y: 0
         width: 133
         height: 110
       spriteId: d73c73d9b2185a74db316dcfc77bfc5d
-    - name: OnlyBoss_Frame_10
+    - name: Frame_10
       frameIndex: 10
+      additiveSortOrder: 0
       cellRect:
         x: 17
         y: 0
         width: 131
         height: 110
       spriteId: fc4b9562980dc784093814c9a5fbd1d1
-    - name: OnlyBoss_Frame_11
+    - name: Frame_11
       frameIndex: 11
+      additiveSortOrder: 0
       cellRect:
         x: 17
         y: 0
         width: 131
         height: 110
       spriteId: 984fb409af5d10d41a66f7b1654c030a
-    - name: OnlyBoss_Frame_12
+    - name: Frame_12
       frameIndex: 12
+      additiveSortOrder: 0
       cellRect:
         x: 17
         y: 0
         width: 131
         height: 110
       spriteId: 16a3c5033b8e2524da1a49bfef588c7a
-    - name: OnlyBoss_Frame_13
+    - name: Frame_13
       frameIndex: 13
+      additiveSortOrder: 0
       cellRect:
         x: 17
         y: 0
         width: 131
         height: 110
       spriteId: 57f955a2e3316124d8f83d9596ca7d3e
-    - name: OnlyBoss_Frame_14
+    - name: Frame_14
       frameIndex: 14
+      additiveSortOrder: 0
       cellRect:
         x: 17
         y: 0
         width: 131
         height: 110
       spriteId: 6718c3d4376a09b41bb75dee3fa2a974
-    - name: OnlyBoss_Frame_15
+    - name: Frame_15
       frameIndex: 15
+      additiveSortOrder: 0
       cellRect:
         x: 17
         y: 0
         width: 131
         height: 110
       spriteId: c32fc2250f0a5b84488fb75129ed0a2c
-    - name: OnlyBoss_Frame_16
+    - name: Frame_16
       frameIndex: 16
+      additiveSortOrder: 0
       cellRect:
         x: 17
         y: 0
         width: 131
         height: 110
       spriteId: c0a4ef42d1f239046a34735a82231131
-    - name: OnlyBoss_Frame_17
+    - name: Frame_17
       frameIndex: 17
+      additiveSortOrder: 0
       cellRect:
         x: 17
         y: 0
         width: 131
         height: 110
       spriteId: a5b544995b3f0a546afb55df59084832
-    - name: OnlyBoss_Frame_18
+    - name: Frame_18
       frameIndex: 18
+      additiveSortOrder: 0
       cellRect:
         x: 17
         y: 0
         width: 131
         height: 110
       spriteId: 89cec2bf5ff6a2a48bbbf74a3ac4f4f2
-    - name: OnlyBoss_Frame_19
+    - name: Frame_19
       frameIndex: 19
+      additiveSortOrder: 0
       cellRect:
         x: 17
         y: 0
         width: 131
         height: 110
       spriteId: 5be34a0f4e61fb347a23c65060e6e88c
-    - name: OnlyBoss_Frame_20
+    - name: Frame_20
       frameIndex: 20
+      additiveSortOrder: 0
       cellRect:
         x: 17
         y: 0
         width: 131
         height: 110
       spriteId: f21f47279242bef4c9afbd34db17bac6
-    - name: OnlyBoss_Frame_21
+    - name: Frame_21
       frameIndex: 21
+      additiveSortOrder: 0
       cellRect:
         x: 17
         y: 0
         width: 131
         height: 110
       spriteId: 32fe42d909a81c64bbef1dfbf60ef75a
-    - name: OnlyBoss_Frame_22
+    - name: Frame_22
       frameIndex: 22
+      additiveSortOrder: 0
       cellRect:
         x: 17
         y: 0
         width: 131
         height: 110
       spriteId: 35f71138a5950da4186556fedcd0bab2
-    - name: OnlyBoss_Frame_23
+    - name: Frame_23
       frameIndex: 23
+      additiveSortOrder: 0
       cellRect:
         x: 17
         y: 0
         width: 131
         height: 110
       spriteId: e69e9f9716b55b14c9c9a79643db5a97
-    - name: OnlyBoss_Frame_24
+    - name: Frame_24
       frameIndex: 24
+      additiveSortOrder: 0
       cellRect:
         x: 17
         y: 0
         width: 131
         height: 110
       spriteId: 96fce98cdf4473340929017181dafb52
-    - name: OnlyBoss_Frame_25
+    - name: Frame_25
       frameIndex: 25
+      additiveSortOrder: 0
       cellRect:
         x: 17
         y: 0
         width: 131
         height: 110
       spriteId: d57699b1a7fcfc247bdd7ba4effed7ee
-    - name: OnlyBoss_Frame_26
+    - name: Frame_26
       frameIndex: 26
+      additiveSortOrder: 0
       cellRect:
         x: 17
         y: 0
         width: 131
         height: 110
       spriteId: c3425a771260e524495236892acb326e
-    - name: OnlyBoss_Frame_27
+    - name: Frame_27
       frameIndex: 27
+      additiveSortOrder: 0
       cellRect:
         x: 17
         y: 0
         width: 131
         height: 110
       spriteId: ea334c7f91a93194ab9c84e6ec89ee38
-    - name: OnlyBoss_Frame_28
+    - name: Frame_28
       frameIndex: 28
+      additiveSortOrder: 0
       cellRect:
         x: 17
         y: 0
         width: 131
         height: 110
       spriteId: cfd95aa7754f67d4287b4a58c65c9857
-    - name: OnlyBoss_Frame_29
+    - name: Frame_29
       frameIndex: 29
+      additiveSortOrder: 0
       cellRect:
         x: 17
         y: 0
         width: 131
         height: 110
       spriteId: b215d670a4848914e8cbd435250f4936
-    - name: OnlyBoss_Frame_30
+    - name: Frame_30
       frameIndex: 30
+      additiveSortOrder: 0
       cellRect:
         x: 17
         y: 0
         width: 131
         height: 110
       spriteId: 8a4518bc22c269c4cb76efcbec684b8f
-    - name: OnlyBoss_Frame_31
+    - name: Frame_31
       frameIndex: 31
+      additiveSortOrder: 0
       cellRect:
         x: 17
         y: 0
         width: 131
         height: 110
       spriteId: 7aa92624f61158d45a24ad2ee0625926
-    - name: OnlyBoss_Frame_32
+    - name: Frame_32
       frameIndex: 32
+      additiveSortOrder: 0
       cellRect:
         x: 17
         y: 0
         width: 131
         height: 110
       spriteId: 56f86273633a57044934e07c12d12e92
-    - name: OnlyBoss_Frame_33
+    - name: Frame_33
       frameIndex: 33
+      additiveSortOrder: 0
       cellRect:
         x: 17
         y: 0
         width: 131
         height: 110
       spriteId: a819faa3d8b4b3d408b405d216853ebc
-    - name: OnlyBoss_Frame_34
+    - name: Frame_34
       frameIndex: 34
+      additiveSortOrder: 0
       cellRect:
         x: 17
         y: 0
         width: 131
         height: 110
       spriteId: 63c574bc4bc22ca47b38ec4f6938294f
-    - name: OnlyBoss_Frame_35
+    - name: Frame_35
       frameIndex: 35
+      additiveSortOrder: 0
       cellRect:
         x: 17
         y: 0
         width: 131
         height: 110
       spriteId: 683086797c63fd647bd5e32b71289baf
-    - name: OnlyBoss_Frame_36
+    - name: Frame_36
       frameIndex: 36
+      additiveSortOrder: 0
       cellRect:
         x: 17
         y: 0
         width: 131
         height: 110
       spriteId: 6fedc014840806b4f96d81cae0ad2d61
-    - name: OnlyBoss_Frame_37
+    - name: Frame_37
       frameIndex: 37
+      additiveSortOrder: 0
       cellRect:
         x: 17
         y: 0
         width: 131
         height: 110
       spriteId: 4e066dbd65eb2ef4d9a0f473f5a03aea
-    - name: OnlyBoss_Frame_38
+    - name: Frame_38
       frameIndex: 38
+      additiveSortOrder: 0
       cellRect:
         x: 17
         y: 0
         width: 131
         height: 110
       spriteId: fc2cb0b254be2764cab47705cfdd2b54
-    - name: OnlyBoss_Frame_39
+    - name: Frame_39
       frameIndex: 39
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 158
         height: 111
       spriteId: 7489f8de559fbc1468a480b6bfd6d2e7
-    - name: OnlyBoss_Frame_40
+    - name: Frame_40
       frameIndex: 40
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 158
         height: 131
       spriteId: 026f0a9f4e882744283a7fd0856d2571
-    - name: OnlyBoss_Frame_41
+    - name: Frame_41
       frameIndex: 41
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 158
         height: 111
       spriteId: 39dc98cb96e31bd4986ff0797cfcbbdb
-    - name: OnlyBoss_Frame_42
+    - name: Frame_42
       frameIndex: 42
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 158
         height: 111
       spriteId: 997ffc0e9213ecb4086417fbbdee4334
-    - name: OnlyBoss_Frame_43
+    - name: Frame_43
       frameIndex: 43
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 158
         height: 111
       spriteId: 9cf63859090129940a371f92a2522429
-    - name: OnlyBoss_Frame_44
+    - name: Frame_44
       frameIndex: 44
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 158
         height: 111
       spriteId: c5848f1221f93f440b555e1498440930
-    - name: OnlyBoss_Frame_45
+    - name: Frame_45
       frameIndex: 45
+      additiveSortOrder: 0
       cellRect:
         x: 5
         y: 0
         width: 153
         height: 111
       spriteId: e43061b6018b71d41b2646189bcfa8fd
-    - name: OnlyBoss_Frame_46
+    - name: Frame_46
       frameIndex: 46
+      additiveSortOrder: 0
       cellRect:
         x: 5
         y: 0
         width: 153
         height: 111
       spriteId: 142d62d39482c2c4589529ab5091f769
-    - name: OnlyBoss_Frame_47
+    - name: Frame_47
       frameIndex: 47
+      additiveSortOrder: 0
       cellRect:
         x: 5
         y: 0
         width: 153
         height: 110
       spriteId: d3e0bb924bc90a04e8bfb57f4e1fe816
-    - name: OnlyBoss_Frame_48
+    - name: Frame_48
       frameIndex: 48
+      additiveSortOrder: 0
       cellRect:
         x: 5
         y: 0
         width: 153
         height: 129
       spriteId: 371bb323150b1e642830018deb0f79f4
-    - name: OnlyBoss_Frame_49
+    - name: Frame_49
       frameIndex: 49
+      additiveSortOrder: 0
       cellRect:
         x: 5
         y: 0
         width: 153
         height: 138
       spriteId: 296341e3e3a890a4698470da9cd0dc93
-    - name: OnlyBoss_Frame_50
+    - name: Frame_50
       frameIndex: 50
+      additiveSortOrder: 0
       cellRect:
         x: 5
         y: 0
@@ -1607,6 +1666,8 @@ ScriptedImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     androidETC2FallbackOverride: 0
+  generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 158, y: 160}
+  previousTextureSize: {x: 1024, y: 1024}

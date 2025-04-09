@@ -8,6 +8,7 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  importerVersion: 2
   textureImporterSettings:
     alphaSource: 1
     mipMapMode: 0
@@ -77,6 +78,7 @@ ScriptedImporter:
     defaultPivotSpace: 0
     defaultPivotAlignment: 7
     customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
     spritePadding: 0
     generateModelPrefab: 1
     generateAnimationClips: 1
@@ -89,6 +91,7 @@ ScriptedImporter:
     defaultPivotSpace: 0
     defaultPivotAlignment: 7
     customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
     spritePadding: 0
     generateModelPrefab: 1
     generateAnimationClips: 1
@@ -362,102 +365,119 @@ ScriptedImporter:
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: -2109872353
+    uuid:
+      value0: 1844658779
+      value1: 0
+      value2: 0
+      value3: 0
+    guid: 1844658779
     name: Enemie
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: Enemie_Frame_0
+    - name: Frame_0
       frameIndex: 0
+      additiveSortOrder: 0
       cellRect:
         x: 6
         y: 0
         width: 16
         height: 28
       spriteId: 130fd98758db1164d8890475a0f19ea0
-    - name: Enemie_Frame_1
+    - name: Frame_1
       frameIndex: 1
+      additiveSortOrder: 0
       cellRect:
         x: 6
         y: 0
         width: 16
         height: 29
       spriteId: 8b909d4cd0590714196c98926a9e8b55
-    - name: Enemie_Frame_2
+    - name: Frame_2
       frameIndex: 2
+      additiveSortOrder: 0
       cellRect:
         x: 6
         y: 0
         width: 16
         height: 29
       spriteId: eeb738f28e0044c4a8f50eed7b41e188
-    - name: Enemie_Frame_3
+    - name: Frame_3
       frameIndex: 3
+      additiveSortOrder: 0
       cellRect:
         x: 6
         y: 0
         width: 16
         height: 28
       spriteId: 40ef73c90574e9143a0d13582c604888
-    - name: Enemie_Frame_4
+    - name: Frame_4
       frameIndex: 4
+      additiveSortOrder: 0
       cellRect:
         x: 6
         y: 0
         width: 17
         height: 32
       spriteId: f18a92160396a0f40965b192ee350421
-    - name: Enemie_Frame_5
+    - name: Frame_5
       frameIndex: 5
+      additiveSortOrder: 0
       cellRect:
         x: 3
         y: 0
         width: 23
         height: 32
       spriteId: eb751c0fb16fb6a4aafda08d7dce6632
-    - name: Enemie_Frame_6
+    - name: Frame_6
       frameIndex: 6
+      additiveSortOrder: 0
       cellRect:
         x: 3
         y: 0
         width: 27
         height: 32
       spriteId: 91c4c1be2fbb6e048b985f220502e0cd
-    - name: Enemie_Frame_7
+    - name: Frame_7
       frameIndex: 7
+      additiveSortOrder: 0
       cellRect:
         x: 3
         y: 0
         width: 27
         height: 32
       spriteId: 752ebb036362530449488c68ce68b736
-    - name: Enemie_Frame_8
+    - name: Frame_8
       frameIndex: 8
+      additiveSortOrder: 0
       cellRect:
         x: 3
         y: 0
         width: 27
         height: 32
       spriteId: 2e4f03cc31ed1224a85d31cea747e9ba
-    - name: Enemie_Frame_9
+    - name: Frame_9
       frameIndex: 9
+      additiveSortOrder: 0
       cellRect:
         x: 3
         y: 0
         width: 27
         height: 31
       spriteId: 67e52d14f10bb2443b4364a0d5b20381
-    - name: Enemie_Frame_10
+    - name: Frame_10
       frameIndex: 10
+      additiveSortOrder: 0
       cellRect:
         x: 3
         y: 3
         width: 26
         height: 27
       spriteId: b62a26a5801235447a60ff7d49ec20f1
-    - name: Enemie_Frame_11
+    - name: Frame_11
       frameIndex: 11
+      additiveSortOrder: 0
       cellRect:
         x: 16
         y: 0
@@ -503,6 +523,8 @@ ScriptedImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     androidETC2FallbackOverride: 0
+  generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 32, y: 32}
+  previousTextureSize: {x: 128, y: 128}

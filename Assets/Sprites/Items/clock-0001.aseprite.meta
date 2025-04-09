@@ -8,6 +8,7 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  importerVersion: 2
   textureImporterSettings:
     alphaSource: 1
     mipMapMode: 0
@@ -77,6 +78,7 @@ ScriptedImporter:
     defaultPivotSpace: 0
     defaultPivotAlignment: 7
     customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
     spritePadding: 0
     generateModelPrefab: 1
     generateAnimationClips: 1
@@ -89,6 +91,7 @@ ScriptedImporter:
     defaultPivotSpace: 0
     defaultPivotAlignment: 7
     customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
     spritePadding: 0
     generateModelPrefab: 1
     generateAnimationClips: 1
@@ -282,70 +285,83 @@ ScriptedImporter:
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: 1986735648
+    uuid:
+      value0: 1833340576
+      value1: 0
+      value2: 0
+      value3: 0
+    guid: 1833340576
     name: clock-0001
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: clock-0001_Frame_0
+    - name: Frame_0
       frameIndex: 0
+      additiveSortOrder: 0
       cellRect:
         x: 6
         y: 5
         width: 25
         height: 27
       spriteId: 8f0e6d6365396be4dab1ac86c37f4cc1
-    - name: clock-0001_Frame_1
+    - name: Frame_1
       frameIndex: 1
+      additiveSortOrder: 0
       cellRect:
         x: 6
         y: 4
         width: 25
         height: 27
       spriteId: c11af755cf678e54d970a367488d5f24
-    - name: clock-0001_Frame_2
+    - name: Frame_2
       frameIndex: 2
+      additiveSortOrder: 0
       cellRect:
         x: 6
         y: 3
         width: 25
         height: 27
       spriteId: 59e3994f98be3ae439d52d414b3ed5be
-    - name: clock-0001_Frame_3
+    - name: Frame_3
       frameIndex: 3
+      additiveSortOrder: 0
       cellRect:
         x: 6
         y: 2
         width: 25
         height: 27
       spriteId: 745fb27ee40eca44cbd97ec51756b3fe
-    - name: clock-0001_Frame_4
+    - name: Frame_4
       frameIndex: 4
+      additiveSortOrder: 0
       cellRect:
         x: 6
         y: 1
         width: 25
         height: 27
       spriteId: fa0e4e035ec039643ba53094c68c80cc
-    - name: clock-0001_Frame_5
+    - name: Frame_5
       frameIndex: 5
+      additiveSortOrder: 0
       cellRect:
         x: 6
         y: 2
         width: 25
         height: 27
       spriteId: 132a985099d3e2a408e4592147c6c13f
-    - name: clock-0001_Frame_6
+    - name: Frame_6
       frameIndex: 6
+      additiveSortOrder: 0
       cellRect:
         x: 6
         y: 3
         width: 25
         height: 27
       spriteId: 8a7705849bf4a2942b9d3ccd89958773
-    - name: clock-0001_Frame_7
+    - name: Frame_7
       frameIndex: 7
+      additiveSortOrder: 0
       cellRect:
         x: 6
         y: 4
@@ -355,6 +371,8 @@ ScriptedImporter:
     linkedCells: []
     parentIndex: -1
   platformSettings: []
+  generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 32, y: 32}
+  previousTextureSize: {x: 128, y: 128}

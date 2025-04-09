@@ -7978,13 +7978,49 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 609251960218921413, guid: 17b61ad476147b6408fff010e318608a, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -25
+      objectReference: {fileID: 0}
     - target: {fileID: 874351322699649398, guid: 17b61ad476147b6408fff010e318608a, type: 3}
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 165606127}
+    - target: {fileID: 874351322699649398, guid: 17b61ad476147b6408fff010e318608a, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 874351322699649398, guid: 17b61ad476147b6408fff010e318608a, type: 3}
+      propertyPath: m_UpdateRectTransformForStandalone
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1222331523199776737, guid: 17b61ad476147b6408fff010e318608a, type: 3}
       propertyPath: m_Name
       value: SettingsSystemCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 1651438507878050895, guid: 17b61ad476147b6408fff010e318608a, type: 3}
+      propertyPath: m_CullTransparentMesh
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4705563528244603771, guid: 17b61ad476147b6408fff010e318608a, type: 3}
+      propertyPath: m_CullTransparentMesh
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5770451069856558145, guid: 17b61ad476147b6408fff010e318608a, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6393620528337809431, guid: 17b61ad476147b6408fff010e318608a, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6393620528337809431, guid: 17b61ad476147b6408fff010e318608a, type: 3}
+      propertyPath: m_UseSpriteMesh
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6393620528337809431, guid: 17b61ad476147b6408fff010e318608a, type: 3}
+      propertyPath: m_PreserveAspect
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8332488137761381575, guid: 17b61ad476147b6408fff010e318608a, type: 3}
       propertyPath: m_Pivot.x
@@ -8131,13 +8167,45 @@ PrefabInstance:
       propertyPath: m_Name
       value: Main Camera
       objectReference: {fileID: 0}
+    - target: {fileID: 6322553146321516246, guid: e7482f4d9ff7433438ca51d2614c617e, type: 3}
+      propertyPath: m_ForceIntoRT
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6322553146321516246, guid: e7482f4d9ff7433438ca51d2614c617e, type: 3}
+      propertyPath: orthographic size
+      value: 4.964041
+      objectReference: {fileID: 0}
     - target: {fileID: 7231430245172519444, guid: e7482f4d9ff7433438ca51d2614c617e, type: 3}
       propertyPath: target
       value: 
       objectReference: {fileID: 139480425}
     - target: {fileID: 7231430245172519444, guid: e7482f4d9ff7433438ca51d2614c617e, type: 3}
+      propertyPath: left_border
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7231430245172519444, guid: e7482f4d9ff7433438ca51d2614c617e, type: 3}
       propertyPath: right_border
       value: 89
+      objectReference: {fileID: 0}
+    - target: {fileID: 8490511721775846222, guid: e7482f4d9ff7433438ca51d2614c617e, type: 3}
+      propertyPath: m_UpscaleRT
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8490511721775846222, guid: e7482f4d9ff7433438ca51d2614c617e, type: 3}
+      propertyPath: m_CropFrameX
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8490511721775846222, guid: e7482f4d9ff7433438ca51d2614c617e, type: 3}
+      propertyPath: m_CropFrameY
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8490511721775846222, guid: e7482f4d9ff7433438ca51d2614c617e, type: 3}
+      propertyPath: m_StretchFill
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8490511721775846222, guid: e7482f4d9ff7433438ca51d2614c617e, type: 3}
+      propertyPath: m_PixelSnapping
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
