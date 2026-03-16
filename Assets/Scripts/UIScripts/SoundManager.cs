@@ -51,6 +51,17 @@ public class SoundManager : MonoBehaviour
          backgroundMusicSource.Play();
     }
 
+    // Play boss music
+    public void PlayBossMusic()
+    {
+        // log 
+        Debug.Log("Playing boss music");
+
+        backgroundMusicSource.clip = level2Song;
+        backgroundMusicSource.loop = true;
+        backgroundMusicSource.Play();
+    }
+
     // Play a sound effect
     public void PlaySFX(AudioClip sfxClip)
     { 

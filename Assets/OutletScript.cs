@@ -1,29 +1,30 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class OutletScript : MonoBehaviour
 {
-    // has access to boss and player
     [SerializeField] private GameObject boss;
     [SerializeField] private GameObject player;
-    [SerializeField] Animator _animator;
+    [FormerlySerializedAs("_animator")] [SerializeField] private Animator animator;
     private static readonly int PluggedOut = Animator.StringToHash("PluggedOut");
-    private static bool _pluggedIn = true;
+    private bool _pluggedIn = true;
+    private BossScript _bossScript;
 
-    // Update is called once per frame
-    void Update()
+    private void Start()
     {
-        if (Vector2.Distance(transform.position, player.transform.position) < 1 && _pluggedIn)
-        {
-            if (Input.GetKeyDown(KeyCode.E))
-            {
-                _animator.SetTrigger(PluggedOut);
-                boss.GetComponent<Animator>().SetTrigger(PluggedOut);
-                _pluggedIn = false;
-            }
+        _bossScript = boss.GetComponent<BossScript>();
+    }
 
-        }
+    private void Update()
+    {
+        if (!(Vector2.Distance(transform.position, player.transform.position) < 1.5f) || !_pluggedIn) return;
+        bool interact = Input.GetKeyDown(KeyCode.E);
+        if (MobileControls.Instance != null)
+            interact = interact || MobileControls.Instance.InteractDown;
+        if (!interact) return;
+        animator.SetTrigger(PluggedOut);
+        _pluggedIn = false;
 
+        if (_bossScript) _bossScript.Unplug();
     }
 }

@@ -21,8 +21,10 @@ namespace EnemyScripts
         // Update is called once per frame
         private void Update()
         {
+            // start launching missiles after 2 seconds
+
             // if player is far away follow but dont change y position
-        
+
             if (Vector2.Distance(transform.position, player.transform.position) > 3 && !_launching)
             {
                 var bossPosition = transform.position;

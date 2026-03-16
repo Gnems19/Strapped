@@ -1,0 +1,34 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__coplay-mcp__check_compile_errors",
+      "mcp__coplay-mcp__get_animator_controller_data",
+      "mcp__coplay-mcp__get_game_object_info",
+      "mcp__coplay-mcp__list_game_objects_in_hierarchy",
+      "mcp__coplay-mcp__remove_component",
+      "mcp__coplay-mcp__get_animation_clip_data",
+      "mcp__coplay-mcp__set_animation_clip_settings",
+      "mcp__coplay-mcp__set_sprite_animation_curve",
+      "mcp__coplay-mcp__modify_animator_controller",
+      "WebSearch",
+      "mcp__coplay-mcp__get_unity_logs",
+      "mcp__coplay-mcp__add_component",
+      "mcp__coplay-mcp__set_property",
+      "mcp__coplay-mcp__execute_script",
+      "mcp__coplay-mcp__save_scene",
+      "Bash(ls -1 /c/Users/user/UnityProjects/Strapped/Assets/Animations/BossAnimations/*.anim | sed 's/.*\\\\///' | sort)",
+      "Bash(python3 << 'EOF'\n# Extract frame names from OnlyBoss.aseprite.meta\nimport re\n\nwith open\\(r'C:\\\\Users\\\\user\\\\UnityProjects\\\\Strapped\\\\Assets\\\\Animations\\\\BossAnimations\\\\OnlyBoss.aseprite.meta', 'r'\\) as f:\n    content = f.read\\(\\)\n\n# Find all sprite frame names\nframes = re.findall\\(r'- name: \\(OnlyBoss_Frame_\\\\d+\\)', content\\)\nprint\\(\"OnlyBoss.aseprite frames:\"\\)\nfor i, frame in enumerate\\(frames\\):\n    print\\(f\"{i}: {frame}\"\\)\n\n# Find OnlyBossAnimationsLastTry frames\nwith open\\(r'C:\\\\Users\\\\user\\\\UnityProjects\\\\Strapped\\\\Assets\\\\Animations\\\\BossAnimations\\\\OnlyBossAnimationsLastTry.aseprite.meta', 'r'\\) as f:\n    content2 = f.read\\(\\)\n\nframes2 = re.findall\\(r'- name: \\(Frame_\\\\d+\\)', content2\\)\nprint\\(\"\\\\nOnlyBossAnimationsLastTry.aseprite frames \\(first 20\\):\"\\)\nfor i, frame in enumerate\\(frames2[:20]\\):\n    print\\(f\"{i}: {frame}\"\\)\nprint\\(f\"... total {len\\(frames2\\)} frames\"\\)\nEOF)",
+      "Bash(/tmp/analyze_shutdown.txt:*)",
+      "Read(//tmp/**)",
+      "Bash(find /c/Users/user/UnityProjects/Strapped/Assets -name \"*.anim\" -type f | xargs grep -l \"ShutDown\\\\|Sleep\\\\|shutdown\\\\|sleep\" 2>/dev/null || echo \"No additional shutdown/sleep animations found\")",
+      "Bash(ls -la /c/Users/user/UnityProjects/Strapped/Assets/Animations/BossAnimations/ | grep -iE \"\\\\.anim$\")",
+      "mcp__coplay-mcp__create_animation_clip",
+      "mcp__coplay-mcp__get_unity_editor_state",
+      "mcp__coplay-mcp__create_ui_element",
+      "mcp__coplay-mcp__stop_game",
+      "mcp__coplay-mcp__open_scene",
+      "mcp__coplay-mcp__create_game_object",
+      "mcp__coplay-mcp__delete_game_object"
+    ]
+  }
+}

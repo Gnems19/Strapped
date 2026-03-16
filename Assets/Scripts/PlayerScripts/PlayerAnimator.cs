@@ -49,6 +49,7 @@ namespace PlayerScripts
                 }
                 // Play landing effects and begin ground movement effects
                 if (!_playerGrounded && _player.Grounded) {
+                    _playerGrounded = true;
                     _anim.SetBool("Jumping", false);
                 }
                 else if (_playerGrounded && !_player.Grounded) {

@@ -55,10 +55,23 @@ namespace PlayerScripts
         }
         #region Gather Input
         private void GatherInput() {
+            bool jumpDown = UnityEngine.Input.GetButtonDown("Jump");
+            bool jumpUp = UnityEngine.Input.GetButtonUp("Jump");
+            float x = UnityEngine.Input.GetAxisRaw("Horizontal");
+
+            // Merge mobile touch input if available
+            if (MobileControls.Instance != null)
+            {
+                jumpDown = jumpDown || MobileControls.Instance.JumpDown;
+                jumpUp = jumpUp || MobileControls.Instance.JumpUp;
+                if (MobileControls.Instance.HorizontalInput != 0f)
+                    x = MobileControls.Instance.HorizontalInput;
+            }
+
             Input = new FrameInput {
-                JumpDown = UnityEngine.Input.GetButtonDown("Jump"),
-                JumpUp = UnityEngine.Input.GetButtonUp("Jump"),
-                X = UnityEngine.Input.GetAxisRaw("Horizontal")
+                JumpDown = jumpDown,
+                JumpUp = jumpUp,
+                X = x
             };
             if (Input.JumpDown) {
                 _lastJumpPressed = Time.time;
