@@ -1,9 +1,12 @@
+using System;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class BossScript : MonoBehaviour
 {
-    [SerializeField] GameObject missileLauncherRockets;
-    [SerializeField] Animator _animator;
+    [SerializeField] private GameObject missileLauncherRockets;
+    [FormerlySerializedAs("_animator")] [SerializeField]
+    private Animator animator;
     [SerializeField] private GameObject player;
     [SerializeField] private float followSpeed = 5f;
     [SerializeField] private float attackInterval = 10f;
@@ -15,6 +18,11 @@ public class BossScript : MonoBehaviour
 
     private enum BossState { Sleeping, Following, Launching }
     private BossState _state = BossState.Sleeping;
+
+    public BossScript(GameObject missileLauncherRockets)
+    {
+        this.missileLauncherRockets = missileLauncherRockets;
+    }
 
     private static readonly int Moving = Animator.StringToHash("Moving");
     private static readonly int TurnedLeft = Animator.StringToHash("TurnedLeft");
@@ -38,14 +46,16 @@ public class BossScript : MonoBehaviour
                 if (_attackTimer >= attackInterval)
                 {
                     _state = BossState.Launching;
-                    _animator.SetBool(Moving, false);
-                    _animator.SetBool(LaunchingMissiles, true);
+                    animator.SetBool(Moving, false);
+                    animator.SetBool(LaunchingMissiles, true);
                 }
                 break;
 
             case BossState.Launching:
                 // Waiting for animation event to call LaunchMissile()
                 break;
+            default:
+                throw new ArgumentOutOfRangeException();
         }
     }
 
@@ -53,33 +63,31 @@ public class BossScript : MonoBehaviour
     {
         var playerPos = player.transform.position;
         var bossPos = transform.position;
-        bool playerIsRight = playerPos.x > bossPos.x;
+        var playerIsRight = playerPos.x > bossPos.x;
 
-        if (playerIsRight != _facingRight)
-        {
-            _facingRight = playerIsRight;
-            _animator.SetBool(MovingRight, _facingRight);
-            _animator.SetBool(TurnedLeft, !_facingRight);
-        }
+        if (playerIsRight == _facingRight) return;
+        _facingRight = playerIsRight;
+        animator.SetBool(MovingRight, _facingRight);
+        animator.SetBool(TurnedLeft, !_facingRight);
     }
 
     private void FollowPlayer()
     {
         var bossPos = transform.position;
         var playerPos = player.transform.position;
-        float dist = Mathf.Abs(bossPos.x - playerPos.x);
+        var dist = Mathf.Abs(bossPos.x - playerPos.x);
 
         if (dist > followDistance)
         {
-            float dir = playerPos.x > bossPos.x ? 1f : -1f;
+            var dir = playerPos.x > bossPos.x ? 1f : -1f;
             transform.position = new Vector3(
                 bossPos.x + dir * followSpeed * Time.deltaTime,
                 bossPos.y, bossPos.z);
-            _animator.SetBool(Moving, true);
+            animator.SetBool(Moving, true);
         }
         else
         {
-            _animator.SetBool(Moving, false);
+            animator.SetBool(Moving, false);
         }
     }
 
@@ -96,6 +104,7 @@ public class BossScript : MonoBehaviour
     /// <summary>Called by animation event when missile launch animation finishes.</summary>
     public void LaunchMissile()
     {
+        if (_isDead) return;
         missileLauncherRockets.transform.position = new Vector3(
             transform.position.x + 3.3f,
             transform.position.y + 5.5f,
@@ -103,7 +112,7 @@ public class BossScript : MonoBehaviour
         missileLauncherRockets.SetActive(true);
         SoundManager.Instance.ExplisionSound();
 
-        _animator.SetBool(LaunchingMissiles, false);
+        animator.SetBool(LaunchingMissiles, false);
         _attackTimer = 0f;
         _state = BossState.Following;
     }
@@ -113,8 +122,9 @@ public class BossScript : MonoBehaviour
     {
         _isDead = true;
         _state = BossState.Sleeping;
-        _animator.SetBool(Moving, false);
-        _animator.SetBool(LaunchingMissiles, false);
-        _animator.SetTrigger(PluggedOut);
+        animator.SetBool(Moving, false);
+        animator.SetBool(LaunchingMissiles, false);
+        animator.SetTrigger(PluggedOut);
+        missileLauncherRockets.SetActive(false);
     }
 }

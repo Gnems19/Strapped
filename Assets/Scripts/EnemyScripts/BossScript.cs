@@ -10,6 +10,7 @@ namespace EnemyScripts
         [SerializeField] private GameObject player;
         private float time_passed = 0f;
         private bool _launching = false;
+        private IBossController _bossController;
         private static readonly int Moving = Animator.StringToHash("Moving");
         private static readonly int TurnedLeft = Animator.StringToHash("TurnedLeft");
         private static readonly int MovingRight = Animator.StringToHash("MovingRight");
@@ -18,9 +19,20 @@ namespace EnemyScripts
         private static readonly int TurnLeft = Animator.StringToHash("TurnLeft");
         private static readonly int LaunchingMissiles = Animator.StringToHash("LaunchingMissiles");
 
+        private void Awake()
+        {
+            _bossController = GetComponentInParent<IBossController>();
+        }
+
         // Update is called once per frame
         private void Update()
         {
+            if (_bossController != null && _bossController.IsDead)
+            {
+                _animator.SetBool(Moving, false);
+                _animator.SetBool(LaunchingMissiles, false);
+                return;
+            }
             // start launching missiles after 2 seconds
 
             // if player is far away follow but dont change y position
@@ -67,6 +79,7 @@ namespace EnemyScripts
     
         public void LaunchMissile() // should be called from animation event
         {
+            if (_bossController != null && _bossController.IsDead) return;
             missileLauncherRockets.SetActive(true);
             SoundManager.Instance.ExplisionSound();
             _launching = false;

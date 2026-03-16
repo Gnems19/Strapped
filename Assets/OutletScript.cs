@@ -18,8 +18,8 @@ public class OutletScript : MonoBehaviour
     private void Update()
     {
         if (!(Vector2.Distance(transform.position, player.transform.position) < 1.5f) || !_pluggedIn) return;
-        bool interact = Input.GetKeyDown(KeyCode.E);
-        if (MobileControls.Instance != null)
+        var interact = Input.GetKeyDown(KeyCode.E);
+        if (MobileControls.Instance)
             interact = interact || MobileControls.Instance.InteractDown;
         if (!interact) return;
         animator.SetTrigger(PluggedOut);

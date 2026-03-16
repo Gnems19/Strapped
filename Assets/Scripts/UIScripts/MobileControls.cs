@@ -100,7 +100,7 @@ public class MobileControls : MonoBehaviour
         // Left arrow — rotated 90° so up-arrow points left
         CreateButton("LeftBtn",
             new Vector2(0, 0), new Vector2(0, 0), new Vector2(0, 0),
-            new Vector2(marginX + btnSize, marginY + btnSize),
+            new Vector2(marginX + btnSize, marginY - btnSize * 0.5f),
             new Vector2(btnSize, btnSize),
             buttonNormal, buttonPressed, 90f,
             () => _leftHeld = true, () => _leftHeld = false);
@@ -108,7 +108,7 @@ public class MobileControls : MonoBehaviour
         // Right arrow — rotated -90° so up-arrow points right
         CreateButton("RightBtn",
             new Vector2(0, 0), new Vector2(0, 0), new Vector2(0, 0),
-            new Vector2(marginX + btnSize + btnSize + gap, marginY + btnSize),
+            new Vector2(marginX + btnSize + gap, marginY + btnSize - btnSize * 0.5f),
             new Vector2(btnSize, btnSize),
             buttonNormal, buttonPressed, -90f,
             () => _rightHeld = true, () => _rightHeld = false);
@@ -118,7 +118,7 @@ public class MobileControls : MonoBehaviour
         // Jump — bottom-right, arrow points up (no rotation)
         CreateButton("JumpBtn",
             new Vector2(1, 0), new Vector2(1, 0), new Vector2(1, 1),
-            new Vector2(-marginX, marginY + btnSize),
+            new Vector2(-marginX, marginY + btnSize - btnSize * 0.5f),
             new Vector2(btnSize, btnSize),
             buttonNormal, buttonPressed, 0f,
             () => _jumpPressedThisFrame = true, () => _jumpReleasedThisFrame = true);
@@ -126,7 +126,7 @@ public class MobileControls : MonoBehaviour
         // Interact — left of jump
         CreateButton("InteractBtn",
             new Vector2(1, 0), new Vector2(1, 0), new Vector2(1, 1),
-            new Vector2(-marginX - btnSize - gap, marginY + btnSize),
+            new Vector2(-marginX - btnSize - gap, marginY + btnSize - btnSize * 0.5f),
             new Vector2(btnSize, btnSize),
             interactNormal, interactPressed, 0f,
             () => _interactPressedThisFrame = true, null);
