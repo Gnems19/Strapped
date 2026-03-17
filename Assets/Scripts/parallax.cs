@@ -10,8 +10,7 @@ public class Parallax : MonoBehaviour
     private Vector2 _startPosition; // 0
     private float _startZ;
     public PixelPerfectCamera pixelPerfect;
-    private bool _isZooming;
-    // pixel grid is 
+    // pixel grid is
 
 
     private Vector2 Travel => (Vector2)cam.transform.position - _startPosition; // 2d vector is for the jump parallax
@@ -36,7 +35,6 @@ public class Parallax : MonoBehaviour
         // Debug.Log($"parallaxFactor: {parallaxFactor}");
         // Debug.Log($"start z: {startZ}");
 
-        if (_isZooming) return;
         var newPos = _startPosition + Travel * parallaxFactor;
         if (pixelPerfect)
         {
@@ -49,8 +47,4 @@ public class Parallax : MonoBehaviour
 
     }
 
-    public void SetZooming(bool zooming)
-    {
-        _isZooming = zooming;
-    }
 }

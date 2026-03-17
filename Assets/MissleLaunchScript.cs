@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -6,6 +7,14 @@ public class MissileLaunchScript : MonoBehaviour
 {
     [FormerlySerializedAs("misslePrefab")] public GameObject missilePrefab;
     public GameObject boss;
+    [SerializeField] private float spawnDelay = 0.1f;
+
+    private readonly List<Transform> _spawnPoints = new();
+
+    private void Awake()
+    {
+        CacheSpawnPoints();
+    }
 
     private void OnEnable()
     {
@@ -21,28 +30,67 @@ public class MissileLaunchScript : MonoBehaviour
 
     private void SpawnMissiles()
     {
-        for (var i = 0; i < 2; i++)
+        if (_spawnPoints.Count > 0)
         {
-            for (var j = 0; j < 6; j++)
+            for (var i = 0; i < _spawnPoints.Count; i++)
             {
-                StartCoroutine(SpawnMissileWithDelay(i, j));
+                StartCoroutine(SpawnMissileWithDelay(_spawnPoints[i], i));
+            }
+
+            StartCoroutine(DeactivateAfterSpawn(_spawnPoints.Count));
+            return;
+        }
+
+        // Fallback to the old grid pattern if no prefab-authored spawn markers exist.
+        const int rows = 2;
+        const int columns = 6;
+        var spawnCount = rows * columns;
+        for (var i = 0; i < rows; i++)
+        {
+            for (var j = 0; j < columns; j++)
+            {
+                StartCoroutine(SpawnFallbackMissileWithDelay(i, j, i * columns + j));
             }
         }
 
-        // Deactivate after last coroutine delay finishes
-        StartCoroutine(DeactivateAfterSpawn());
+        StartCoroutine(DeactivateAfterSpawn(spawnCount));
     }
 
-    private IEnumerator DeactivateAfterSpawn()
+    private void CacheSpawnPoints()
     {
-        // Wait for all missiles to finish spawning (max delay: 1*0.1 + 5*0.1 = 0.6s)
-        yield return new WaitForSeconds(0.7f);
+        if (_spawnPoints.Count > 0) return;
+
+        for (var i = 0; i < transform.childCount; i++)
+        {
+            var child = transform.GetChild(i);
+            if (!child.CompareTag("HomingMissile")) continue;
+
+            _spawnPoints.Add(child);
+            child.gameObject.SetActive(false);
+        }
+    }
+
+    private IEnumerator DeactivateAfterSpawn(int spawnCount)
+    {
+        var lastSpawnDelay = Mathf.Max(0, spawnCount - 1) * spawnDelay;
+        yield return new WaitForSeconds(lastSpawnDelay + 0.1f);
         gameObject.SetActive(false);
     }
 
-    private IEnumerator SpawnMissileWithDelay(int i, int j)
+    private IEnumerator SpawnMissileWithDelay(Transform spawnPoint, int spawnIndex)
     {
-        yield return new WaitForSeconds(i * 0.1f + j * 0.1f);
+        yield return new WaitForSeconds(spawnIndex * spawnDelay);
+
+        var spawnPosition = transform.TransformPoint(spawnPoint.localPosition);
+        spawnPosition.z = transform.position.z;
+        var spawnRotation = transform.rotation * spawnPoint.localRotation;
+
+        Instantiate(missilePrefab, spawnPosition, spawnRotation);
+    }
+
+    private IEnumerator SpawnFallbackMissileWithDelay(int i, int j, int spawnIndex)
+    {
+        yield return new WaitForSeconds(spawnIndex * spawnDelay);
 
         var spreadAngle = (i * 6 + j - 5.5f) * 10f;
         Instantiate(missilePrefab,

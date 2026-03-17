@@ -19,57 +19,58 @@ public class EnterBossAreaScript : MonoBehaviour
     private Animator exitDoorAnimator;
     private static readonly int Close = Animator.StringToHash("Close");
     private static readonly int Open = Animator.StringToHash("Open");
+    private bool _bossEncounterStarted;
 
     public int targetSize = 3; // Zoom value for boss area
     public float transitionTime = 1f; // Duration of zoom
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player"))
+        if (!other.CompareTag("Player") || _bossEncounterStarted) return;
+
+        _bossEncounterStarted = true;
+        Debug.Log("Entered Boss Area");
+        if (cameraController != null)
         {
-            Debug.Log("Entered Boss Area");
-            if (cameraController != null)
+            Debug.Log("Calling ZoomTo()");
+            cameraController.ZoomTo(targetSize, transitionTime);
+            // activate boss music or other effects here
+            if (soundManager != null)
             {
-                Debug.Log("Calling ZoomTo()");
-                cameraController.ZoomTo(targetSize, transitionTime);
-                // activate boss music or other effects here
-                if (soundManager != null)
-                {
-                    // Assuming the SoundManager has a method to play boss music
-                    soundManager.GetComponent<SoundManager>().PlayBossMusic();
-                }
-                else
-                {
-                    Debug.LogWarning("SoundManager is not assigned.");
-                }
-                // Wake up the boss
-                if (boss != null)
-                {
-                    boss.SetActive(true);
-                    var bossScript = boss.GetComponent<BossScript>();
-                    if (bossScript != null) bossScript.WakeUp();
-                }
-                else
-                {
-                    Debug.LogWarning("Boss prefab is not assigned.");
-                }
+                // Assuming the SoundManager has a method to play boss music
+                soundManager.GetComponent<SoundManager>().PlayBossMusic();
             }
             else
             {
-                Debug.LogWarning("CameraController reference is null.");
+                Debug.LogWarning("SoundManager is not assigned.");
             }
-            // Close the doors
-            if (door1 != null && door2 != null)
+            // Wake up the boss
+            if (boss != null)
             {
-                enterDoorAnimator.SetTrigger(Close);
-                exitDoorAnimator.SetTrigger(Open);
-                /*                door1.SetActive(false);
-                                door2.SetActive(false);*/
+                boss.SetActive(true);
+                var bossScript = boss.GetComponent<BossScript>();
+                if (bossScript != null) bossScript.WakeUp();
             }
             else
             {
-                Debug.LogWarning("Door prefabs are not assigned.");
+                Debug.LogWarning("Boss prefab is not assigned.");
             }
+        }
+        else
+        {
+            Debug.LogWarning("CameraController reference is null.");
+        }
+        // Close the doors
+        if (door1 != null && door2 != null)
+        {
+            enterDoorAnimator.SetTrigger(Close);
+            exitDoorAnimator.SetTrigger(Open);
+            /*                door1.SetActive(false);
+                             door2.SetActive(false);*/
+        }
+        else
+        {
+            Debug.LogWarning("Door prefabs are not assigned.");
         }
     }
 }

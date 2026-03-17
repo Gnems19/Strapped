@@ -6,7 +6,7 @@ namespace PlayerScripts
 {
     public class PlayerController : MonoBehaviour, IPlayerController {
     
-        [SerializeField] Logger logger;
+        [SerializeField] private Logger logger;
 
         // Public for external hooks
         public Vector3 Velocity { get; private set; }
@@ -15,13 +15,13 @@ namespace PlayerScripts
         public bool LandingThisFrame { get; private set; }
         public Vector3 RawMovement { get; private set; }
         public bool IsDead { get; private set;}
-        public bool Grounded => _colDown;
-    
+        public bool Grounded { get; private set; }
+
         private Vector3 _lastPosition;
         private float _currentHorizontalSpeed, _currentVerticalSpeed;
         private IPlayerDeathController _death;
-    
-        void Awake() => _death = GetComponentInParent<IPlayerDeathController>();
+
+        private void Awake() => _death = GetComponentInParent<IPlayerDeathController>();
         private void Start()
         {
             logger.Log("PlayerController Start called");
@@ -97,7 +97,7 @@ namespace PlayerScripts
         [SerializeField] [Range(0.01f, 0.3f)] private float _rayBuffer = 0.1f; // Prevents side detectors hitting the ground
 
         private RayRange _raysUp, _raysRight, _raysDown, _raysLeft;
-        private bool _colUp, _colRight, _colDown, _colLeft;
+        private bool _colUp, _colRight, _colLeft;
 
         private float _timeLeftGrounded;
 
@@ -108,13 +108,13 @@ namespace PlayerScripts
             // Ground
             LandingThisFrame = false;
             var groundedCheck = RunDetection(_raysDown);
-            if (_colDown && !groundedCheck) _timeLeftGrounded = Time.time; // Only trigger when first leaving
-            else if (!_colDown && groundedCheck) {
+            if (Grounded && !groundedCheck) _timeLeftGrounded = Time.time; // Only trigger when first leaving
+            else if (!Grounded && groundedCheck) {
                 _coyoteUsable = true; // Only trigger when first touching
                 LandingThisFrame = true;
             }
 
-            _colDown = groundedCheck;
+            Grounded = groundedCheck;
 
             // The rest
             _colUp = RunDetection(_raysUp);
@@ -211,7 +211,7 @@ namespace PlayerScripts
         private float _fallSpeed;
 
         private void CalculateGravity() {
-            if (_colDown) {
+            if (Grounded) {
                 // Move out of the ground
                 if (_currentVerticalSpeed < 0) _currentVerticalSpeed = 0;
             }
@@ -240,11 +240,11 @@ namespace PlayerScripts
         private bool _endedJumpEarly = true;
         private float _apexPoint; // Becomes 1 at the apex of a jump
         private float _lastJumpPressed;
-        private bool CanUseCoyote => _coyoteUsable && !_colDown && _timeLeftGrounded + _coyoteTimeThreshold > Time.time;
-        private bool HasBufferedJump => _colDown && _lastJumpPressed + _jumpBuffer > Time.time;
+        private bool CanUseCoyote => _coyoteUsable && !Grounded && _timeLeftGrounded + _coyoteTimeThreshold > Time.time;
+        private bool HasBufferedJump => Grounded && _lastJumpPressed + _jumpBuffer > Time.time;
 
         private void CalculateJumpApex() {
-            if (!_colDown) {
+            if (!Grounded) {
                 // Gets stronger the closer to the top of the jump
                 _apexPoint = Mathf.InverseLerp(_jumpApexThreshold, 0, Mathf.Abs(Velocity.y));
                 _fallSpeed = Mathf.Lerp(_minFallSpeed, _maxFallSpeed, _apexPoint);
@@ -268,7 +268,7 @@ namespace PlayerScripts
             }
 
             // End the jump early if button released
-            if (!_colDown && Input.JumpUp && !_endedJumpEarly && Velocity.y > 0) {
+            if (!Grounded && Input.JumpUp && !_endedJumpEarly && Velocity.y > 0) {
                 // _currentVerticalSpeed = 0;
                 _endedJumpEarly = true;
             }
@@ -301,7 +301,7 @@ namespace PlayerScripts
 
             // otherwise increment away from current pos; see what closest position we can move to
             var positionToMoveTo = transform.position;
-            for (int i = 1; i < _freeColliderIterations; i++) {
+            for (var i = 1; i < _freeColliderIterations; i++) {
                 // increment to check all but furthestPoint - we did that already
                 var t = (float)i / _freeColliderIterations;
                 var posToTry = Vector2.Lerp(pos, furthestPoint, t);
@@ -309,11 +309,45 @@ namespace PlayerScripts
                 if (Physics2D.OverlapBox(posToTry, _characterBounds.size, 0, _groundLayer)) {
                     transform.position = positionToMoveTo;
 
-                    // We've landed on a corner or hit our head on a ledge. Nudge the player gently
-                    if (i == 1) {
-                        if (_currentVerticalSpeed < 0) _currentVerticalSpeed = 0;
-                        var dir = transform.position - hit.transform.position;
-                        transform.position += dir.normalized * move.magnitude;
+                    // Corner/ledge collision: resolve each axis independently to slide along surfaces
+                    if (i != 1) return;
+                    var xOnly = new Vector2(pos.x + _currentHorizontalSpeed * Time.deltaTime, pos.y);
+                    var yOnly = new Vector2(pos.x, pos.y + _currentVerticalSpeed * Time.deltaTime);
+
+                    bool xBlocked = Physics2D.OverlapBox(xOnly, _characterBounds.size, 0, _groundLayer);
+                    bool yBlocked = Physics2D.OverlapBox(yOnly, _characterBounds.size, 0, _groundLayer);
+
+                    if (!yBlocked) {
+                        transform.position = new Vector3(yOnly.x, yOnly.y, pos.z);
+                        _currentHorizontalSpeed = 0;
+                    } else if (!xBlocked) {
+                        transform.position = new Vector3(xOnly.x, xOnly.y, pos.z);
+                        _currentVerticalSpeed = 0;
+                    } else {
+                        // Both full-axis moves blocked (corner) — try partial moves to slide past
+                        var resolved = false;
+                        var yMove = _currentVerticalSpeed * Time.deltaTime;
+                        var xMove = _currentHorizontalSpeed * Time.deltaTime;
+                        for (var j = _freeColliderIterations - 1; j >= 1 && !resolved; j--) {
+                            var frac = (float)j / _freeColliderIterations;
+                            var partialY = new Vector2(pos.x, pos.y + yMove * frac);
+                            if (Physics2D.OverlapBox(partialY, _characterBounds.size, 0, _groundLayer)) continue;
+                            transform.position = new Vector3(pos.x, partialY.y, pos.z);
+                            _currentHorizontalSpeed = 0;
+                            resolved = true;
+                        }
+                        for (var j = _freeColliderIterations - 1; j >= 1 && !resolved; j--) {
+                            var frac = (float)j / _freeColliderIterations;
+                            var partialX = new Vector2(pos.x + xMove * frac, pos.y);
+                            if (Physics2D.OverlapBox(partialX, _characterBounds.size, 0, _groundLayer)) continue;
+                            transform.position = new Vector3(partialX.x, pos.y, pos.z);
+                            _currentVerticalSpeed = 0;
+                            resolved = true;
+                        }
+
+                        if (resolved) return;
+                        _currentHorizontalSpeed = 0;
+                        _currentVerticalSpeed = 0;
                     }
 
                     return;

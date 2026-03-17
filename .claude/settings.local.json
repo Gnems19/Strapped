@@ -28,7 +28,8 @@
       "mcp__coplay-mcp__stop_game",
       "mcp__coplay-mcp__open_scene",
       "mcp__coplay-mcp__create_game_object",
-      "mcp__coplay-mcp__delete_game_object"
+      "mcp__coplay-mcp__delete_game_object",
+      "mcp__coplay-mcp__duplicate_asset"
     ]
   }
 }

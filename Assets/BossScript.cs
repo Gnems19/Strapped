@@ -24,11 +24,13 @@ public class BossScript : MonoBehaviour
         this.missileLauncherRockets = missileLauncherRockets;
     }
 
-    private static readonly int Moving = Animator.StringToHash("Moving");
+    private static readonly int MovingLeft = Animator.StringToHash("MovingLeft");
     private static readonly int TurnedLeft = Animator.StringToHash("TurnedLeft");
     private static readonly int MovingRight = Animator.StringToHash("MovingRight");
     private static readonly int LaunchingMissiles = Animator.StringToHash("LaunchingMissiles");
     private static readonly int PluggedOut = Animator.StringToHash("PluggedOut");
+    private const string RocketLaunchLeftState = "Base Layer.RocketLaunchLeft";
+    private const string RocketLaunchRightState = "Base Layer.RocketLaunchRight";
 
     private void Update()
     {
@@ -40,14 +42,14 @@ public class BossScript : MonoBehaviour
                 break;
 
             case BossState.Following:
-                FacePlayer();
-                FollowPlayer();
+                UpdateFacingAndMovement();
                 _attackTimer += Time.deltaTime;
                 if (_attackTimer >= attackInterval)
                 {
                     _state = BossState.Launching;
-                    animator.SetBool(Moving, false);
+                    StopMovementAnimation();
                     animator.SetBool(LaunchingMissiles, true);
+                    animator.CrossFadeInFixedTime(_facingRight ? RocketLaunchRightState : RocketLaunchLeftState, 0.05f);
                 }
                 break;
 
@@ -67,7 +69,6 @@ public class BossScript : MonoBehaviour
 
         if (playerIsRight == _facingRight) return;
         _facingRight = playerIsRight;
-        animator.SetBool(MovingRight, _facingRight);
         animator.SetBool(TurnedLeft, !_facingRight);
     }
 
@@ -79,16 +80,32 @@ public class BossScript : MonoBehaviour
 
         if (dist > followDistance)
         {
-            var dir = playerPos.x > bossPos.x ? 1f : -1f;
-            transform.position = new Vector3(
-                bossPos.x + dir * followSpeed * Time.deltaTime,
-                bossPos.y, bossPos.z);
-            animator.SetBool(Moving, true);
+            var moveRight = playerPos.x > bossPos.x;
+
+            // Don't move physically while a turn or rocket launch animation is playing
+            var stateInfo = animator.GetCurrentAnimatorStateInfo(0);
+            var isBusy = stateInfo.IsName("TurnRight") || stateInfo.IsName("TurnLeft")
+                || stateInfo.IsName("RocketLaunchRight") || stateInfo.IsName("RocketLaunchLeft");
+            if (!isBusy)
+            {
+                var dir = moveRight ? 1f : -1f;
+                transform.position = new Vector3(
+                    bossPos.x + dir * followSpeed * Time.deltaTime,
+                    bossPos.y, bossPos.z);
+            }
+
+            SetMovementDirection(moveRight);
         }
         else
         {
-            animator.SetBool(Moving, false);
+            StopMovementAnimation();
         }
+    }
+
+    private void UpdateFacingAndMovement()
+    {
+        FacePlayer();
+        FollowPlayer();
     }
 
     /// <summary>Called by EnterBossAreaScript when player enters boss area.</summary>
@@ -97,8 +114,8 @@ public class BossScript : MonoBehaviour
         if (_state != BossState.Sleeping || _isDead) return;
         _state = BossState.Following;
         _attackTimer = 0f;
-        // Immediately start facing and moving
-        FacePlayer();
+        // Prime the animator on the activation frame so movement does not wait for the next Update.
+        UpdateFacingAndMovement();
     }
 
     /// <summary>Called by animation event when missile launch animation finishes.</summary>
@@ -115,6 +132,7 @@ public class BossScript : MonoBehaviour
         animator.SetBool(LaunchingMissiles, false);
         _attackTimer = 0f;
         _state = BossState.Following;
+        UpdateFacingAndMovement();
     }
 
     /// <summary>Called by OutletScript when player unplugs the boss.</summary>
@@ -122,9 +140,21 @@ public class BossScript : MonoBehaviour
     {
         _isDead = true;
         _state = BossState.Sleeping;
-        animator.SetBool(Moving, false);
+        StopMovementAnimation();
         animator.SetBool(LaunchingMissiles, false);
         animator.SetTrigger(PluggedOut);
         missileLauncherRockets.SetActive(false);
+    }
+
+    private void SetMovementDirection(bool movingRight)
+    {
+        animator.SetBool(MovingRight, movingRight);
+        animator.SetBool(MovingLeft, !movingRight);
+    }
+
+    private void StopMovementAnimation()
+    {
+        animator.SetBool(MovingLeft, false);
+        animator.SetBool(MovingRight, false);
     }
 }

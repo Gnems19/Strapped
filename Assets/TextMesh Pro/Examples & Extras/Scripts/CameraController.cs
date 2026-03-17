@@ -6,7 +6,6 @@ public class CameraController : MonoBehaviour
     [SerializeField] private Camera cam;
     private Coroutine zoomCoroutine;
     [SerializeField] private PixelPerfectCamera pixelPerfect;
-    public Parallax[] parallaxLayers;
     [SerializeField] private float baseY = 2; // starting Y pos when orthographicSize is 5
     [SerializeField] private float baseSize = 5f; // expected "normal" ortho size for your baseline
 
@@ -62,33 +61,30 @@ public class CameraController : MonoBehaviour
             Debug.Log("Pixel snapping re-enabled");
         }
     }*/
+    private static int RoundToEven(float value)
+    {
+        int rounded = Mathf.RoundToInt(value);
+        if (rounded % 2 != 0) rounded++;
+        return rounded;
+    }
+
     private System.Collections.IEnumerator SmoothZoom(int targetResY, float duration)
     {
-        foreach(Parallax parallax in parallaxLayers) 
-        {
-            parallax.SetZooming(true);
-        }
         int startResY = pixelPerfect.refResolutionY;
         int startResX = pixelPerfect.refResolutionX;
-        float targetResX = targetResY * (1920f / 1080f);
+        int finalResX = RoundToEven(targetResY * cam.aspect);
+        int finalResY = RoundToEven(targetResY);
         float time = 0f;
 
         while (time < duration)
         {
             float t = time / duration;
-            float currentResY = Mathf.Lerp(startResY, targetResY, t);
-            float currentResX = Mathf.Lerp(startResX, targetResY * (cam.aspect), t);
-            pixelPerfect.refResolutionX = Mathf.RoundToInt(currentResX);
-            pixelPerfect.refResolutionY = Mathf.RoundToInt(currentResY);
+            pixelPerfect.refResolutionX = RoundToEven(Mathf.Lerp(startResX, finalResX, t));
+            pixelPerfect.refResolutionY = RoundToEven(Mathf.Lerp(startResY, finalResY, t));
             time += Time.deltaTime;
             yield return null;
         }
-        pixelPerfect.refResolutionX = Mathf.RoundToInt(targetResX);
-        pixelPerfect.refResolutionY = targetResY;
-
-        foreach(Parallax parallax in parallaxLayers) 
-        {
-            parallax.SetZooming(false);
-        }
+        pixelPerfect.refResolutionX = finalResX;
+        pixelPerfect.refResolutionY = finalResY;
     }
 }

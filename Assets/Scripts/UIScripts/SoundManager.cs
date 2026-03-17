@@ -46,6 +46,9 @@ public class SoundManager : MonoBehaviour
     // Play the background music
     public void PlayBackgroundMusic(AudioClip musicClip)
     {
+         if (backgroundMusicSource == null || musicClip == null) return;
+         if (backgroundMusicSource.clip == musicClip && backgroundMusicSource.isPlaying) return;
+
          backgroundMusicSource.clip = musicClip;
          backgroundMusicSource.loop = true;
          backgroundMusicSource.Play();
@@ -56,10 +59,7 @@ public class SoundManager : MonoBehaviour
     {
         // log 
         Debug.Log("Playing boss music");
-
-        backgroundMusicSource.clip = level2Song;
-        backgroundMusicSource.loop = true;
-        backgroundMusicSource.Play();
+        PlayBackgroundMusic(level2Song);
     }
 
     // Play a sound effect
