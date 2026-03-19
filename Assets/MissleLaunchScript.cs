@@ -44,7 +44,7 @@ public class MissileLaunchScript : MonoBehaviour
         // Fallback to the old grid pattern if no prefab-authored spawn markers exist.
         const int rows = 2;
         const int columns = 6;
-        var spawnCount = rows * columns;
+        const int spawnCount = rows * columns;
         for (var i = 0; i < rows; i++)
         {
             for (var j = 0; j < columns; j++)

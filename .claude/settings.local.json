@@ -29,7 +29,24 @@
       "mcp__coplay-mcp__open_scene",
       "mcp__coplay-mcp__create_game_object",
       "mcp__coplay-mcp__delete_game_object",
-      "mcp__coplay-mcp__duplicate_asset"
+      "mcp__coplay-mcp__duplicate_asset",
+      "Bash(head:*)",
+      "mcp__coplay-mcp__play_game",
+      "mcp__coplay-mcp__capture_scene_object",
+      "mcp__coplay-mcp__set_transform",
+      "Bash(find Assets/Scripts -name \"*.cs.meta\" -type f -exec grep -H \"guid:\" {})",
+      "Bash(find Assets -maxdepth 1 -name \"*.cs.meta\" -type f -exec grep -H \"guid:\" {})",
+      "Bash(grep -h m_Script:.*guid: /c/Users/user/UnityProjects/Strapped/Assets/Scenes/BossLevel.unity /c/Users/user/UnityProjects/Strapped/Assets/Scenes/StartLevel.unity /c/Users/user/UnityProjects/Strapped/Assets/BossLevel.unity)",
+      "Bash(for guid:*)",
+      "Bash(do echo:*)",
+      "Bash(grep -r \"guid: $guid\" Assets --include=\"*.meta\")",
+      "Bash(done)",
+      "Bash(xargs grep:*)",
+      "Bash(git -C /c/Users/user/UnityProjects/Strapped log --all --oneline --all -- \"*.cs.meta\")",
+      "Bash(git -C /c/Users/user/UnityProjects/Strapped log --all --name-only --oneline)",
+      "Bash(grep -E \"\\\\.cs\\\\.meta|\\\\.cs$\")",
+      "Bash(git -C /c/Users/user/UnityProjects/Strapped log --all --format=\"\" --name-only -- \"*.cs\")",
+      "Bash(grep -r b206d7aafd8dd1645a5ad17bb240cd9f /c/Users/user/UnityProjects/Strapped/Assets --include=*.prefab)"
     ]
   }
 }

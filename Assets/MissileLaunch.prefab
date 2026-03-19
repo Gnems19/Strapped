@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 8485174846249858139}
   - component: {fileID: 7222714178287282688}
   - component: {fileID: 8257456604925766658}
-  - component: {fileID: 845105467809301463}
   m_Layer: 9
   m_Name: HomingMissileRight6
   m_TagString: HomingMissile
@@ -27,13 +26,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 407281559530331594}
+  serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.8870109, w: -0.46174863}
   m_LocalPosition: {x: 0.1, y: -1.5, z: -2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6070511217434902319}
-  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 235}
 --- !u!212 &8485174846249858139
 SpriteRenderer:
@@ -173,20 +172,6 @@ PolygonCollider2D:
       - {x: 0.14635468, y: 0.4408226}
       - {x: 0.070560455, y: 0.5066457}
   m_UseDelaunayMesh: 0
---- !u!114 &845105467809301463
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 407281559530331594}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6514921d558e3fa499dd8c7ed89070d0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _speed: 5
-  _rotateSpeed: 200
 --- !u!1 &632900651515629432
 GameObject:
   m_ObjectHideFlags: 0
@@ -199,7 +184,6 @@ GameObject:
   - component: {fileID: 3785747107478703355}
   - component: {fileID: 4618465181865413582}
   - component: {fileID: 8853668355294757885}
-  - component: {fileID: 8223887609206195974}
   m_Layer: 9
   m_Name: HomingMissileLeft4
   m_TagString: HomingMissile
@@ -214,13 +198,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 632900651515629432}
+  serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
   m_LocalPosition: {x: -1.07, y: -0.00999999, z: -2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6070511217434902319}
-  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!212 &3785747107478703355
 SpriteRenderer:
@@ -360,20 +344,6 @@ PolygonCollider2D:
       - {x: 0.14635468, y: 0.4408226}
       - {x: 0.070560455, y: 0.5066457}
   m_UseDelaunayMesh: 0
---- !u!114 &8223887609206195974
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 632900651515629432}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6514921d558e3fa499dd8c7ed89070d0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _speed: 5
-  _rotateSpeed: 200
 --- !u!1 &1058864460526337246
 GameObject:
   m_ObjectHideFlags: 0
@@ -398,6 +368,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1058864460526337246}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 42.3, y: 0.55, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -416,7 +387,6 @@ Transform:
   - {fileID: 6385918654044659250}
   - {fileID: 8098580652408680857}
   m_Father: {fileID: 0}
-  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &8809330984281485944
 MonoBehaviour:
@@ -430,6 +400,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf6c50267aa6dff429b1bb6e2e56790a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  missilePrefab: {fileID: 0}
+  boss: {fileID: 0}
+  spawnDelay: 0.1
 --- !u!1 &1246371011154325887
 GameObject:
   m_ObjectHideFlags: 0
@@ -442,7 +415,6 @@ GameObject:
   - component: {fileID: 8914037790179286985}
   - component: {fileID: 6725885243538650626}
   - component: {fileID: 8138200803025243307}
-  - component: {fileID: 89705990827991179}
   m_Layer: 9
   m_Name: HomingMissileRight1
   m_TagString: HomingMissile
@@ -457,13 +429,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1246371011154325887}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: -0.5, w: 0.8660254}
   m_LocalPosition: {x: 0.83, y: 0.93, z: -2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6070511217434902319}
-  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -60}
 --- !u!212 &8914037790179286985
 SpriteRenderer:
@@ -603,20 +575,6 @@ PolygonCollider2D:
       - {x: 0.14635468, y: 0.4408226}
       - {x: 0.070560455, y: 0.5066457}
   m_UseDelaunayMesh: 0
---- !u!114 &89705990827991179
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1246371011154325887}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6514921d558e3fa499dd8c7ed89070d0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _speed: 5
-  _rotateSpeed: 200
 --- !u!1 &2130678732088711340
 GameObject:
   m_ObjectHideFlags: 0
@@ -629,7 +587,6 @@ GameObject:
   - component: {fileID: 1943890148244770756}
   - component: {fileID: 468254691170071575}
   - component: {fileID: 9167604941533222717}
-  - component: {fileID: 5087436279848452702}
   m_Layer: 9
   m_Name: HomingMissileLeft5
   m_TagString: HomingMissile
@@ -644,13 +601,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2130678732088711340}
+  serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.76604444, w: 0.64278764}
   m_LocalPosition: {x: -1.21, y: -0.57, z: -2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6070511217434902319}
-  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 100}
 --- !u!212 &1943890148244770756
 SpriteRenderer:
@@ -790,20 +747,6 @@ PolygonCollider2D:
       - {x: 0.14635468, y: 0.4408226}
       - {x: 0.070560455, y: 0.5066457}
   m_UseDelaunayMesh: 0
---- !u!114 &5087436279848452702
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2130678732088711340}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6514921d558e3fa499dd8c7ed89070d0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _speed: 5
-  _rotateSpeed: 200
 --- !u!1 &3836303290066815645
 GameObject:
   m_ObjectHideFlags: 0
@@ -816,7 +759,6 @@ GameObject:
   - component: {fileID: 3675560017132809710}
   - component: {fileID: 2876433681942255554}
   - component: {fileID: 544323418450536899}
-  - component: {fileID: 8464628739227584694}
   m_Layer: 9
   m_Name: HomingMissileLeft2
   m_TagString: HomingMissile
@@ -831,13 +773,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3836303290066815645}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0.38268343, w: 0.92387956}
   m_LocalPosition: {x: -0.55, y: 1.1399999, z: -2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6070511217434902319}
-  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 45}
 --- !u!212 &3675560017132809710
 SpriteRenderer:
@@ -977,20 +919,6 @@ PolygonCollider2D:
       - {x: 0.14635468, y: 0.4408226}
       - {x: 0.070560455, y: 0.5066457}
   m_UseDelaunayMesh: 0
---- !u!114 &8464628739227584694
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3836303290066815645}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6514921d558e3fa499dd8c7ed89070d0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _speed: 5
-  _rotateSpeed: 200
 --- !u!1 &4383474389642676691
 GameObject:
   m_ObjectHideFlags: 0
@@ -1003,7 +931,6 @@ GameObject:
   - component: {fileID: 3203138652103070571}
   - component: {fileID: 7926327159351832675}
   - component: {fileID: 5254196839237364191}
-  - component: {fileID: 4031511806894103754}
   m_Layer: 9
   m_Name: HomingMissileLeft1
   m_TagString: HomingMissile
@@ -1018,13 +945,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4383474389642676691}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0.17364816, w: 0.9848078}
   m_LocalPosition: {x: -0.06, y: 1.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6070511217434902319}
-  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 20}
 --- !u!212 &3203138652103070571
 SpriteRenderer:
@@ -1164,20 +1091,6 @@ PolygonCollider2D:
       - {x: 0.14635468, y: 0.4408226}
       - {x: 0.070560455, y: 0.5066457}
   m_UseDelaunayMesh: 0
---- !u!114 &4031511806894103754
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4383474389642676691}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6514921d558e3fa499dd8c7ed89070d0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _speed: 5
-  _rotateSpeed: 200
 --- !u!1 &4766174171809662799
 GameObject:
   m_ObjectHideFlags: 0
@@ -1190,7 +1103,6 @@ GameObject:
   - component: {fileID: 8086881926510025349}
   - component: {fileID: 4246354298185721796}
   - component: {fileID: 8676158373210969698}
-  - component: {fileID: 7952080559070220457}
   m_Layer: 9
   m_Name: HomingMissileRight3
   m_TagString: HomingMissile
@@ -1205,13 +1117,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4766174171809662799}
+  serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0.7660445, w: 0.64278764}
   m_LocalPosition: {x: 0.80000126, y: -0.060000055, z: -2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6070511217434902319}
-  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -100}
 --- !u!212 &8086881926510025349
 SpriteRenderer:
@@ -1351,20 +1263,6 @@ PolygonCollider2D:
       - {x: 0.14635468, y: 0.4408226}
       - {x: 0.070560455, y: 0.5066457}
   m_UseDelaunayMesh: 0
---- !u!114 &7952080559070220457
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4766174171809662799}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6514921d558e3fa499dd8c7ed89070d0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _speed: 5
-  _rotateSpeed: 200
 --- !u!1 &6981947044183291334
 GameObject:
   m_ObjectHideFlags: 0
@@ -1377,7 +1275,6 @@ GameObject:
   - component: {fileID: 5752276110075690103}
   - component: {fileID: 7636653976555244712}
   - component: {fileID: 5827743725887021831}
-  - component: {fileID: 6312096355731159537}
   m_Layer: 9
   m_Name: HomingMissileRight4
   m_TagString: HomingMissile
@@ -1392,13 +1289,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6981947044183291334}
+  serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0.8241262, w: 0.56640637}
   m_LocalPosition: {x: 0.56, y: -0.59, z: -2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6070511217434902319}
-  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -111}
 --- !u!212 &5752276110075690103
 SpriteRenderer:
@@ -1538,20 +1435,6 @@ PolygonCollider2D:
       - {x: 0.14635468, y: 0.4408226}
       - {x: 0.070560455, y: 0.5066457}
   m_UseDelaunayMesh: 0
---- !u!114 &6312096355731159537
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6981947044183291334}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6514921d558e3fa499dd8c7ed89070d0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _speed: 5
-  _rotateSpeed: 200
 --- !u!1 &8014790074801052785
 GameObject:
   m_ObjectHideFlags: 0
@@ -1564,7 +1447,6 @@ GameObject:
   - component: {fileID: 567595031677808069}
   - component: {fileID: 7915033651104849936}
   - component: {fileID: 735899887439580582}
-  - component: {fileID: 7611453331630991683}
   m_Layer: 9
   m_Name: HomingMissileLeft6
   m_TagString: HomingMissile
@@ -1579,13 +1461,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8014790074801052785}
+  serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.86602545, w: 0.49999994}
   m_LocalPosition: {x: -1.06, y: -1.17, z: -2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6070511217434902319}
-  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 120}
 --- !u!212 &567595031677808069
 SpriteRenderer:
@@ -1725,20 +1607,6 @@ PolygonCollider2D:
       - {x: 0.14635468, y: 0.4408226}
       - {x: 0.070560455, y: 0.5066457}
   m_UseDelaunayMesh: 0
---- !u!114 &7611453331630991683
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8014790074801052785}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6514921d558e3fa499dd8c7ed89070d0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _speed: 5
-  _rotateSpeed: 200
 --- !u!1 &8415514982541166093
 GameObject:
   m_ObjectHideFlags: 0
@@ -1751,7 +1619,6 @@ GameObject:
   - component: {fileID: 1623531354665404806}
   - component: {fileID: 848821696130423246}
   - component: {fileID: 5955452891050083819}
-  - component: {fileID: 8092027608242321901}
   m_Layer: 9
   m_Name: HomingMissileRight2
   m_TagString: HomingMissile
@@ -1766,13 +1633,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8415514982541166093}
+  serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0.71000123, y: 0.39999995, z: -2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6070511217434902319}
-  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
 --- !u!212 &1623531354665404806
 SpriteRenderer:
@@ -1912,20 +1779,6 @@ PolygonCollider2D:
       - {x: 0.14635468, y: 0.4408226}
       - {x: 0.070560455, y: 0.5066457}
   m_UseDelaunayMesh: 0
---- !u!114 &8092027608242321901
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8415514982541166093}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6514921d558e3fa499dd8c7ed89070d0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _speed: 5
-  _rotateSpeed: 200
 --- !u!1 &8568313558383652561
 GameObject:
   m_ObjectHideFlags: 0
@@ -1938,7 +1791,6 @@ GameObject:
   - component: {fileID: 7881642638199284122}
   - component: {fileID: 8265702890651674231}
   - component: {fileID: 8113642660080436891}
-  - component: {fileID: 3162102637739405724}
   m_Layer: 9
   m_Name: HomingMissileLeft3
   m_TagString: HomingMissile
@@ -1953,13 +1805,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8568313558383652561}
+  serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.60876137, w: 0.7933534}
   m_LocalPosition: {x: -0.84, y: 0.59, z: -2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6070511217434902319}
-  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 75}
 --- !u!212 &7881642638199284122
 SpriteRenderer:
@@ -2099,20 +1951,6 @@ PolygonCollider2D:
       - {x: 0.14635468, y: 0.4408226}
       - {x: 0.070560455, y: 0.5066457}
   m_UseDelaunayMesh: 0
---- !u!114 &3162102637739405724
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8568313558383652561}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6514921d558e3fa499dd8c7ed89070d0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _speed: 5
-  _rotateSpeed: 200
 --- !u!1 &9161540935770556981
 GameObject:
   m_ObjectHideFlags: 0
@@ -2125,7 +1963,6 @@ GameObject:
   - component: {fileID: 497941346938199016}
   - component: {fileID: 2931149183195491735}
   - component: {fileID: 2726196965238411103}
-  - component: {fileID: 7746874640105124189}
   m_Layer: 9
   m_Name: HomingMissileRight5
   m_TagString: HomingMissile
@@ -2140,13 +1977,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9161540935770556981}
+  serializedVersion: 2
   m_LocalRotation: {x: 0.004297163, y: 0.0075952085, z: -0.8703225, w: 0.49240485}
   m_LocalPosition: {x: 0.13000122, y: -1.0300001, z: -2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6070511217434902319}
-  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 1, y: 0, z: -121}
 --- !u!212 &497941346938199016
 SpriteRenderer:
@@ -2286,17 +2123,3 @@ PolygonCollider2D:
       - {x: 0.14635468, y: 0.4408226}
       - {x: 0.070560455, y: 0.5066457}
   m_UseDelaunayMesh: 0
---- !u!114 &7746874640105124189
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9161540935770556981}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6514921d558e3fa499dd8c7ed89070d0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _speed: 5
-  _rotateSpeed: 200
