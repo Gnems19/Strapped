@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 5afee8fe9d59f1b499dba18b1aa9d1ef
+guid: 46815146d95aaea44a6a600f24aa05c2
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -36,7 +36,7 @@ ScriptedImporter:
     spriteMeshType: 1
     alignment: 0
     spritePivot: {x: 0.5, y: 0.5}
-    spritePixelsToUnits: 100
+    spritePixelsToUnits: 16
     spriteBorder: {x: 0, y: 0, z: 0, w: 0}
     spriteGenerateFallbackPhysicsShape: 0
     generateCubemap: 6
@@ -122,18 +122,18 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: InteractionButton
+  - name: Frame_0
     originalName: 
-    pivot: {x: 0.5, y: -0.032258064}
+    pivot: {x: 0.5555556, y: -0.14814815}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 32
-      height: 31
-    spriteID: a3e3b2f55e10d9a48aaf1ae8bba0453e
+      width: 9
+      height: 27
+    spriteID: 638d6996c940ec948991b76812b9c257
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -141,19 +141,19 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 4}
+    uvTransform: {x: -7, y: 0}
   - name: Frame_1
     originalName: 
-    pivot: {x: 0.5, y: -0.032258064}
+    pivot: {x: 0.5555556, y: -0.14814815}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
-      y: 43
-      width: 32
-      height: 31
-    spriteID: 84587e0eb447d5149af11a65fe7f4614
+      y: 39
+      width: 9
+      height: 27
+    spriteID: 8313ac6076ffa0a4bba0aa15745df232
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -161,17 +161,57 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 43}
+    uvTransform: {x: -7, y: 35}
+  - name: Frame_2
+    originalName: 
+    pivot: {x: 0.5555556, y: -0.14814815}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 74
+      width: 9
+      height: 27
+    spriteID: 6ed1ce195dd5ac743aa1e5e5ec71650b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: -7, y: 70}
+  - name: Frame_3
+    originalName: 
+    pivot: {x: 0.5555556, y: -0.14814815}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 21
+      y: 4
+      width: 9
+      height: 27
+    spriteID: 4383256cd7275d0418ca906c77572780
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 10, y: 0}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
     uuid:
-      value0: 4144607874
+      value0: 967314983
       value1: 0
       value2: 0
       value3: 0
     guid: 0
-    name: InteractionButton
+    name: interactionQueMobile
     layerFlags: 0
     layerType: 0
     blendMode: 0
@@ -181,19 +221,37 @@ ScriptedImporter:
       additiveSortOrder: 0
       cellRect:
         x: 0
-        y: 1
+        y: 0
         width: 32
-        height: 31
-      spriteId: a3e3b2f55e10d9a48aaf1ae8bba0453e
+        height: 32
+      spriteId: 638d6996c940ec948991b76812b9c257
     - name: Frame_1
       frameIndex: 1
       additiveSortOrder: 0
       cellRect:
         x: 0
-        y: 1
+        y: 0
         width: 32
-        height: 31
-      spriteId: 84587e0eb447d5149af11a65fe7f4614
+        height: 32
+      spriteId: 8313ac6076ffa0a4bba0aa15745df232
+    - name: Frame_2
+      frameIndex: 2
+      additiveSortOrder: 0
+      cellRect:
+        x: 0
+        y: 0
+        width: 32
+        height: 32
+      spriteId: 6ed1ce195dd5ac743aa1e5e5ec71650b
+    - name: Frame_3
+      frameIndex: 3
+      additiveSortOrder: 0
+      cellRect:
+        x: 0
+        y: 0
+        width: 32
+        height: 32
+      spriteId: 4383256cd7275d0418ca906c77572780
     linkedCells: []
     parentIndex: -1
   platformSettings:

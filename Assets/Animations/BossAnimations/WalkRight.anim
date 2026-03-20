@@ -31,7 +31,7 @@ AnimationClip:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 0.25
+        time: 0.15
         value: 1
         inSlope: Infinity
         outSlope: Infinity
@@ -40,7 +40,7 @@ AnimationClip:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 0.5
+        time: 0.28333333
         value: 1
         inSlope: Infinity
         outSlope: Infinity
@@ -61,9 +61,11 @@ AnimationClip:
     curve:
     - time: 0
       value: {fileID: -3726048036359533942, guid: b983bbd1ac5c520418625fbb3ffd358b, type: 3}
-    - time: 0.25
+    - time: 0.15
       value: {fileID: -4593667634987583811, guid: b983bbd1ac5c520418625fbb3ffd358b, type: 3}
-    - time: 0.5
+    - time: 0.28333333
+      value: {fileID: -724535239990016248, guid: b983bbd1ac5c520418625fbb3ffd358b, type: 3}
+    - time: 0.43333334
       value: {fileID: -724535239990016248, guid: b983bbd1ac5c520418625fbb3ffd358b, type: 3}
     attribute: m_Sprite
     path: 
@@ -99,12 +101,13 @@ AnimationClip:
     - {fileID: -3726048036359533942, guid: b983bbd1ac5c520418625fbb3ffd358b, type: 3}
     - {fileID: -4593667634987583811, guid: b983bbd1ac5c520418625fbb3ffd358b, type: 3}
     - {fileID: -724535239990016248, guid: b983bbd1ac5c520418625fbb3ffd358b, type: 3}
+    - {fileID: -724535239990016248, guid: b983bbd1ac5c520418625fbb3ffd358b, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.51666665
+    m_StopTime: 0.45000002
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -134,7 +137,7 @@ AnimationClip:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 0.25
+        time: 0.15
         value: 1
         inSlope: Infinity
         outSlope: Infinity
@@ -143,7 +146,7 @@ AnimationClip:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 0.5
+        time: 0.28333333
         value: 1
         inSlope: Infinity
         outSlope: Infinity

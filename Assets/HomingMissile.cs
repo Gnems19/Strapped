@@ -8,7 +8,7 @@ public class HomingMissile : MonoBehaviour
 {
     // Start is called before the first frame update
     [FormerlySerializedAs("_speed")] [SerializeField] private float speed = 9f;
-    [FormerlySerializedAs("_rotateSpeed")] [SerializeField] private float rotateSpeed = 200f;
+    [FormerlySerializedAs("_rotateSpeed")] [SerializeField] private float rotateSpeed = 120f;
     [SerializeField] private GameObject explosionPrefab;
     private static readonly int Close = Animator.StringToHash("Hit");
 

@@ -1,75 +1,104 @@
 using UnityEngine;
+using UnityEngine.Rendering;
 using UnityEngine.SceneManagement;
 
 namespace InteractableItemsScripts
 {
     public class DoorScript : MonoBehaviour
     {
-        // get player object
         public GameObject player;
-        // get sprites for opend and closed door
         [SerializeField] Sprite openedDoor;
         [SerializeField] Sprite closedDoor;
         [SerializeField] Logger logger;
         [SerializeField] int sceneToLoad;
-        private bool _collide;
-        private float _timer;
-        private float _duration;
-    
-        // Start is called before the first frame update
+
+        private bool _playerInRange;
+        private GameObject _prompt;
+
         void Start()
         {
-            _collide = false;
-            _timer = 0f; 
-            _duration = 2f;
-            // set sprite to closed door
             GetComponent<SpriteRenderer>().sprite = closedDoor;
-            //check if called by logging
-            logger.Log("DoorScript Start called");
+            if (logger != null) logger.Log("DoorScript Start called");
+            BuildPrompt();
         }
 
-        private void FixedUpdate()
+        private void BuildPrompt()
         {
-            //if the collision is grater than 1 second change scene to 2
-            if(_collide)
+            var isMobile = false;
+#if UNITY_ANDROID || UNITY_IOS
+            isMobile = true;
+#endif
+            var prefabName = isMobile ? "interactionQueMobile" : "interactionQueKeyboard";
+            var prefab = Resources.Load<GameObject>(prefabName);
+
+            if (prefab != null)
             {
-                _timer+=Time.deltaTime;
-                if (_timer >= _duration)
+                _prompt = Instantiate(prefab, transform);
+                _prompt.transform.localPosition = new Vector3(0f, 1.2f, 0f);
+
+                var sg = _prompt.GetComponentInChildren<SortingGroup>();
+                if (sg != null)
                 {
-                    SceneManager.LoadScene(sceneToLoad); 
+                    sg.sortingLayerName = "Player";
+                    sg.sortingOrder = 100;
+                }
+
+                var sr = _prompt.GetComponentInChildren<SpriteRenderer>();
+                if (sr != null)
+                {
+                    if (sg == null)
+                    {
+                        sr.sortingLayerName = "Player";
+                        sr.sortingOrder = 100;
+                    }
+                    sr.color = new Color(1f, 1f, 1f, 0.6f);
                 }
             }
+            else
+            {
+                if (logger != null) logger.Log($"InteractionQue prefab '{prefabName}' not found in Resources");
+                _prompt = new GameObject("InteractionQue");
+                _prompt.transform.SetParent(transform);
+                _prompt.transform.localPosition = new Vector3(0f, 1.2f, 0f);
+            }
+
+            _prompt.SetActive(false);
         }
 
-        // if player comes to the door changes sprite to opened door
+        private void Update()
+        {
+            if (!_playerInRange) return;
+
+            var interact = Input.GetKeyDown(KeyCode.E);
+            if (MobileControls.Instance != null)
+                interact = interact || MobileControls.Instance.InteractDown;
+
+            if (interact)
+            {
+                SceneManager.LoadScene(sceneToLoad);
+            }
+        }
+
         private void OnTriggerEnter2D(Collider2D other)
         {
-            // check if called by logging
             if (logger != null) logger.Log("OnTriggerEnter2D called");
-            if (other.gameObject == (player))
+            if (other.gameObject == player)
             {
+                _playerInRange = true;
+                _prompt.SetActive(true);
                 GetComponent<SpriteRenderer>().sprite = openedDoor;
-                if(!_collide)
-                    _collide = true;
             }
         }
-    
 
-        // if the player leaves the door it closes
         private void OnTriggerExit2D(Collider2D other)
         {
-            // check if called by logging
             if (logger != null) logger.Log("OnTriggerExit2D called");
-
-            if (other.gameObject == (player))
+            if (other.gameObject == player)
             {
+                _playerInRange = false;
+                _prompt.SetActive(false);
                 GetComponent<SpriteRenderer>().sprite = closedDoor;
             }
-        
-            _collide = false;
-            _timer = 0;
         }
-    
-    
     }
 }

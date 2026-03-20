@@ -28,6 +28,9 @@ public class MissileLaunchScript : MonoBehaviour
         StopAllCoroutines();
     }
 
+    // TODO: Missiles currently spawn as 2 columns (all left then all right).
+    //       They should spawn as 6 rows of 2 (pair by pair): Left1+Right1, Left2+Right2, etc.
+    //       Reorder _spawnPoints or interleave Left/Right so each delay step spawns a pair.
     private void SpawnMissiles()
     {
         if (_spawnPoints.Count > 0)

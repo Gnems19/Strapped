@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 /// <summary>
@@ -51,6 +52,21 @@ public class MobileControls : MonoBehaviour
         DontDestroyOnLoad(gameObject);
 
         BuildUI();
+
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    void OnDestroy()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        // Hide controls on MainMenu (0) and EndScene (3), show on gameplay scenes
+        var canvas = GetComponent<Canvas>();
+        if (canvas != null)
+            canvas.enabled = scene.buildIndex != 0 && scene.buildIndex != 3;
     }
 
     void Update()
@@ -92,8 +108,8 @@ public class MobileControls : MonoBehaviour
         // Button sizing: percentage-friendly values at 960x540 reference
         float btnSize = 70f;
         float gap = 10f;
-        float marginX = 50f;
-        float marginY = 30f;
+        float marginX = 10f;
+        float marginY = 10f + btnSize * 0.4f;
 
         // === LEFT SIDE: movement arrows (shifted up by btnSize and right by btnSize) ===
 
@@ -154,8 +170,12 @@ public class MobileControls : MonoBehaviour
         img.preserveAspect = true;
         img.raycastTarget = true;
 
+        var defaultAlpha = 0.85f;
         if (normal != null)
+        {
             img.sprite = normal;
+            img.color = new Color(1f, 1f, 1f, defaultAlpha);
+        }
         else
             img.color = new Color(1f, 1f, 1f, 0.35f);
 
@@ -179,7 +199,7 @@ public class MobileControls : MonoBehaviour
             {
                 onUp?.Invoke();
                 if (normal != null) img.sprite = normal;
-                img.color = Color.white;
+                img.color = new Color(1f, 1f, 1f, defaultAlpha);
             });
             trigger.triggers.Add(entry);
         }

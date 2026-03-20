@@ -46,7 +46,17 @@
       "Bash(git -C /c/Users/user/UnityProjects/Strapped log --all --name-only --oneline)",
       "Bash(grep -E \"\\\\.cs\\\\.meta|\\\\.cs$\")",
       "Bash(git -C /c/Users/user/UnityProjects/Strapped log --all --format=\"\" --name-only -- \"*.cs\")",
-      "Bash(grep -r b206d7aafd8dd1645a5ad17bb240cd9f /c/Users/user/UnityProjects/Strapped/Assets --include=*.prefab)"
+      "Bash(grep -r b206d7aafd8dd1645a5ad17bb240cd9f /c/Users/user/UnityProjects/Strapped/Assets --include=*.prefab)",
+      "mcp__coplay-mcp__set_rect_transform",
+      "mcp__coplay-mcp__list_files",
+      "mcp__coplay-mcp__search_files",
+      "Bash(git checkout:*)",
+      "Bash(grep -r \"assetsPPU\\\\|pixelPerfect\\\\|refResolution\" /c/Users/user/UnityProjects/Strapped/Assets --include=*.asset --include=*.unity)",
+      "Bash(grep -r e7482f4d9ff7433438ca51d2614c617e /c/Users/user/UnityProjects/Strapped/Assets --include=*.prefab)",
+      "Bash(while read:*)",
+      "Bash(do if:*)",
+      "Bash(then echo:*)",
+      "Bash(fi)"
     ]
   }
 }

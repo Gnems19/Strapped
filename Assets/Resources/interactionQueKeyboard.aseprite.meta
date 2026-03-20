@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 5afee8fe9d59f1b499dba18b1aa9d1ef
+guid: a3ee2dc954907ec4ab8c755e21baef3a
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -36,7 +36,7 @@ ScriptedImporter:
     spriteMeshType: 1
     alignment: 0
     spritePivot: {x: 0.5, y: 0.5}
-    spritePixelsToUnits: 100
+    spritePixelsToUnits: 16
     spriteBorder: {x: 0, y: 0, z: 0, w: 0}
     spriteGenerateFallbackPhysicsShape: 0
     generateCubemap: 6
@@ -122,18 +122,18 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: InteractionButton
+  - name: Frame_0
     originalName: 
-    pivot: {x: 0.5, y: -0.032258064}
+    pivot: {x: 0.5, y: -0.033333335}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 32
-      height: 31
-    spriteID: a3e3b2f55e10d9a48aaf1ae8bba0453e
+      width: 30
+      height: 30
+    spriteID: 88dd3cff192b24c43827dad912c41f12
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -144,16 +144,16 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 4}
   - name: Frame_1
     originalName: 
-    pivot: {x: 0.5, y: -0.032258064}
+    pivot: {x: 0.5, y: -0.033333335}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
-      y: 43
-      width: 32
-      height: 31
-    spriteID: 84587e0eb447d5149af11a65fe7f4614
+      y: 42
+      width: 30
+      height: 30
+    spriteID: a5acb49ca20e9e343a0ca389ce27fd62
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -161,17 +161,57 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 43}
+    uvTransform: {x: 4, y: 42}
+  - name: Frame_2
+    originalName: 
+    pivot: {x: 0.5, y: -0.033333335}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 80
+      width: 30
+      height: 30
+    spriteID: 268cbbb615b62a347aae526141c2e660
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 80}
+  - name: Frame_3
+    originalName: 
+    pivot: {x: 0.5, y: -0.033333335}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 42
+      y: 4
+      width: 30
+      height: 30
+    spriteID: cf0762a280739e04abe15b3d6a5365c2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 42, y: 4}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
     uuid:
-      value0: 4144607874
+      value0: 1031832574
       value1: 0
       value2: 0
       value3: 0
     guid: 0
-    name: InteractionButton
+    name: interactionQueKeyboard
     layerFlags: 0
     layerType: 0
     blendMode: 0
@@ -180,20 +220,38 @@ ScriptedImporter:
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 0
+        x: 1
         y: 1
-        width: 32
-        height: 31
-      spriteId: a3e3b2f55e10d9a48aaf1ae8bba0453e
+        width: 30
+        height: 30
+      spriteId: 88dd3cff192b24c43827dad912c41f12
     - name: Frame_1
       frameIndex: 1
       additiveSortOrder: 0
       cellRect:
-        x: 0
+        x: 1
         y: 1
-        width: 32
-        height: 31
-      spriteId: 84587e0eb447d5149af11a65fe7f4614
+        width: 30
+        height: 30
+      spriteId: a5acb49ca20e9e343a0ca389ce27fd62
+    - name: Frame_2
+      frameIndex: 2
+      additiveSortOrder: 0
+      cellRect:
+        x: 1
+        y: 1
+        width: 30
+        height: 30
+      spriteId: 268cbbb615b62a347aae526141c2e660
+    - name: Frame_3
+      frameIndex: 3
+      additiveSortOrder: 0
+      cellRect:
+        x: 1
+        y: 1
+        width: 30
+        height: 30
+      spriteId: cf0762a280739e04abe15b3d6a5365c2
     linkedCells: []
     parentIndex: -1
   platformSettings:
@@ -213,4 +271,4 @@ ScriptedImporter:
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 32, y: 32}
-  previousTextureSize: {x: 64, y: 128}
+  previousTextureSize: {x: 128, y: 128}

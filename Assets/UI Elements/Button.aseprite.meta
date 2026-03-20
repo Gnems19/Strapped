@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 5afee8fe9d59f1b499dba18b1aa9d1ef
+guid: d37f7ba9723215b4c9ac40d584099c23
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -122,18 +122,18 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: InteractionButton
+  - name: Frame_0
     originalName: 
-    pivot: {x: 0.5, y: -0.032258064}
+    pivot: {x: 0.5, y: -0.033333335}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 32
-      height: 31
-    spriteID: a3e3b2f55e10d9a48aaf1ae8bba0453e
+      width: 30
+      height: 30
+    spriteID: a138f67ec577322498193d7c46b9c582
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -141,19 +141,19 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 4}
+    uvTransform: {x: 3, y: 3}
   - name: Frame_1
     originalName: 
-    pivot: {x: 0.5, y: -0.032258064}
+    pivot: {x: 0.5, y: -0.033333335}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
-      y: 43
-      width: 32
-      height: 31
-    spriteID: 84587e0eb447d5149af11a65fe7f4614
+      y: 42
+      width: 30
+      height: 30
+    spriteID: 4075d3f4a1af58e468582284a2fcffcc
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -161,17 +161,17 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 43}
+    uvTransform: {x: 4, y: 42}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
     uuid:
-      value0: 4144607874
+      value0: 1993771182
       value1: 0
       value2: 0
       value3: 0
     guid: 0
-    name: InteractionButton
+    name: Button
     layerFlags: 0
     layerType: 0
     blendMode: 0
@@ -181,19 +181,19 @@ ScriptedImporter:
       additiveSortOrder: 0
       cellRect:
         x: 0
-        y: 1
+        y: 0
         width: 32
-        height: 31
-      spriteId: a3e3b2f55e10d9a48aaf1ae8bba0453e
+        height: 32
+      spriteId: a138f67ec577322498193d7c46b9c582
     - name: Frame_1
       frameIndex: 1
       additiveSortOrder: 0
       cellRect:
-        x: 0
+        x: 1
         y: 1
-        width: 32
-        height: 31
-      spriteId: 84587e0eb447d5149af11a65fe7f4614
+        width: 30
+        height: 30
+      spriteId: 4075d3f4a1af58e468582284a2fcffcc
     linkedCells: []
     parentIndex: -1
   platformSettings:

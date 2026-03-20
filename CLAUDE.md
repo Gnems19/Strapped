@@ -4,7 +4,11 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project
 
-**Strapped** is a 2D pixel art Unity platformer. The player navigates levels, avoids enemies, and fights a boss. Sprites are authored in Aseprite and imported natively via the Unity Aseprite package.
+**Strapped** is a 2D pixel art Unity platformer evolving into a Hollow Knight / Silksong-style exploration sidescroller. Originally a game jam entry, the game is being expanded with new areas, NPCs, and exploration mechanics.
+
+**Lore:** You've been abducted by an evil corporation and strapped with remote explosives. You must escape their clutches.
+
+**Art constraints:** Flat 2D pixel art, Gameboy-inspired 4-color palette, characters max 32x32 pixels. Sprites authored in Aseprite and imported natively via the Unity Aseprite package.
 
 ## Development Commands
 
@@ -80,17 +84,33 @@ Assets/Scripts/
   PlayerScripts/     — PlayerController, PlayerAnimator, PlayerDeathController, PlayerSoundController
                        PlayerExtras.cs (shared interfaces + structs, no MonoBehaviour)
   EnemyScripts/      — EnemyScript, BossScript, BossController, BossAnimator, DetectionZone, IBossController
-  InteractableItemsScripts/ — PowerOutlet, PowerOutletAnimator, BedScript, DoorScript, IPowerOutlet
+  InteractableItemsScripts/ — PowerOutlet, PowerOutletAnimator, BedScript, DoorScript, IPowerOutlet, CompyDialogue
   UIScripts/         — SoundManager, MenuManagerScript, SettingsScript, volume sliders
   CameraScript.cs    — Horizontal follow with left/right border clamps
   parallax.cs        — Parallax background scrolling
-  DialogueScript.cs  — Stub only, not implemented
+  DialogueScript.cs  — Stub only, not implemented (CompyDialogue is the active dialogue system)
 Assets/              — Root-level scripts are in-progress / working copies:
                        HomingMissile.cs, MissleLaunchScript.cs, OutletScript.cs,
                        EnterBossAreaScript.cs, DestroyAfterAnimation.cs
 ```
 
-> Root-level `Assets/*.cs` scripts are the actively used versions for boss-fight mechanics. The older `Assets/Scripts/EnemyScripts/HomingMissile.cs` was deleted. `Assets/BossScript.cs` at the root is a stale duplicate — the canonical boss script is `Assets/Scripts/EnemyScripts/BossScript.cs`.
+> Root-level `Assets/*.cs` scripts are the actively used versions for boss-fight mechanics. The older `Assets/Scripts/EnemyScripts/HomingMissile.cs` was deleted. `Assets/BossScript.cs` at the root is a stale duplicate — the canonical boss script is `Assets/Scripts/EnemyScripts/BossScript.cs`. Archived duplicate scenes live in `Assets/Archived/`.
+
+### NPC Dialogue (CompyDialogue)
+
+`CompyDialogue.cs` is attached to the `Terrain/Compy` tilemap in StartLevel. It auto-detects the tilemap bounds center for interaction range. Features:
+- Press **E** near Compy to trigger dialogue (typewriter effect)
+- `static int TimesInteracted` tracks interactions across scene reloads
+- After 3 interactions, auto-shows "Go!" without pressing E
+- Builds a world-space Canvas at runtime with Gameboy colors (`#0f380f` bg, `#8bac0f` text)
+- Uses Electronic Highway Sign SDF font (loaded from TMP Resources)
+- Canvas must use sorting layer `"Player"` with high order to render above tilemap layers
+
+### Sorting Layers (back to front)
+
+`Default → Parallax → Background → Interactable Objects → Ground → Enemie → Player`
+
+Any world-space UI (dialogue bubbles, etc.) must use `"Player"` sorting layer to appear above all tilemap layers.
 
 ### Mobile Controls
 

@@ -6,12 +6,15 @@ using UnityEngine.SceneManagement;
 
 public class PlayerDeathController : MonoBehaviour, IPlayerDeathController
 {
+    private const string DeathCountKey = "TotalDeathCount";
 
     [SerializeField] private Logger logger;
 
     public bool IsDead { get; private set; }
 
-    
+    public static int TotalDeathCount => PlayerPrefs.GetInt(DeathCountKey, 0);
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -57,7 +60,10 @@ public class PlayerDeathController : MonoBehaviour, IPlayerDeathController
 
     void RestartGame()
     {
-        // restart the game
+        var count = PlayerPrefs.GetInt(DeathCountKey, 0) + 1;
+        PlayerPrefs.SetInt(DeathCountKey, count);
+        PlayerPrefs.Save();
+
         SceneManager.LoadScene(1);
     }
 }
