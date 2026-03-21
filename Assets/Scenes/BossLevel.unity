@@ -411,7 +411,7 @@ MonoBehaviour:
   attackInterval: 2
   followDistance: 3
   launchOffsetXRight: 3.3
-  launchOffsetXLeft: -2.05
+  launchOffsetXLeft: 2.05
   launchOffsetY: 5.5
 --- !u!1 &347639872 stripped
 GameObject:
