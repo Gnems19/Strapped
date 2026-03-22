@@ -27,6 +27,9 @@ namespace InteractableItemsScripts
             var isMobile = false;
 #if UNITY_ANDROID || UNITY_IOS
             isMobile = true;
+#else
+            // Runtime fallback for device/platform detection in non-mobile builds.
+            isMobile = UnityEngine.Device.Application.isMobilePlatform || MobileControls.Instance != null;
 #endif
             var prefabName = isMobile ? "interactionQueMobile" : "interactionQueKeyboard";
             var prefab = Resources.Load<GameObject>(prefabName);

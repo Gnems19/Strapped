@@ -1,5 +1,4 @@
 using UnityEngine;
-using System.Collections;
 
 /// <summary>
 /// Scales a SpriteRenderer to fit within the camera viewport without overflowing.
@@ -10,13 +9,17 @@ public class FitSpriteToScreen : MonoBehaviour
     [Tooltip("How much of the screen to occupy (100 = fit to screen edges).")]
     [SerializeField, Range(10, 100)] private int screenPercent = 100;
 
-    IEnumerator Start()
+    private void Start()
     {
-        yield return null;
+        ApplyScale();
+    }
 
+    private void ApplyScale()
+    {
         var cam = Camera.main;
         var sr = GetComponent<SpriteRenderer>();
-        if (cam == null || sr == null || sr.sprite == null) yield break;
+        if (cam == null || sr == null || sr.sprite == null)
+            return;
 
         var bounds = sr.sprite.bounds.size;
         float camH = cam.orthographicSize * 2f;
@@ -32,7 +35,7 @@ public class FitSpriteToScreen : MonoBehaviour
             if (ls.x > 0f && ls.y > 0f)
             {
                 transform.localScale = new Vector3(s / ls.x, s / ls.y, 1f);
-                yield break;
+                return;
             }
         }
 
